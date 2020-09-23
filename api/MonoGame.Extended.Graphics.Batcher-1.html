@@ -1,0 +1,774 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class Batcher&lt;TDrawCallInfo&gt;
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class Batcher&lt;TDrawCallInfo&gt;
+   ">
+    <meta name="generator" content="docfx 2.56.2.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="MonoGame.Extended.Graphics.Batcher`1">
+  
+  
+  <h1 id="MonoGame_Extended_Graphics_Batcher_1" data-uid="MonoGame.Extended.Graphics.Batcher`1" class="text-break">Class Batcher&lt;TDrawCallInfo&gt;
+  </h1>
+  <div class="markdown level0 summary"><p>Minimizes draw calls to a <a class="xref" href="MonoGame.Extended.Graphics.Batcher-1.html#MonoGame_Extended_Graphics_Batcher_1_GraphicsDevice">GraphicsDevice</a> by sorting them and attempting to merge them together
+before submitting them.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">Batcher&lt;TDrawCallInfo&gt;</span></div>
+      <div class="level2"><a class="xref" href="MonoGame.Extended.Graphics.Batcher2D.html">Batcher2D</a></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><span class="xref">System.IDisposable</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="MonoGame.Extended.Graphics.html">MonoGame.Extended.Graphics</a></h6>
+  <h6><strong>Assembly</strong>: MonoGame.Extended.Graphics.dll</h6>
+  <h5 id="MonoGame_Extended_Graphics_Batcher_1_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract class Batcher&lt;TDrawCallInfo&gt; : IDisposable where TDrawCallInfo : struct, IBatchDrawCallInfo&lt;TDrawCallInfo&gt;, IComparable&lt;TDrawCallInfo&gt;</code></pre>
+  </div>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TDrawCallInfo</span></td>
+        <td><p>The type of the information for a draw call.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="constructors">Constructors
+  </h3>
+  
+  
+  <a id="MonoGame_Extended_Graphics_Batcher_1__ctor_" data-uid="MonoGame.Extended.Graphics.Batcher`1.#ctor*"></a>
+  <h4 id="MonoGame_Extended_Graphics_Batcher_1__ctor_Microsoft_Xna_Framework_Graphics_GraphicsDevice_Microsoft_Xna_Framework_Graphics_Effect_System_Int32_" data-uid="MonoGame.Extended.Graphics.Batcher`1.#ctor(Microsoft.Xna.Framework.Graphics.GraphicsDevice,Microsoft.Xna.Framework.Graphics.Effect,System.Int32)">Batcher(GraphicsDevice, Effect, Int32)</h4>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="MonoGame.Extended.Graphics.Batcher-1.html">Batcher&lt;TDrawCallInfo&gt;</a> class.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected Batcher(GraphicsDevice graphicsDevice, Effect defaultEffect, int maximumDrawCallsCount = 2048)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Microsoft.Xna.Framework.Graphics.GraphicsDevice</span></td>
+        <td><span class="parametername">graphicsDevice</span></td>
+        <td><p>The graphics device.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Microsoft.Xna.Framework.Graphics.Effect</span></td>
+        <td><span class="parametername">defaultEffect</span></td>
+        <td><p>The default effect.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">maximumDrawCallsCount</span></td>
+        <td><p>The maximum number of <see cref="!:TDrawCallInfo"></see> structs that can be enqueued before a
+<a class="xref" href="MonoGame.Extended.Graphics.Batcher-1.html#MonoGame_Extended_Graphics_Batcher_1_Flush">Flush()</a>
+is required. The default value is <pre><code>2048</code></pre>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.ArgumentNullException</span></td>
+        <td><p><code data-dev-comment-type="paramref" class="paramref">graphicsDevice</code> is
+null.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.ArgumentOutOfRangeException</span></td>
+        <td><p><code data-dev-comment-type="paramref" class="paramref">maximumDrawCallsCount</code> is less than or equal</p>
+<pre><code>0</code></pre>.
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="fields">Fields
+  </h3>
+  
+  
+  <h4 id="MonoGame_Extended_Graphics_Batcher_1_DrawCalls" data-uid="MonoGame.Extended.Graphics.Batcher`1.DrawCalls">DrawCalls</h4>
+  <div class="markdown level1 summary"><p>The array of <see cref="!:TDrawCallInfo"></see> structs currently enqueued.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected TDrawCallInfo[] DrawCalls</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>TDrawCallInfo[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="MonoGame_Extended_Graphics_Batcher_1_EnqueuedDrawCallCount" data-uid="MonoGame.Extended.Graphics.Batcher`1.EnqueuedDrawCallCount">EnqueuedDrawCallCount</h4>
+  <div class="markdown level1 summary"><p>The number of <see cref="!:TDrawCallInfo"></see> structs currently enqueued.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected int EnqueuedDrawCallCount</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="MonoGame_Extended_Graphics_Batcher_1_GraphicsDevice_" data-uid="MonoGame.Extended.Graphics.Batcher`1.GraphicsDevice*"></a>
+  <h4 id="MonoGame_Extended_Graphics_Batcher_1_GraphicsDevice" data-uid="MonoGame.Extended.Graphics.Batcher`1.GraphicsDevice">GraphicsDevice</h4>
+  <div class="markdown level1 summary"><p>Gets the <a class="xref" href="MonoGame.Extended.Graphics.Batcher-1.html#MonoGame_Extended_Graphics_Batcher_1_GraphicsDevice">GraphicsDevice</a> associated with this <a class="xref" href="MonoGame.Extended.Graphics.Batcher-1.html">Batcher&lt;TDrawCallInfo&gt;</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public GraphicsDevice GraphicsDevice { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Microsoft.Xna.Framework.Graphics.GraphicsDevice</span></td>
+        <td><p>The <a class="xref" href="MonoGame.Extended.Graphics.Batcher-1.html#MonoGame_Extended_Graphics_Batcher_1_GraphicsDevice">GraphicsDevice</a> associated with this <a class="xref" href="MonoGame.Extended.Graphics.Batcher-1.html">Batcher&lt;TDrawCallInfo&gt;</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MonoGame_Extended_Graphics_Batcher_1_HasBegun_" data-uid="MonoGame.Extended.Graphics.Batcher`1.HasBegun*"></a>
+  <h4 id="MonoGame_Extended_Graphics_Batcher_1_HasBegun" data-uid="MonoGame.Extended.Graphics.Batcher`1.HasBegun">HasBegun</h4>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether batching is currently in progress by being within a <a class="xref" href="MonoGame.Extended.Graphics.Batcher-1.html#MonoGame_Extended_Graphics_Batcher_1_Begin_Microsoft_Xna_Framework_Matrix__Microsoft_Xna_Framework_Matrix__Microsoft_Xna_Framework_Graphics_BlendState_Microsoft_Xna_Framework_Graphics_SamplerState_Microsoft_Xna_Framework_Graphics_DepthStencilState_Microsoft_Xna_Framework_Graphics_RasterizerState_Microsoft_Xna_Framework_Graphics_Effect_">Begin(ref Matrix, ref Matrix, BlendState, SamplerState, DepthStencilState, RasterizerState, Effect)</a> and
+<a class="xref" href="MonoGame.Extended.Graphics.Batcher-1.html#MonoGame_Extended_Graphics_Batcher_1_End">End()</a> pair block of code.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool HasBegun { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p><code>true</code> if batching has begun; otherwise, <code>false</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="MonoGame_Extended_Graphics_Batcher_1_Begin_" data-uid="MonoGame.Extended.Graphics.Batcher`1.Begin*"></a>
+  <h4 id="MonoGame_Extended_Graphics_Batcher_1_Begin_Microsoft_Xna_Framework_Matrix__Microsoft_Xna_Framework_Matrix__Microsoft_Xna_Framework_Graphics_BlendState_Microsoft_Xna_Framework_Graphics_SamplerState_Microsoft_Xna_Framework_Graphics_DepthStencilState_Microsoft_Xna_Framework_Graphics_RasterizerState_Microsoft_Xna_Framework_Graphics_Effect_" data-uid="MonoGame.Extended.Graphics.Batcher`1.Begin(Microsoft.Xna.Framework.Matrix@,Microsoft.Xna.Framework.Matrix@,Microsoft.Xna.Framework.Graphics.BlendState,Microsoft.Xna.Framework.Graphics.SamplerState,Microsoft.Xna.Framework.Graphics.DepthStencilState,Microsoft.Xna.Framework.Graphics.RasterizerState,Microsoft.Xna.Framework.Graphics.Effect)">Begin(ref Matrix, ref Matrix, BlendState, SamplerState, DepthStencilState, RasterizerState, Effect)</h4>
+  <div class="markdown level1 summary"><p>Begins the batch operation using an optional <span class="xref">Microsoft.Xna.Framework.Graphics.BlendState</span>, <span class="xref">Microsoft.Xna.Framework.Graphics.SamplerState</span>,
+<span class="xref">Microsoft.Xna.Framework.Graphics.DepthStencilState</span>, <span class="xref">Microsoft.Xna.Framework.Graphics.RasterizerState</span>, <span class="xref">Microsoft.Xna.Framework.Graphics.Effect</span>, world-to-view
+<span class="xref">Microsoft.Xna.Framework.Matrix</span>, or view-to-projection <span class="xref">Microsoft.Xna.Framework.Matrix</span>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void Begin(ref Matrix viewMatrix, ref Matrix projectionMatrix, BlendState blendState = null, SamplerState samplerState = null, DepthStencilState depthStencilState = null, RasterizerState rasterizerState = null, Effect effect = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Microsoft.Xna.Framework.Matrix</span></td>
+        <td><span class="parametername">viewMatrix</span></td>
+        <td><p>The world-to-view transformation matrix to use for the <a class="xref" href="MonoGame.Extended.Graphics.Batcher-1.html#MonoGame_Extended_Graphics_Batcher_1_Begin_Microsoft_Xna_Framework_Matrix__Microsoft_Xna_Framework_Matrix__Microsoft_Xna_Framework_Graphics_BlendState_Microsoft_Xna_Framework_Graphics_SamplerState_Microsoft_Xna_Framework_Graphics_DepthStencilState_Microsoft_Xna_Framework_Graphics_RasterizerState_Microsoft_Xna_Framework_Graphics_Effect_">Begin(ref Matrix, ref Matrix, BlendState, SamplerState, DepthStencilState, RasterizerState, Effect)</a> and
+<a class="xref" href="MonoGame.Extended.Graphics.Batcher-1.html#MonoGame_Extended_Graphics_Batcher_1_End">End()</a> pair.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Microsoft.Xna.Framework.Matrix</span></td>
+        <td><span class="parametername">projectionMatrix</span></td>
+        <td><p>The view-to-projection transformation matrix to use for the <a class="xref" href="MonoGame.Extended.Graphics.Batcher-1.html#MonoGame_Extended_Graphics_Batcher_1_Begin_Microsoft_Xna_Framework_Matrix__Microsoft_Xna_Framework_Matrix__Microsoft_Xna_Framework_Graphics_BlendState_Microsoft_Xna_Framework_Graphics_SamplerState_Microsoft_Xna_Framework_Graphics_DepthStencilState_Microsoft_Xna_Framework_Graphics_RasterizerState_Microsoft_Xna_Framework_Graphics_Effect_">Begin(ref Matrix, ref Matrix, BlendState, SamplerState, DepthStencilState, RasterizerState, Effect)</a> and
+<a class="xref" href="MonoGame.Extended.Graphics.Batcher-1.html#MonoGame_Extended_Graphics_Batcher_1_End">End()</a> pair.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Microsoft.Xna.Framework.Graphics.BlendState</span></td>
+        <td><span class="parametername">blendState</span></td>
+        <td><p>The <span class="xref">Microsoft.Xna.Framework.Graphics.BlendState</span> to use for the <a class="xref" href="MonoGame.Extended.Graphics.Batcher-1.html#MonoGame_Extended_Graphics_Batcher_1_Begin_Microsoft_Xna_Framework_Matrix__Microsoft_Xna_Framework_Matrix__Microsoft_Xna_Framework_Graphics_BlendState_Microsoft_Xna_Framework_Graphics_SamplerState_Microsoft_Xna_Framework_Graphics_DepthStencilState_Microsoft_Xna_Framework_Graphics_RasterizerState_Microsoft_Xna_Framework_Graphics_Effect_">Begin(ref Matrix, ref Matrix, BlendState, SamplerState, DepthStencilState, RasterizerState, Effect)</a>, <a class="xref" href="MonoGame.Extended.Graphics.Batcher-1.html#MonoGame_Extended_Graphics_Batcher_1_End">End()</a> pair.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Microsoft.Xna.Framework.Graphics.SamplerState</span></td>
+        <td><span class="parametername">samplerState</span></td>
+        <td><p>The texture <span class="xref">Microsoft.Xna.Framework.Graphics.SamplerState</span> to use for the <a class="xref" href="MonoGame.Extended.Graphics.Batcher-1.html#MonoGame_Extended_Graphics_Batcher_1_Begin_Microsoft_Xna_Framework_Matrix__Microsoft_Xna_Framework_Matrix__Microsoft_Xna_Framework_Graphics_BlendState_Microsoft_Xna_Framework_Graphics_SamplerState_Microsoft_Xna_Framework_Graphics_DepthStencilState_Microsoft_Xna_Framework_Graphics_RasterizerState_Microsoft_Xna_Framework_Graphics_Effect_">Begin(ref Matrix, ref Matrix, BlendState, SamplerState, DepthStencilState, RasterizerState, Effect)</a> and
+<a class="xref" href="MonoGame.Extended.Graphics.Batcher-1.html#MonoGame_Extended_Graphics_Batcher_1_End">End()</a> pair.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Microsoft.Xna.Framework.Graphics.DepthStencilState</span></td>
+        <td><span class="parametername">depthStencilState</span></td>
+        <td><p>The <span class="xref">Microsoft.Xna.Framework.Graphics.DepthStencilState</span> to use for the <a class="xref" href="MonoGame.Extended.Graphics.Batcher-1.html#MonoGame_Extended_Graphics_Batcher_1_Begin_Microsoft_Xna_Framework_Matrix__Microsoft_Xna_Framework_Matrix__Microsoft_Xna_Framework_Graphics_BlendState_Microsoft_Xna_Framework_Graphics_SamplerState_Microsoft_Xna_Framework_Graphics_DepthStencilState_Microsoft_Xna_Framework_Graphics_RasterizerState_Microsoft_Xna_Framework_Graphics_Effect_">Begin(ref Matrix, ref Matrix, BlendState, SamplerState, DepthStencilState, RasterizerState, Effect)</a> and
+<a class="xref" href="MonoGame.Extended.Graphics.Batcher-1.html#MonoGame_Extended_Graphics_Batcher_1_End">End()</a> pair.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Microsoft.Xna.Framework.Graphics.RasterizerState</span></td>
+        <td><span class="parametername">rasterizerState</span></td>
+        <td><p>The <span class="xref">Microsoft.Xna.Framework.Graphics.RasterizerState</span> to use for the <a class="xref" href="MonoGame.Extended.Graphics.Batcher-1.html#MonoGame_Extended_Graphics_Batcher_1_Begin_Microsoft_Xna_Framework_Matrix__Microsoft_Xna_Framework_Matrix__Microsoft_Xna_Framework_Graphics_BlendState_Microsoft_Xna_Framework_Graphics_SamplerState_Microsoft_Xna_Framework_Graphics_DepthStencilState_Microsoft_Xna_Framework_Graphics_RasterizerState_Microsoft_Xna_Framework_Graphics_Effect_">Begin(ref Matrix, ref Matrix, BlendState, SamplerState, DepthStencilState, RasterizerState, Effect)</a> and
+<a class="xref" href="MonoGame.Extended.Graphics.Batcher-1.html#MonoGame_Extended_Graphics_Batcher_1_End">End()</a> pair.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Microsoft.Xna.Framework.Graphics.Effect</span></td>
+        <td><span class="parametername">effect</span></td>
+        <td><p>The <span class="xref">Microsoft.Xna.Framework.Graphics.Effect</span> to use for the <a class="xref" href="MonoGame.Extended.Graphics.Batcher-1.html#MonoGame_Extended_Graphics_Batcher_1_Begin_Microsoft_Xna_Framework_Matrix__Microsoft_Xna_Framework_Matrix__Microsoft_Xna_Framework_Graphics_BlendState_Microsoft_Xna_Framework_Graphics_SamplerState_Microsoft_Xna_Framework_Graphics_DepthStencilState_Microsoft_Xna_Framework_Graphics_RasterizerState_Microsoft_Xna_Framework_Graphics_Effect_">Begin(ref Matrix, ref Matrix, BlendState, SamplerState, DepthStencilState, RasterizerState, Effect)</a> and <a class="xref" href="MonoGame.Extended.Graphics.Batcher-1.html#MonoGame_Extended_Graphics_Batcher_1_End">End()</a> pair.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="MonoGame_Extended_Graphics_Batcher_1_Begin_Microsoft_Xna_Framework_Matrix__Microsoft_Xna_Framework_Matrix__Microsoft_Xna_Framework_Graphics_BlendState_Microsoft_Xna_Framework_Graphics_SamplerState_Microsoft_Xna_Framework_Graphics_DepthStencilState_Microsoft_Xna_Framework_Graphics_RasterizerState_Microsoft_Xna_Framework_Graphics_Effect__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>
+    The default objects for <code data-dev-comment-type="paramref" class="paramref">blendState</code>, <code data-dev-comment-type="paramref" class="paramref">samplerState</code>,
+<code data-dev-comment-type="paramref" class="paramref">depthStencilState</code>, and <code data-dev-comment-type="paramref" class="paramref">rasterizerState</code> are
+<span class="xref">Microsoft.Xna.Framework.Graphics.BlendState.AlphaBlend</span>, <span class="xref">Microsoft.Xna.Framework.Graphics.SamplerState.LinearClamp</span>,
+<span class="xref">Microsoft.Xna.Framework.Graphics.DepthStencilState.None</span> and <span class="xref">Microsoft.Xna.Framework.Graphics.RasterizerState.CullCounterClockwise</span> respectively.
+Passing
+<pre><code>null</code></pre> for any of the previously mentioned parameters result in using their default object.
+</p>
+</div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.InvalidOperationException</span></td>
+        <td><p><a class="xref" href="MonoGame.Extended.Graphics.Batcher-1.html#MonoGame_Extended_Graphics_Batcher_1_Begin_Microsoft_Xna_Framework_Matrix__Microsoft_Xna_Framework_Matrix__Microsoft_Xna_Framework_Graphics_BlendState_Microsoft_Xna_Framework_Graphics_SamplerState_Microsoft_Xna_Framework_Graphics_DepthStencilState_Microsoft_Xna_Framework_Graphics_RasterizerState_Microsoft_Xna_Framework_Graphics_Effect_">Begin(ref Matrix, ref Matrix, BlendState, SamplerState, DepthStencilState, RasterizerState, Effect)</a> cannot be invoked again until <a class="xref" href="MonoGame.Extended.Graphics.Batcher-1.html#MonoGame_Extended_Graphics_Batcher_1_End">End()</a> has been invoked.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MonoGame_Extended_Graphics_Batcher_1_Begin_" data-uid="MonoGame.Extended.Graphics.Batcher`1.Begin*"></a>
+  <h4 id="MonoGame_Extended_Graphics_Batcher_1_Begin_System_Nullable_Microsoft_Xna_Framework_Matrix__System_Nullable_Microsoft_Xna_Framework_Matrix__Microsoft_Xna_Framework_Graphics_BlendState_Microsoft_Xna_Framework_Graphics_SamplerState_Microsoft_Xna_Framework_Graphics_DepthStencilState_Microsoft_Xna_Framework_Graphics_RasterizerState_Microsoft_Xna_Framework_Graphics_Effect_" data-uid="MonoGame.Extended.Graphics.Batcher`1.Begin(System.Nullable{Microsoft.Xna.Framework.Matrix},System.Nullable{Microsoft.Xna.Framework.Matrix},Microsoft.Xna.Framework.Graphics.BlendState,Microsoft.Xna.Framework.Graphics.SamplerState,Microsoft.Xna.Framework.Graphics.DepthStencilState,Microsoft.Xna.Framework.Graphics.RasterizerState,Microsoft.Xna.Framework.Graphics.Effect)">Begin(Nullable&lt;Matrix&gt;, Nullable&lt;Matrix&gt;, BlendState, SamplerState, DepthStencilState, RasterizerState, Effect)</h4>
+  <div class="markdown level1 summary"><p>Begins the batch operation using an optional <span class="xref">Microsoft.Xna.Framework.Graphics.BlendState</span>, <span class="xref">Microsoft.Xna.Framework.Graphics.SamplerState</span>,
+<span class="xref">Microsoft.Xna.Framework.Graphics.DepthStencilState</span>, <span class="xref">Microsoft.Xna.Framework.Graphics.RasterizerState</span>, <span class="xref">Microsoft.Xna.Framework.Graphics.Effect</span>, world-to-view
+<span class="xref">Microsoft.Xna.Framework.Matrix</span>, or view-to-projection <span class="xref">Microsoft.Xna.Framework.Matrix</span>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void Begin(Matrix? viewMatrix = default(Matrix? ), Matrix? projectionMatrix = default(Matrix? ), BlendState blendState = null, SamplerState samplerState = null, DepthStencilState depthStencilState = null, RasterizerState rasterizerState = null, Effect effect = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Microsoft.Xna.Framework.Matrix</span>&gt;</td>
+        <td><span class="parametername">viewMatrix</span></td>
+        <td><p>The world-to-view transformation matrix to use for the <a class="xref" href="MonoGame.Extended.Graphics.Batcher-1.html#MonoGame_Extended_Graphics_Batcher_1_Begin_Microsoft_Xna_Framework_Matrix__Microsoft_Xna_Framework_Matrix__Microsoft_Xna_Framework_Graphics_BlendState_Microsoft_Xna_Framework_Graphics_SamplerState_Microsoft_Xna_Framework_Graphics_DepthStencilState_Microsoft_Xna_Framework_Graphics_RasterizerState_Microsoft_Xna_Framework_Graphics_Effect_">Begin(ref Matrix, ref Matrix, BlendState, SamplerState, DepthStencilState, RasterizerState, Effect)</a> and
+<a class="xref" href="MonoGame.Extended.Graphics.Batcher-1.html#MonoGame_Extended_Graphics_Batcher_1_End">End()</a> pair.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Microsoft.Xna.Framework.Matrix</span>&gt;</td>
+        <td><span class="parametername">projectionMatrix</span></td>
+        <td><p>The view-to-projection transformation matrix to use for the <a class="xref" href="MonoGame.Extended.Graphics.Batcher-1.html#MonoGame_Extended_Graphics_Batcher_1_Begin_Microsoft_Xna_Framework_Matrix__Microsoft_Xna_Framework_Matrix__Microsoft_Xna_Framework_Graphics_BlendState_Microsoft_Xna_Framework_Graphics_SamplerState_Microsoft_Xna_Framework_Graphics_DepthStencilState_Microsoft_Xna_Framework_Graphics_RasterizerState_Microsoft_Xna_Framework_Graphics_Effect_">Begin(ref Matrix, ref Matrix, BlendState, SamplerState, DepthStencilState, RasterizerState, Effect)</a> and
+<a class="xref" href="MonoGame.Extended.Graphics.Batcher-1.html#MonoGame_Extended_Graphics_Batcher_1_End">End()</a> pair.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Microsoft.Xna.Framework.Graphics.BlendState</span></td>
+        <td><span class="parametername">blendState</span></td>
+        <td><p>The <span class="xref">Microsoft.Xna.Framework.Graphics.BlendState</span> to use for the <a class="xref" href="MonoGame.Extended.Graphics.Batcher-1.html#MonoGame_Extended_Graphics_Batcher_1_Begin_Microsoft_Xna_Framework_Matrix__Microsoft_Xna_Framework_Matrix__Microsoft_Xna_Framework_Graphics_BlendState_Microsoft_Xna_Framework_Graphics_SamplerState_Microsoft_Xna_Framework_Graphics_DepthStencilState_Microsoft_Xna_Framework_Graphics_RasterizerState_Microsoft_Xna_Framework_Graphics_Effect_">Begin(ref Matrix, ref Matrix, BlendState, SamplerState, DepthStencilState, RasterizerState, Effect)</a>, <a class="xref" href="MonoGame.Extended.Graphics.Batcher-1.html#MonoGame_Extended_Graphics_Batcher_1_End">End()</a> pair.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Microsoft.Xna.Framework.Graphics.SamplerState</span></td>
+        <td><span class="parametername">samplerState</span></td>
+        <td><p>The texture <span class="xref">Microsoft.Xna.Framework.Graphics.SamplerState</span> to use for the <a class="xref" href="MonoGame.Extended.Graphics.Batcher-1.html#MonoGame_Extended_Graphics_Batcher_1_Begin_Microsoft_Xna_Framework_Matrix__Microsoft_Xna_Framework_Matrix__Microsoft_Xna_Framework_Graphics_BlendState_Microsoft_Xna_Framework_Graphics_SamplerState_Microsoft_Xna_Framework_Graphics_DepthStencilState_Microsoft_Xna_Framework_Graphics_RasterizerState_Microsoft_Xna_Framework_Graphics_Effect_">Begin(ref Matrix, ref Matrix, BlendState, SamplerState, DepthStencilState, RasterizerState, Effect)</a> and
+<a class="xref" href="MonoGame.Extended.Graphics.Batcher-1.html#MonoGame_Extended_Graphics_Batcher_1_End">End()</a> pair.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Microsoft.Xna.Framework.Graphics.DepthStencilState</span></td>
+        <td><span class="parametername">depthStencilState</span></td>
+        <td><p>The <span class="xref">Microsoft.Xna.Framework.Graphics.DepthStencilState</span> to use for the <a class="xref" href="MonoGame.Extended.Graphics.Batcher-1.html#MonoGame_Extended_Graphics_Batcher_1_Begin_Microsoft_Xna_Framework_Matrix__Microsoft_Xna_Framework_Matrix__Microsoft_Xna_Framework_Graphics_BlendState_Microsoft_Xna_Framework_Graphics_SamplerState_Microsoft_Xna_Framework_Graphics_DepthStencilState_Microsoft_Xna_Framework_Graphics_RasterizerState_Microsoft_Xna_Framework_Graphics_Effect_">Begin(ref Matrix, ref Matrix, BlendState, SamplerState, DepthStencilState, RasterizerState, Effect)</a> and
+<a class="xref" href="MonoGame.Extended.Graphics.Batcher-1.html#MonoGame_Extended_Graphics_Batcher_1_End">End()</a> pair.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Microsoft.Xna.Framework.Graphics.RasterizerState</span></td>
+        <td><span class="parametername">rasterizerState</span></td>
+        <td><p>The <span class="xref">Microsoft.Xna.Framework.Graphics.RasterizerState</span> to use for the <a class="xref" href="MonoGame.Extended.Graphics.Batcher-1.html#MonoGame_Extended_Graphics_Batcher_1_Begin_Microsoft_Xna_Framework_Matrix__Microsoft_Xna_Framework_Matrix__Microsoft_Xna_Framework_Graphics_BlendState_Microsoft_Xna_Framework_Graphics_SamplerState_Microsoft_Xna_Framework_Graphics_DepthStencilState_Microsoft_Xna_Framework_Graphics_RasterizerState_Microsoft_Xna_Framework_Graphics_Effect_">Begin(ref Matrix, ref Matrix, BlendState, SamplerState, DepthStencilState, RasterizerState, Effect)</a> and
+<a class="xref" href="MonoGame.Extended.Graphics.Batcher-1.html#MonoGame_Extended_Graphics_Batcher_1_End">End()</a> pair.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Microsoft.Xna.Framework.Graphics.Effect</span></td>
+        <td><span class="parametername">effect</span></td>
+        <td><p>The <span class="xref">Microsoft.Xna.Framework.Graphics.Effect</span> to use for the <a class="xref" href="MonoGame.Extended.Graphics.Batcher-1.html#MonoGame_Extended_Graphics_Batcher_1_Begin_Microsoft_Xna_Framework_Matrix__Microsoft_Xna_Framework_Matrix__Microsoft_Xna_Framework_Graphics_BlendState_Microsoft_Xna_Framework_Graphics_SamplerState_Microsoft_Xna_Framework_Graphics_DepthStencilState_Microsoft_Xna_Framework_Graphics_RasterizerState_Microsoft_Xna_Framework_Graphics_Effect_">Begin(ref Matrix, ref Matrix, BlendState, SamplerState, DepthStencilState, RasterizerState, Effect)</a> and <a class="xref" href="MonoGame.Extended.Graphics.Batcher-1.html#MonoGame_Extended_Graphics_Batcher_1_End">End()</a> pair.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="MonoGame_Extended_Graphics_Batcher_1_Begin_System_Nullable_Microsoft_Xna_Framework_Matrix__System_Nullable_Microsoft_Xna_Framework_Matrix__Microsoft_Xna_Framework_Graphics_BlendState_Microsoft_Xna_Framework_Graphics_SamplerState_Microsoft_Xna_Framework_Graphics_DepthStencilState_Microsoft_Xna_Framework_Graphics_RasterizerState_Microsoft_Xna_Framework_Graphics_Effect__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>
+    The default objects for <code data-dev-comment-type="paramref" class="paramref">blendState</code>, <code data-dev-comment-type="paramref" class="paramref">samplerState</code>,
+<code data-dev-comment-type="paramref" class="paramref">depthStencilState</code>, and <code data-dev-comment-type="paramref" class="paramref">rasterizerState</code> are
+<span class="xref">Microsoft.Xna.Framework.Graphics.BlendState.AlphaBlend</span>, <span class="xref">Microsoft.Xna.Framework.Graphics.SamplerState.LinearClamp</span>,
+<span class="xref">Microsoft.Xna.Framework.Graphics.DepthStencilState.None</span> and <span class="xref">Microsoft.Xna.Framework.Graphics.RasterizerState.CullCounterClockwise</span> respectively.
+Passing
+<pre><code>null</code></pre> for any of the previously mentioned parameters result in using their default object.
+</p>
+</div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.InvalidOperationException</span></td>
+        <td><p><a class="xref" href="MonoGame.Extended.Graphics.Batcher-1.html#MonoGame_Extended_Graphics_Batcher_1_Begin_Microsoft_Xna_Framework_Matrix__Microsoft_Xna_Framework_Matrix__Microsoft_Xna_Framework_Graphics_BlendState_Microsoft_Xna_Framework_Graphics_SamplerState_Microsoft_Xna_Framework_Graphics_DepthStencilState_Microsoft_Xna_Framework_Graphics_RasterizerState_Microsoft_Xna_Framework_Graphics_Effect_">Begin(ref Matrix, ref Matrix, BlendState, SamplerState, DepthStencilState, RasterizerState, Effect)</a> cannot be invoked again until <a class="xref" href="MonoGame.Extended.Graphics.Batcher-1.html#MonoGame_Extended_Graphics_Batcher_1_End">End()</a> has been invoked.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MonoGame_Extended_Graphics_Batcher_1_Dispose_" data-uid="MonoGame.Extended.Graphics.Batcher`1.Dispose*"></a>
+  <h4 id="MonoGame_Extended_Graphics_Batcher_1_Dispose" data-uid="MonoGame.Extended.Graphics.Batcher`1.Dispose">Dispose()</h4>
+  <div class="markdown level1 summary"><p>Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Dispose()</code></pre>
+  </div>
+  
+  
+  <a id="MonoGame_Extended_Graphics_Batcher_1_Dispose_" data-uid="MonoGame.Extended.Graphics.Batcher`1.Dispose*"></a>
+  <h4 id="MonoGame_Extended_Graphics_Batcher_1_Dispose_System_Boolean_" data-uid="MonoGame.Extended.Graphics.Batcher`1.Dispose(System.Boolean)">Dispose(Boolean)</h4>
+  <div class="markdown level1 summary"><p>Releases unmanaged and - optionally - managed resources.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void Dispose(bool diposing)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">diposing</span></td>
+        <td><p><code>true</code> to release both managed and unmanaged resources; <code>false</code> to release only
+unmanaged resources.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MonoGame_Extended_Graphics_Batcher_1_End_" data-uid="MonoGame.Extended.Graphics.Batcher`1.End*"></a>
+  <h4 id="MonoGame_Extended_Graphics_Batcher_1_End" data-uid="MonoGame.Extended.Graphics.Batcher`1.End">End()</h4>
+  <div class="markdown level1 summary"><p>Flushes the batched geometry to the <a class="xref" href="MonoGame.Extended.Graphics.Batcher-1.html#MonoGame_Extended_Graphics_Batcher_1_GraphicsDevice">GraphicsDevice</a> and restores it's state to how it was before
+<a class="xref" href="MonoGame.Extended.Graphics.Batcher-1.html#MonoGame_Extended_Graphics_Batcher_1_Begin_Microsoft_Xna_Framework_Matrix__Microsoft_Xna_Framework_Matrix__Microsoft_Xna_Framework_Graphics_BlendState_Microsoft_Xna_Framework_Graphics_SamplerState_Microsoft_Xna_Framework_Graphics_DepthStencilState_Microsoft_Xna_Framework_Graphics_RasterizerState_Microsoft_Xna_Framework_Graphics_Effect_">Begin(ref Matrix, ref Matrix, BlendState, SamplerState, DepthStencilState, RasterizerState, Effect)</a> was called.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void End()</code></pre>
+  </div>
+  <h5 id="MonoGame_Extended_Graphics_Batcher_1_End_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>
+    This method must be called after all enqueuing of draw calls.
+</p>
+</div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.InvalidOperationException</span></td>
+        <td><p><a class="xref" href="MonoGame.Extended.Graphics.Batcher-1.html#MonoGame_Extended_Graphics_Batcher_1_End">End()</a> cannot be invoked until <a class="xref" href="MonoGame.Extended.Graphics.Batcher-1.html#MonoGame_Extended_Graphics_Batcher_1_Begin_Microsoft_Xna_Framework_Matrix__Microsoft_Xna_Framework_Matrix__Microsoft_Xna_Framework_Graphics_BlendState_Microsoft_Xna_Framework_Graphics_SamplerState_Microsoft_Xna_Framework_Graphics_DepthStencilState_Microsoft_Xna_Framework_Graphics_RasterizerState_Microsoft_Xna_Framework_Graphics_Effect_">Begin(ref Matrix, ref Matrix, BlendState, SamplerState, DepthStencilState, RasterizerState, Effect)</a> has been invoked.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MonoGame_Extended_Graphics_Batcher_1_Enqueue_" data-uid="MonoGame.Extended.Graphics.Batcher`1.Enqueue*"></a>
+  <h4 id="MonoGame_Extended_Graphics_Batcher_1_Enqueue__0__" data-uid="MonoGame.Extended.Graphics.Batcher`1.Enqueue(`0@)">Enqueue(ref TDrawCallInfo)</h4>
+  <div class="markdown level1 summary"><p>Enqueues draw call information.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void Enqueue(ref TDrawCallInfo drawCall)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TDrawCallInfo</span></td>
+        <td><span class="parametername">drawCall</span></td>
+        <td><p>The draw call information.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="MonoGame_Extended_Graphics_Batcher_1_Enqueue__0___remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>
+    If possible, the <code data-dev-comment-type="paramref" class="paramref">drawCall</code> is merged with the last enqueued draw call information instead of
+    being
+    enqueued.
+</p>
+<p>
+    If the enqueue buffer is full, a <a class="xref" href="MonoGame.Extended.Graphics.Batcher-1.html#MonoGame_Extended_Graphics_Batcher_1_Flush">Flush()</a> is invoked and then afterwards
+<code data-dev-comment-type="paramref" class="paramref">drawCall</code> is enqueued.
+</p>
+</div>
+  
+  
+  <a id="MonoGame_Extended_Graphics_Batcher_1_EnsureHasBegun_" data-uid="MonoGame.Extended.Graphics.Batcher`1.EnsureHasBegun*"></a>
+  <h4 id="MonoGame_Extended_Graphics_Batcher_1_EnsureHasBegun_System_String_" data-uid="MonoGame.Extended.Graphics.Batcher`1.EnsureHasBegun(System.String)">EnsureHasBegun(String)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void EnsureHasBegun(string callerMemberName = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">callerMemberName</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MonoGame_Extended_Graphics_Batcher_1_EnsureHasNotBegun_" data-uid="MonoGame.Extended.Graphics.Batcher`1.EnsureHasNotBegun*"></a>
+  <h4 id="MonoGame_Extended_Graphics_Batcher_1_EnsureHasNotBegun_System_String_" data-uid="MonoGame.Extended.Graphics.Batcher`1.EnsureHasNotBegun(System.String)">EnsureHasNotBegun(String)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void EnsureHasNotBegun(string callerMemberName = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">callerMemberName</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MonoGame_Extended_Graphics_Batcher_1_Flush_" data-uid="MonoGame.Extended.Graphics.Batcher`1.Flush*"></a>
+  <h4 id="MonoGame_Extended_Graphics_Batcher_1_Flush" data-uid="MonoGame.Extended.Graphics.Batcher`1.Flush">Flush()</h4>
+  <div class="markdown level1 summary"><p>Sorts then submits the (sorted) enqueued draw calls to the <a class="xref" href="MonoGame.Extended.Graphics.Batcher-1.html#MonoGame_Extended_Graphics_Batcher_1_GraphicsDevice">GraphicsDevice</a> for
+rendering without ending the <a class="xref" href="MonoGame.Extended.Graphics.Batcher-1.html#MonoGame_Extended_Graphics_Batcher_1_Begin_Microsoft_Xna_Framework_Matrix__Microsoft_Xna_Framework_Matrix__Microsoft_Xna_Framework_Graphics_BlendState_Microsoft_Xna_Framework_Graphics_SamplerState_Microsoft_Xna_Framework_Graphics_DepthStencilState_Microsoft_Xna_Framework_Graphics_RasterizerState_Microsoft_Xna_Framework_Graphics_Effect_">Begin(ref Matrix, ref Matrix, BlendState, SamplerState, DepthStencilState, RasterizerState, Effect)</a> and <a class="xref" href="MonoGame.Extended.Graphics.Batcher-1.html#MonoGame_Extended_Graphics_Batcher_1_End">End()</a> pair.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void Flush()</code></pre>
+  </div>
+  
+  
+  <a id="MonoGame_Extended_Graphics_Batcher_1_InvokeDrawCall_" data-uid="MonoGame.Extended.Graphics.Batcher`1.InvokeDrawCall*"></a>
+  <h4 id="MonoGame_Extended_Graphics_Batcher_1_InvokeDrawCall__0__" data-uid="MonoGame.Extended.Graphics.Batcher`1.InvokeDrawCall(`0@)">InvokeDrawCall(ref TDrawCallInfo)</h4>
+  <div class="markdown level1 summary"><p>Submits a draw operation to the <a class="xref" href="MonoGame.Extended.Graphics.Batcher-1.html#MonoGame_Extended_Graphics_Batcher_1_GraphicsDevice">GraphicsDevice</a> using the specified <see cref="!:TDrawCallInfo"></see>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected abstract void InvokeDrawCall(ref TDrawCallInfo drawCall)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TDrawCallInfo</span></td>
+        <td><span class="parametername">drawCall</span></td>
+        <td><p>The draw call information.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MonoGame_Extended_Graphics_Batcher_1_SortDrawCallsAndBindBuffers_" data-uid="MonoGame.Extended.Graphics.Batcher`1.SortDrawCallsAndBindBuffers*"></a>
+  <h4 id="MonoGame_Extended_Graphics_Batcher_1_SortDrawCallsAndBindBuffers" data-uid="MonoGame.Extended.Graphics.Batcher`1.SortDrawCallsAndBindBuffers">SortDrawCallsAndBindBuffers()</h4>
+  <div class="markdown level1 summary"><p>Sorts the enqueued draw calls and binds any used <span class="xref">Microsoft.Xna.Framework.Graphics.VertexBuffer</span> or <span class="xref">Microsoft.Xna.Framework.Graphics.IndexBuffer</span> to the <a class="xref" href="MonoGame.Extended.Graphics.Batcher-1.html#MonoGame_Extended_Graphics_Batcher_1_GraphicsDevice">GraphicsDevice</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected abstract void SortDrawCallsAndBindBuffers()</code></pre>
+  </div>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <span class="xref">System.IDisposable</span>
+  </div>
+  <h3 id="seealso">See Also</h3>
+  <div class="seealso">
+      <div><span class="xref">System.IDisposable</span></div>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

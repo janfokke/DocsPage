@@ -1,0 +1,859 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class Batcher2D
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class Batcher2D
+   ">
+    <meta name="generator" content="docfx 2.56.2.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="MonoGame.Extended.Graphics.Batcher2D">
+  
+  
+  <h1 id="MonoGame_Extended_Graphics_Batcher2D" data-uid="MonoGame.Extended.Graphics.Batcher2D" class="text-break">Class Batcher2D
+  </h1>
+  <div class="markdown level0 summary"><p>A general purpose <a class="xref" href="MonoGame.Extended.Graphics.Batcher-1.html">Batcher&lt;TDrawCallInfo&gt;</a> for two-dimensional geometry that change
+frequently between frames such as sprites and shapes.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><a class="xref" href="MonoGame.Extended.Graphics.Batcher-1.html">Batcher</a>&lt;<span class="xref">MonoGame.Extended.Graphics.Batcher2D.DrawCallInfo</span>&gt;</div>
+    <div class="level2"><span class="xref">Batcher2D</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><span class="xref">System.IDisposable</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="MonoGame.Extended.Graphics.Batcher-1.html#MonoGame_Extended_Graphics_Batcher_1_DrawCalls">Batcher&lt;Batcher2D.DrawCallInfo&gt;.DrawCalls</a>
+    </div>
+    <div>
+      <a class="xref" href="MonoGame.Extended.Graphics.Batcher-1.html#MonoGame_Extended_Graphics_Batcher_1_EnqueuedDrawCallCount">Batcher&lt;Batcher2D.DrawCallInfo&gt;.EnqueuedDrawCallCount</a>
+    </div>
+    <div>
+      <a class="xref" href="MonoGame.Extended.Graphics.Batcher-1.html#MonoGame_Extended_Graphics_Batcher_1_GraphicsDevice">Batcher&lt;Batcher2D.DrawCallInfo&gt;.GraphicsDevice</a>
+    </div>
+    <div>
+      <a class="xref" href="MonoGame.Extended.Graphics.Batcher-1.html#MonoGame_Extended_Graphics_Batcher_1_HasBegun">Batcher&lt;Batcher2D.DrawCallInfo&gt;.HasBegun</a>
+    </div>
+    <div>
+      <a class="xref" href="MonoGame.Extended.Graphics.Batcher-1.html#MonoGame_Extended_Graphics_Batcher_1_Dispose">Batcher&lt;Batcher2D.DrawCallInfo&gt;.Dispose()</a>
+    </div>
+    <div>
+      <a class="xref" href="MonoGame.Extended.Graphics.Batcher-1.html#MonoGame_Extended_Graphics_Batcher_1_Dispose_System_Boolean_">Batcher&lt;Batcher2D.DrawCallInfo&gt;.Dispose(Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="MonoGame.Extended.Graphics.Batcher-1.html#MonoGame_Extended_Graphics_Batcher_1_EnsureHasBegun_System_String_">Batcher&lt;Batcher2D.DrawCallInfo&gt;.EnsureHasBegun(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="MonoGame.Extended.Graphics.Batcher-1.html#MonoGame_Extended_Graphics_Batcher_1_EnsureHasNotBegun_System_String_">Batcher&lt;Batcher2D.DrawCallInfo&gt;.EnsureHasNotBegun(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="MonoGame.Extended.Graphics.Batcher-1.html#MonoGame_Extended_Graphics_Batcher_1_Begin_System_Nullable_Microsoft_Xna_Framework_Matrix__System_Nullable_Microsoft_Xna_Framework_Matrix__Microsoft_Xna_Framework_Graphics_BlendState_Microsoft_Xna_Framework_Graphics_SamplerState_Microsoft_Xna_Framework_Graphics_DepthStencilState_Microsoft_Xna_Framework_Graphics_RasterizerState_Microsoft_Xna_Framework_Graphics_Effect_">Batcher&lt;Batcher2D.DrawCallInfo&gt;.Begin(Nullable&lt;Matrix&gt;, Nullable&lt;Matrix&gt;, BlendState, SamplerState, DepthStencilState, RasterizerState, Effect)</a>
+    </div>
+    <div>
+      <a class="xref" href="MonoGame.Extended.Graphics.Batcher-1.html#MonoGame_Extended_Graphics_Batcher_1_Begin_Microsoft_Xna_Framework_Matrix__Microsoft_Xna_Framework_Matrix__Microsoft_Xna_Framework_Graphics_BlendState_Microsoft_Xna_Framework_Graphics_SamplerState_Microsoft_Xna_Framework_Graphics_DepthStencilState_Microsoft_Xna_Framework_Graphics_RasterizerState_Microsoft_Xna_Framework_Graphics_Effect_">Batcher&lt;Batcher2D.DrawCallInfo&gt;.Begin(Matrix, Matrix, BlendState, SamplerState, DepthStencilState, RasterizerState, Effect)</a>
+    </div>
+    <div>
+      <a class="xref" href="MonoGame.Extended.Graphics.Batcher-1.html#MonoGame_Extended_Graphics_Batcher_1_End">Batcher&lt;Batcher2D.DrawCallInfo&gt;.End()</a>
+    </div>
+    <div>
+      <a class="xref" href="MonoGame.Extended.Graphics.Batcher-1.html#MonoGame_Extended_Graphics_Batcher_1_Flush">Batcher&lt;Batcher2D.DrawCallInfo&gt;.Flush()</a>
+    </div>
+    <div>
+      <a class="xref" href="MonoGame.Extended.Graphics.Batcher-1.html#MonoGame_Extended_Graphics_Batcher_1_Enqueue__0__">Batcher&lt;Batcher2D.DrawCallInfo&gt;.Enqueue(Batcher2D.DrawCallInfo)</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="MonoGame.Extended.Graphics.html">MonoGame.Extended.Graphics</a></h6>
+  <h6><strong>Assembly</strong>: MonoGame.Extended.Graphics.dll</h6>
+  <h5 id="MonoGame_Extended_Graphics_Batcher2D_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed class Batcher2D : Batcher&lt;Batcher2D.DrawCallInfo&gt;, IDisposable</code></pre>
+  </div>
+  <h5 id="MonoGame_Extended_Graphics_Batcher2D_remarks"><strong>Remarks</strong></h5>
+  <div class="markdown level0 remarks"><p>For drawing user interfaces, consider using <see cref="!:UIBatcher(ref Matrix, ref Matrix, BlendState, SamplerState, DepthStencilState, RasterizerState, Effect)"></see> instead because it supports scissor rectangles.</p>
+</div>
+  <h3 id="constructors">Constructors
+  </h3>
+  
+  
+  <a id="MonoGame_Extended_Graphics_Batcher2D__ctor_" data-uid="MonoGame.Extended.Graphics.Batcher2D.#ctor*"></a>
+  <h4 id="MonoGame_Extended_Graphics_Batcher2D__ctor_Microsoft_Xna_Framework_Graphics_GraphicsDevice_System_UInt16_System_UInt16_System_Int32_" data-uid="MonoGame.Extended.Graphics.Batcher2D.#ctor(Microsoft.Xna.Framework.Graphics.GraphicsDevice,System.UInt16,System.UInt16,System.Int32)">Batcher2D(GraphicsDevice, UInt16, UInt16, Int32)</h4>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="MonoGame.Extended.Graphics.Batcher2D.html">Batcher2D</a> class.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Batcher2D(GraphicsDevice graphicsDevice, ushort maximumVerticesCount = 8192, ushort maximumIndicesCount = 12288, int maximumDrawCallsCount = 2048)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Microsoft.Xna.Framework.Graphics.GraphicsDevice</span></td>
+        <td><span class="parametername">graphicsDevice</span></td>
+        <td><p>The graphics device.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.UInt16</span></td>
+        <td><span class="parametername">maximumVerticesCount</span></td>
+        <td><p>The maximum number of vertices that can be enqueued before a
+<a class="xref" href="MonoGame.Extended.Graphics.Batcher-1.html#MonoGame_Extended_Graphics_Batcher_1_Flush">Flush()</a> is required. The default value is <pre><code>8192</code></pre>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.UInt16</span></td>
+        <td><span class="parametername">maximumIndicesCount</span></td>
+        <td><p>The maximum number of indices that can be enqueued before a
+<a class="xref" href="MonoGame.Extended.Graphics.Batcher-1.html#MonoGame_Extended_Graphics_Batcher_1_Flush">Flush()</a> is required. The default value is <pre><code>12288</code></pre>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">maximumDrawCallsCount</span></td>
+        <td><p>The maximum number of <span class="xref">MonoGame.Extended.Graphics.Batcher2D.DrawCallInfo</span> structs that can be enqueued before a
+<a class="xref" href="MonoGame.Extended.Graphics.Batcher-1.html#MonoGame_Extended_Graphics_Batcher_1_Flush">Flush()</a> is required. The default value is <pre><code>2048</code></pre>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.ArgumentNullException</span></td>
+        <td><p><code data-dev-comment-type="paramref" class="paramref">graphicsDevice</code>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.ArgumentOutOfRangeException</span></td>
+        <td><p><code data-dev-comment-type="paramref" class="paramref">maximumDrawCallsCount</code> is less than or equal</p>
+<pre><code>0</code></pre>, or <code data-dev-comment-type="paramref" class="paramref">maximumVerticesCount</code> is less than or equal to <pre><code>0</code></pre>, or,
+<p><code data-dev-comment-type="paramref" class="paramref">maximumVerticesCount</code> is less than or equal to <pre><code>0</code></pre>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="MonoGame_Extended_Graphics_Batcher2D_DrawSprite_" data-uid="MonoGame.Extended.Graphics.Batcher2D.DrawSprite*"></a>
+  <h4 id="MonoGame_Extended_Graphics_Batcher2D_DrawSprite_Microsoft_Xna_Framework_Graphics_Texture2D_MonoGame_Extended_Matrix2__Microsoft_Xna_Framework_Rectangle__System_Nullable_Microsoft_Xna_Framework_Color__MonoGame_Extended_Graphics_FlipFlags_System_Single_" data-uid="MonoGame.Extended.Graphics.Batcher2D.DrawSprite(Microsoft.Xna.Framework.Graphics.Texture2D,MonoGame.Extended.Matrix2@,Microsoft.Xna.Framework.Rectangle@,System.Nullable{Microsoft.Xna.Framework.Color},MonoGame.Extended.Graphics.FlipFlags,System.Single)">DrawSprite(Texture2D, ref Matrix2, ref Rectangle, Nullable&lt;Color&gt;, FlipFlags, Single)</h4>
+  <div class="markdown level1 summary"><p>Draws a sprite using a specified <span class="xref">Microsoft.Xna.Framework.Graphics.Texture</span>, transform <a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a>, source
+<span class="xref">Microsoft.Xna.Framework.Rectangle</span>, and an optional
+<span class="xref">Microsoft.Xna.Framework.Color</span>, origin <span class="xref">Microsoft.Xna.Framework.Vector2</span>, <a class="xref" href="MonoGame.Extended.Graphics.FlipFlags.html">FlipFlags</a>, and depth <span class="xref">System.Single</span>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void DrawSprite(Texture2D texture, ref Matrix2 transformMatrix, ref Rectangle sourceRectangle, Color? color = default(Color? ), FlipFlags flags = FlipFlags.None, float depth = 0F)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Microsoft.Xna.Framework.Graphics.Texture2D</span></td>
+        <td><span class="parametername">texture</span></td>
+        <td><p>The <span class="xref">Microsoft.Xna.Framework.Graphics.Texture</span>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a></td>
+        <td><span class="parametername">transformMatrix</span></td>
+        <td><p>The transform <a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Microsoft.Xna.Framework.Rectangle</span></td>
+        <td><span class="parametername">sourceRectangle</span></td>
+        <td><p>The texture region <span class="xref">Microsoft.Xna.Framework.Rectangle</span> of the <code data-dev-comment-type="paramref" class="paramref">texture</code>. Use</p>
+<pre><code>null</code></pre> to use the entire <span class="xref">Microsoft.Xna.Framework.Graphics.Texture2D</span>.
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Microsoft.Xna.Framework.Color</span>&gt;</td>
+        <td><span class="parametername">color</span></td>
+        <td><p>The <span class="xref">Microsoft.Xna.Framework.Color</span>. Use <pre><code>null</code></pre> to use the default <span class="xref">Microsoft.Xna.Framework.Color.White</span>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MonoGame.Extended.Graphics.FlipFlags.html">FlipFlags</a></td>
+        <td><span class="parametername">flags</span></td>
+        <td><p>The <a class="xref" href="MonoGame.Extended.Graphics.FlipFlags.html">FlipFlags</a>. The default value is <a class="xref" href="MonoGame.Extended.Graphics.FlipFlags.html#MonoGame_Extended_Graphics_FlipFlags_None">None</a>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">depth</span></td>
+        <td><p>The depth <span class="xref">System.Single</span>. The default value is <pre><code>0</code></pre>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.InvalidOperationException</span></td>
+        <td><p>The <a class="xref" href="MonoGame.Extended.Graphics.Batcher-1.html#MonoGame_Extended_Graphics_Batcher_1_Begin_Microsoft_Xna_Framework_Matrix__Microsoft_Xna_Framework_Matrix__Microsoft_Xna_Framework_Graphics_BlendState_Microsoft_Xna_Framework_Graphics_SamplerState_Microsoft_Xna_Framework_Graphics_DepthStencilState_Microsoft_Xna_Framework_Graphics_RasterizerState_Microsoft_Xna_Framework_Graphics_Effect_">Begin(ref Matrix, ref Matrix, BlendState, SamplerState, DepthStencilState, RasterizerState, Effect)</a> method has not been called.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.ArgumentNullException</span></td>
+        <td><p><code data-dev-comment-type="paramref" class="paramref">texture</code> is null.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MonoGame_Extended_Graphics_Batcher2D_DrawString_" data-uid="MonoGame.Extended.Graphics.Batcher2D.DrawString*"></a>
+  <h4 id="MonoGame_Extended_Graphics_Batcher2D_DrawString_MonoGame_Extended_BitmapFonts_BitmapFont_System_String_Microsoft_Xna_Framework_Vector2_System_Nullable_Microsoft_Xna_Framework_Color__System_Single_System_Nullable_Microsoft_Xna_Framework_Vector2__System_Nullable_Microsoft_Xna_Framework_Vector2__MonoGame_Extended_Graphics_FlipFlags_System_Single_" data-uid="MonoGame.Extended.Graphics.Batcher2D.DrawString(MonoGame.Extended.BitmapFonts.BitmapFont,System.String,Microsoft.Xna.Framework.Vector2,System.Nullable{Microsoft.Xna.Framework.Color},System.Single,System.Nullable{Microsoft.Xna.Framework.Vector2},System.Nullable{Microsoft.Xna.Framework.Vector2},MonoGame.Extended.Graphics.FlipFlags,System.Single)">DrawString(BitmapFont, String, Vector2, Nullable&lt;Color&gt;, Single, Nullable&lt;Vector2&gt;, Nullable&lt;Vector2&gt;, FlipFlags, Single)</h4>
+  <div class="markdown level1 summary"><p>Draws unicode (UTF-16) characters as sprites using the specified <a class="xref" href="MonoGame.Extended.BitmapFonts.BitmapFont.html">BitmapFont</a>, text
+<span class="xref">System.String</span>, position <span class="xref">Microsoft.Xna.Framework.Vector2</span> and optional <span class="xref">Microsoft.Xna.Framework.Color</span>, rotation
+<span class="xref">System.Single</span>, origin <span class="xref">Microsoft.Xna.Framework.Vector2</span>, scale <span class="xref">Microsoft.Xna.Framework.Vector2</span> <a class="xref" href="MonoGame.Extended.Graphics.FlipFlags.html">FlipFlags</a>, and
+depth <span class="xref">System.Single</span>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void DrawString(BitmapFont bitmapFont, string text, Vector2 position, Color? color = default(Color? ), float rotation = 0F, Vector2? origin = default(Vector2? ), Vector2? scale = default(Vector2? ), FlipFlags flags = FlipFlags.None, float depth = 0F)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MonoGame.Extended.BitmapFonts.BitmapFont.html">BitmapFont</a></td>
+        <td><span class="parametername">bitmapFont</span></td>
+        <td><p>The <a class="xref" href="MonoGame.Extended.BitmapFonts.BitmapFont.html">BitmapFont</a>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">text</span></td>
+        <td><p>The text <span class="xref">System.String</span>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Microsoft.Xna.Framework.Vector2</span></td>
+        <td><span class="parametername">position</span></td>
+        <td><p>The position <span class="xref">Microsoft.Xna.Framework.Vector2</span>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Microsoft.Xna.Framework.Color</span>&gt;</td>
+        <td><span class="parametername">color</span></td>
+        <td><p>The <span class="xref">Microsoft.Xna.Framework.Color</span>. Use <pre><code>null</code></pre> to use the default
+<span class="xref">Microsoft.Xna.Framework.Color.White</span>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">rotation</span></td>
+        <td><p>The angle <span class="xref">System.Single</span> (in radians) to rotate each sprite about its <code data-dev-comment-type="paramref" class="paramref">origin</code>. The default
+value is <pre><code>0f</code></pre>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Microsoft.Xna.Framework.Vector2</span>&gt;</td>
+        <td><span class="parametername">origin</span></td>
+        <td><p>The origin <span class="xref">Microsoft.Xna.Framework.Vector2</span>. Use <pre><code>null</code></pre> to use the default
+<span class="xref">Microsoft.Xna.Framework.Vector2.Zero</span>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Microsoft.Xna.Framework.Vector2</span>&gt;</td>
+        <td><span class="parametername">scale</span></td>
+        <td><p>The scale <span class="xref">Microsoft.Xna.Framework.Vector2</span>. Use <pre><code>null</code></pre> to use the default
+<span class="xref">Microsoft.Xna.Framework.Vector2.One</span>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MonoGame.Extended.Graphics.FlipFlags.html">FlipFlags</a></td>
+        <td><span class="parametername">flags</span></td>
+        <td><p>The <a class="xref" href="MonoGame.Extended.Graphics.FlipFlags.html">FlipFlags</a>. The default value is <a class="xref" href="MonoGame.Extended.Graphics.FlipFlags.html#MonoGame_Extended_Graphics_FlipFlags_None">None</a>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">depth</span></td>
+        <td><p>The depth <span class="xref">System.Single</span>. The default value is <pre><code>0f</code></pre></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.InvalidOperationException</span></td>
+        <td><p>The <a class="xref" href="MonoGame.Extended.Graphics.Batcher-1.html#MonoGame_Extended_Graphics_Batcher_1_Begin_Microsoft_Xna_Framework_Matrix__Microsoft_Xna_Framework_Matrix__Microsoft_Xna_Framework_Graphics_BlendState_Microsoft_Xna_Framework_Graphics_SamplerState_Microsoft_Xna_Framework_Graphics_DepthStencilState_Microsoft_Xna_Framework_Graphics_RasterizerState_Microsoft_Xna_Framework_Graphics_Effect_">Begin(ref Matrix, ref Matrix, BlendState, SamplerState, DepthStencilState, RasterizerState, Effect)</a> method has not been called.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.ArgumentNullException</span></td>
+        <td><p><code data-dev-comment-type="paramref" class="paramref">bitmapFont</code> is null or <code data-dev-comment-type="paramref" class="paramref">text</code> is null.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MonoGame_Extended_Graphics_Batcher2D_DrawString_" data-uid="MonoGame.Extended.Graphics.Batcher2D.DrawString*"></a>
+  <h4 id="MonoGame_Extended_Graphics_Batcher2D_DrawString_MonoGame_Extended_BitmapFonts_BitmapFont_System_String_MonoGame_Extended_Matrix2__System_Nullable_Microsoft_Xna_Framework_Color__MonoGame_Extended_Graphics_FlipFlags_System_Single_" data-uid="MonoGame.Extended.Graphics.Batcher2D.DrawString(MonoGame.Extended.BitmapFonts.BitmapFont,System.String,MonoGame.Extended.Matrix2@,System.Nullable{Microsoft.Xna.Framework.Color},MonoGame.Extended.Graphics.FlipFlags,System.Single)">DrawString(BitmapFont, String, ref Matrix2, Nullable&lt;Color&gt;, FlipFlags, Single)</h4>
+  <div class="markdown level1 summary"><p>Draws unicode (UTF-16) characters as sprites using the specified <a class="xref" href="MonoGame.Extended.BitmapFonts.BitmapFont.html">BitmapFont</a>, text
+<span class="xref">System.String</span>, transform <a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a> and optional <span class="xref">Microsoft.Xna.Framework.Color</span>, origin
+<span class="xref">Microsoft.Xna.Framework.Vector2</span>, <a class="xref" href="MonoGame.Extended.Graphics.FlipFlags.html">FlipFlags</a>, and depth <span class="xref">System.Single</span>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void DrawString(BitmapFont bitmapFont, string text, ref Matrix2 transformMatrix, Color? color = default(Color? ), FlipFlags flags = FlipFlags.None, float depth = 0F)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MonoGame.Extended.BitmapFonts.BitmapFont.html">BitmapFont</a></td>
+        <td><span class="parametername">bitmapFont</span></td>
+        <td><p>The <a class="xref" href="MonoGame.Extended.BitmapFonts.BitmapFont.html">BitmapFont</a>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">text</span></td>
+        <td><p>The text <span class="xref">System.String</span>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a></td>
+        <td><span class="parametername">transformMatrix</span></td>
+        <td><p>The transform <a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Microsoft.Xna.Framework.Color</span>&gt;</td>
+        <td><span class="parametername">color</span></td>
+        <td><p>The <span class="xref">Microsoft.Xna.Framework.Color</span>. Use <pre><code>null</code></pre> to use the default
+<span class="xref">Microsoft.Xna.Framework.Color.White</span>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MonoGame.Extended.Graphics.FlipFlags.html">FlipFlags</a></td>
+        <td><span class="parametername">flags</span></td>
+        <td><p>The <a class="xref" href="MonoGame.Extended.Graphics.FlipFlags.html">FlipFlags</a>. The default value is <a class="xref" href="MonoGame.Extended.Graphics.FlipFlags.html#MonoGame_Extended_Graphics_FlipFlags_None">None</a>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">depth</span></td>
+        <td><p>The depth <span class="xref">System.Single</span>. The default value is <pre><code>0f</code></pre></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.InvalidOperationException</span></td>
+        <td><p>The <a class="xref" href="MonoGame.Extended.Graphics.Batcher-1.html#MonoGame_Extended_Graphics_Batcher_1_Begin_Microsoft_Xna_Framework_Matrix__Microsoft_Xna_Framework_Matrix__Microsoft_Xna_Framework_Graphics_BlendState_Microsoft_Xna_Framework_Graphics_SamplerState_Microsoft_Xna_Framework_Graphics_DepthStencilState_Microsoft_Xna_Framework_Graphics_RasterizerState_Microsoft_Xna_Framework_Graphics_Effect_">Begin(ref Matrix, ref Matrix, BlendState, SamplerState, DepthStencilState, RasterizerState, Effect)</a> method has not been called.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.ArgumentNullException</span></td>
+        <td><p><code data-dev-comment-type="paramref" class="paramref">bitmapFont</code> is null or <code data-dev-comment-type="paramref" class="paramref">text</code> is null.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MonoGame_Extended_Graphics_Batcher2D_DrawString_" data-uid="MonoGame.Extended.Graphics.Batcher2D.DrawString*"></a>
+  <h4 id="MonoGame_Extended_Graphics_Batcher2D_DrawString_MonoGame_Extended_BitmapFonts_BitmapFont_System_Text_StringBuilder_Microsoft_Xna_Framework_Vector2_System_Nullable_Microsoft_Xna_Framework_Color__System_Single_System_Nullable_Microsoft_Xna_Framework_Vector2__System_Nullable_Microsoft_Xna_Framework_Vector2__MonoGame_Extended_Graphics_FlipFlags_System_Single_" data-uid="MonoGame.Extended.Graphics.Batcher2D.DrawString(MonoGame.Extended.BitmapFonts.BitmapFont,System.Text.StringBuilder,Microsoft.Xna.Framework.Vector2,System.Nullable{Microsoft.Xna.Framework.Color},System.Single,System.Nullable{Microsoft.Xna.Framework.Vector2},System.Nullable{Microsoft.Xna.Framework.Vector2},MonoGame.Extended.Graphics.FlipFlags,System.Single)">DrawString(BitmapFont, StringBuilder, Vector2, Nullable&lt;Color&gt;, Single, Nullable&lt;Vector2&gt;, Nullable&lt;Vector2&gt;, FlipFlags, Single)</h4>
+  <div class="markdown level1 summary"><p>Draws unicode (UTF-16) characters as sprites using the specified <a class="xref" href="MonoGame.Extended.BitmapFonts.BitmapFont.html">BitmapFont</a>, text
+<span class="xref">System.Text.StringBuilder</span>, position <span class="xref">Microsoft.Xna.Framework.Vector2</span> and optional <span class="xref">Microsoft.Xna.Framework.Color</span>, rotation
+<span class="xref">System.Single</span>, origin <span class="xref">Microsoft.Xna.Framework.Vector2</span>, scale <span class="xref">Microsoft.Xna.Framework.Vector2</span> <a class="xref" href="MonoGame.Extended.Graphics.FlipFlags.html">FlipFlags</a>, and
+depth <span class="xref">System.Single</span>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void DrawString(BitmapFont bitmapFont, StringBuilder text, Vector2 position, Color? color = default(Color? ), float rotation = 0F, Vector2? origin = default(Vector2? ), Vector2? scale = default(Vector2? ), FlipFlags flags = FlipFlags.None, float depth = 0F)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MonoGame.Extended.BitmapFonts.BitmapFont.html">BitmapFont</a></td>
+        <td><span class="parametername">bitmapFont</span></td>
+        <td><p>The <a class="xref" href="MonoGame.Extended.BitmapFonts.BitmapFont.html">BitmapFont</a>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Text.StringBuilder</span></td>
+        <td><span class="parametername">text</span></td>
+        <td><p>The text <span class="xref">System.String</span>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Microsoft.Xna.Framework.Vector2</span></td>
+        <td><span class="parametername">position</span></td>
+        <td><p>The position <span class="xref">Microsoft.Xna.Framework.Vector2</span>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Microsoft.Xna.Framework.Color</span>&gt;</td>
+        <td><span class="parametername">color</span></td>
+        <td><p>The <span class="xref">Microsoft.Xna.Framework.Color</span>. Use <pre><code>null</code></pre> to use the default
+<span class="xref">Microsoft.Xna.Framework.Color.White</span>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">rotation</span></td>
+        <td><p>The angle <span class="xref">System.Single</span> (in radians) to rotate each sprite about its <code data-dev-comment-type="paramref" class="paramref">origin</code>. The default
+value is <pre><code>0f</code></pre>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Microsoft.Xna.Framework.Vector2</span>&gt;</td>
+        <td><span class="parametername">origin</span></td>
+        <td><p>The origin <span class="xref">Microsoft.Xna.Framework.Vector2</span>. Use <pre><code>null</code></pre> to use the default
+<span class="xref">Microsoft.Xna.Framework.Vector2.Zero</span>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Microsoft.Xna.Framework.Vector2</span>&gt;</td>
+        <td><span class="parametername">scale</span></td>
+        <td><p>The scale <span class="xref">Microsoft.Xna.Framework.Vector2</span>. Use <pre><code>null</code></pre> to use the default
+<span class="xref">Microsoft.Xna.Framework.Vector2.One</span>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MonoGame.Extended.Graphics.FlipFlags.html">FlipFlags</a></td>
+        <td><span class="parametername">flags</span></td>
+        <td><p>The <a class="xref" href="MonoGame.Extended.Graphics.FlipFlags.html">FlipFlags</a>. The default value is <a class="xref" href="MonoGame.Extended.Graphics.FlipFlags.html#MonoGame_Extended_Graphics_FlipFlags_None">None</a>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">depth</span></td>
+        <td><p>The depth <span class="xref">System.Single</span>. The default value is <pre><code>0f</code></pre></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.InvalidOperationException</span></td>
+        <td><p>The <a class="xref" href="MonoGame.Extended.Graphics.Batcher-1.html#MonoGame_Extended_Graphics_Batcher_1_Begin_Microsoft_Xna_Framework_Matrix__Microsoft_Xna_Framework_Matrix__Microsoft_Xna_Framework_Graphics_BlendState_Microsoft_Xna_Framework_Graphics_SamplerState_Microsoft_Xna_Framework_Graphics_DepthStencilState_Microsoft_Xna_Framework_Graphics_RasterizerState_Microsoft_Xna_Framework_Graphics_Effect_">Begin(ref Matrix, ref Matrix, BlendState, SamplerState, DepthStencilState, RasterizerState, Effect)</a> method has not been called.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.ArgumentNullException</span></td>
+        <td><p><code data-dev-comment-type="paramref" class="paramref">bitmapFont</code> is null or <code data-dev-comment-type="paramref" class="paramref">text</code> is null.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MonoGame_Extended_Graphics_Batcher2D_DrawString_" data-uid="MonoGame.Extended.Graphics.Batcher2D.DrawString*"></a>
+  <h4 id="MonoGame_Extended_Graphics_Batcher2D_DrawString_MonoGame_Extended_BitmapFonts_BitmapFont_System_Text_StringBuilder_MonoGame_Extended_Matrix2__System_Nullable_Microsoft_Xna_Framework_Color__MonoGame_Extended_Graphics_FlipFlags_System_Single_" data-uid="MonoGame.Extended.Graphics.Batcher2D.DrawString(MonoGame.Extended.BitmapFonts.BitmapFont,System.Text.StringBuilder,MonoGame.Extended.Matrix2@,System.Nullable{Microsoft.Xna.Framework.Color},MonoGame.Extended.Graphics.FlipFlags,System.Single)">DrawString(BitmapFont, StringBuilder, ref Matrix2, Nullable&lt;Color&gt;, FlipFlags, Single)</h4>
+  <div class="markdown level1 summary"><p>Draws unicode (UTF-16) characters as sprites using the specified <a class="xref" href="MonoGame.Extended.BitmapFonts.BitmapFont.html">BitmapFont</a>, text
+<span class="xref">System.Text.StringBuilder</span>, transform <a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a> and optional <span class="xref">Microsoft.Xna.Framework.Color</span>, origin
+<span class="xref">Microsoft.Xna.Framework.Vector2</span>, <a class="xref" href="MonoGame.Extended.Graphics.FlipFlags.html">FlipFlags</a>, and depth <span class="xref">System.Single</span>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void DrawString(BitmapFont bitmapFont, StringBuilder text, ref Matrix2 transformMatrix, Color? color = default(Color? ), FlipFlags flags = FlipFlags.None, float depth = 0F)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MonoGame.Extended.BitmapFonts.BitmapFont.html">BitmapFont</a></td>
+        <td><span class="parametername">bitmapFont</span></td>
+        <td><p>The <a class="xref" href="MonoGame.Extended.BitmapFonts.BitmapFont.html">BitmapFont</a>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Text.StringBuilder</span></td>
+        <td><span class="parametername">text</span></td>
+        <td><p>The text <span class="xref">System.Text.StringBuilder</span>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a></td>
+        <td><span class="parametername">transformMatrix</span></td>
+        <td><p>The transform <a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Microsoft.Xna.Framework.Color</span>&gt;</td>
+        <td><span class="parametername">color</span></td>
+        <td><p>The <span class="xref">Microsoft.Xna.Framework.Color</span>. Use <pre><code>null</code></pre> to use the default
+<span class="xref">Microsoft.Xna.Framework.Color.White</span>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MonoGame.Extended.Graphics.FlipFlags.html">FlipFlags</a></td>
+        <td><span class="parametername">flags</span></td>
+        <td><p>The <a class="xref" href="MonoGame.Extended.Graphics.FlipFlags.html">FlipFlags</a>. The default value is <a class="xref" href="MonoGame.Extended.Graphics.FlipFlags.html#MonoGame_Extended_Graphics_FlipFlags_None">None</a>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">depth</span></td>
+        <td><p>The depth <span class="xref">System.Single</span>. The default value is <pre><code>0f</code></pre>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.InvalidOperationException</span></td>
+        <td><p>The <a class="xref" href="MonoGame.Extended.Graphics.Batcher-1.html#MonoGame_Extended_Graphics_Batcher_1_Begin_Microsoft_Xna_Framework_Matrix__Microsoft_Xna_Framework_Matrix__Microsoft_Xna_Framework_Graphics_BlendState_Microsoft_Xna_Framework_Graphics_SamplerState_Microsoft_Xna_Framework_Graphics_DepthStencilState_Microsoft_Xna_Framework_Graphics_RasterizerState_Microsoft_Xna_Framework_Graphics_Effect_">Begin(ref Matrix, ref Matrix, BlendState, SamplerState, DepthStencilState, RasterizerState, Effect)</a> method has not been called.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.ArgumentNullException</span></td>
+        <td><p><code data-dev-comment-type="paramref" class="paramref">bitmapFont</code> is null or <code data-dev-comment-type="paramref" class="paramref">text</code> is null.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MonoGame_Extended_Graphics_Batcher2D_DrawTexture_" data-uid="MonoGame.Extended.Graphics.Batcher2D.DrawTexture*"></a>
+  <h4 id="MonoGame_Extended_Graphics_Batcher2D_DrawTexture_Microsoft_Xna_Framework_Graphics_Texture2D_MonoGame_Extended_Matrix2__System_Nullable_Microsoft_Xna_Framework_Color__MonoGame_Extended_Graphics_FlipFlags_System_Single_" data-uid="MonoGame.Extended.Graphics.Batcher2D.DrawTexture(Microsoft.Xna.Framework.Graphics.Texture2D,MonoGame.Extended.Matrix2@,System.Nullable{Microsoft.Xna.Framework.Color},MonoGame.Extended.Graphics.FlipFlags,System.Single)">DrawTexture(Texture2D, ref Matrix2, Nullable&lt;Color&gt;, FlipFlags, Single)</h4>
+  <div class="markdown level1 summary"><p>Draws a <span class="xref">Microsoft.Xna.Framework.Graphics.Texture</span> using the specified transform <a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a> and an optional
+<span class="xref">Microsoft.Xna.Framework.Color</span>, origin <span class="xref">Microsoft.Xna.Framework.Vector2</span>, <a class="xref" href="MonoGame.Extended.Graphics.FlipFlags.html">FlipFlags</a>, and depth <span class="xref">System.Single</span>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void DrawTexture(Texture2D texture, ref Matrix2 transformMatrix, Color? color = default(Color? ), FlipFlags flags = FlipFlags.None, float depth = 0F)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Microsoft.Xna.Framework.Graphics.Texture2D</span></td>
+        <td><span class="parametername">texture</span></td>
+        <td><p>The <span class="xref">Microsoft.Xna.Framework.Graphics.Texture</span>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a></td>
+        <td><span class="parametername">transformMatrix</span></td>
+        <td><p>The transform <a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Microsoft.Xna.Framework.Color</span>&gt;</td>
+        <td><span class="parametername">color</span></td>
+        <td><p>The <span class="xref">Microsoft.Xna.Framework.Color</span>. Use <pre><code>null</code></pre> to use the default <span class="xref">Microsoft.Xna.Framework.Color.White</span>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MonoGame.Extended.Graphics.FlipFlags.html">FlipFlags</a></td>
+        <td><span class="parametername">flags</span></td>
+        <td><p>The <a class="xref" href="MonoGame.Extended.Graphics.FlipFlags.html">FlipFlags</a>. The default value is <a class="xref" href="MonoGame.Extended.Graphics.FlipFlags.html#MonoGame_Extended_Graphics_FlipFlags_None">None</a>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">depth</span></td>
+        <td><p>The depth <span class="xref">System.Single</span>. The default value is <pre><code>0</code></pre>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.InvalidOperationException</span></td>
+        <td><p>The <a class="xref" href="MonoGame.Extended.Graphics.Batcher-1.html#MonoGame_Extended_Graphics_Batcher_1_Begin_Microsoft_Xna_Framework_Matrix__Microsoft_Xna_Framework_Matrix__Microsoft_Xna_Framework_Graphics_BlendState_Microsoft_Xna_Framework_Graphics_SamplerState_Microsoft_Xna_Framework_Graphics_DepthStencilState_Microsoft_Xna_Framework_Graphics_RasterizerState_Microsoft_Xna_Framework_Graphics_Effect_">Begin(ref Matrix, ref Matrix, BlendState, SamplerState, DepthStencilState, RasterizerState, Effect)</a> method has not been called.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.ArgumentNullException</span></td>
+        <td><p><code data-dev-comment-type="paramref" class="paramref">texture</code> is null.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MonoGame_Extended_Graphics_Batcher2D_InvokeDrawCall_" data-uid="MonoGame.Extended.Graphics.Batcher2D.InvokeDrawCall*"></a>
+  <h4 id="MonoGame_Extended_Graphics_Batcher2D_InvokeDrawCall_MonoGame_Extended_Graphics_Batcher2D_DrawCallInfo__" data-uid="MonoGame.Extended.Graphics.Batcher2D.InvokeDrawCall(MonoGame.Extended.Graphics.Batcher2D.DrawCallInfo@)">InvokeDrawCall(ref Batcher2D.DrawCallInfo)</h4>
+  <div class="markdown level1 summary"><p>Submits a draw operation to the <span class="xref">Microsoft.Xna.Framework.Graphics.GraphicsDevice</span> using the specified <span class="xref">MonoGame.Extended.Graphics.Batcher2D.DrawCallInfo</span>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void InvokeDrawCall(ref Batcher2D.DrawCallInfo drawCall)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">MonoGame.Extended.Graphics.Batcher2D.DrawCallInfo</span></td>
+        <td><span class="parametername">drawCall</span></td>
+        <td><p>The draw call information.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">MonoGame.Extended.Graphics.Batcher&lt;MonoGame.Extended.Graphics.Batcher2D.DrawCallInfo&gt;.InvokeDrawCall(MonoGame.Extended.Graphics.Batcher2D.DrawCallInfo)</span></div>
+  
+  
+  <a id="MonoGame_Extended_Graphics_Batcher2D_SortDrawCallsAndBindBuffers_" data-uid="MonoGame.Extended.Graphics.Batcher2D.SortDrawCallsAndBindBuffers*"></a>
+  <h4 id="MonoGame_Extended_Graphics_Batcher2D_SortDrawCallsAndBindBuffers" data-uid="MonoGame.Extended.Graphics.Batcher2D.SortDrawCallsAndBindBuffers">SortDrawCallsAndBindBuffers()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void SortDrawCallsAndBindBuffers()</code></pre>
+  </div>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">MonoGame.Extended.Graphics.Batcher&lt;MonoGame.Extended.Graphics.Batcher2D.DrawCallInfo&gt;.SortDrawCallsAndBindBuffers()</span></div>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <span class="xref">System.IDisposable</span>
+  </div>
+  <h3 id="seealso">See Also</h3>
+  <div class="seealso">
+      <div><span class="xref">System.IDisposable</span></div>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

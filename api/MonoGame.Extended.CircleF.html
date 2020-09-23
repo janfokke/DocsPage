@@ -1,0 +1,1730 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Struct CircleF
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Struct CircleF
+   ">
+    <meta name="generator" content="docfx 2.56.2.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="MonoGame.Extended.CircleF">
+  
+  
+  <h1 id="MonoGame_Extended_CircleF" data-uid="MonoGame.Extended.CircleF" class="text-break">Struct CircleF
+  </h1>
+  <div class="markdown level0 summary"><p>A two dimensional circle defined by a centre <a class="xref" href="MonoGame.Extended.Point2.html">Point2</a> and a radius <span class="xref">System.Single</span>.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><span class="xref">System.IEquatable</span>&lt;<a class="xref" href="MonoGame.Extended.CircleF.html">CircleF</a>&gt;</div>
+    <div><a class="xref" href="MonoGame.Extended.IEquatableByRef-1.html">IEquatableByRef</a>&lt;<a class="xref" href="MonoGame.Extended.CircleF.html">CircleF</a>&gt;</div>
+    <div><a class="xref" href="MonoGame.Extended.IShapeF.html">IShapeF</a></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="MonoGame.Extended.html">MonoGame.Extended</a></h6>
+  <h6><strong>Assembly</strong>: MonoGame.Extended.dll</h6>
+  <h5 id="MonoGame_Extended_CircleF_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[DataContract]
+public struct CircleF : IEquatable&lt;CircleF&gt;, IEquatableByRef&lt;CircleF&gt;, IShapeF</code></pre>
+  </div>
+  <h5 id="MonoGame_Extended_CircleF_remarks"><strong>Remarks</strong></h5>
+  <div class="markdown level0 remarks"><p>
+    An <a class="xref" href="MonoGame.Extended.CircleF.html">CircleF</a> is categorized by the set of all points in a plane that are at equal distance from
+    the
+    centre.
+</p>
+</div>
+  <h3 id="constructors">Constructors
+  </h3>
+  
+  
+  <a id="MonoGame_Extended_CircleF__ctor_" data-uid="MonoGame.Extended.CircleF.#ctor*"></a>
+  <h4 id="MonoGame_Extended_CircleF__ctor_MonoGame_Extended_Point2_System_Single_" data-uid="MonoGame.Extended.CircleF.#ctor(MonoGame.Extended.Point2,System.Single)">CircleF(Point2, Single)</h4>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="MonoGame.Extended.CircleF.html">CircleF</a> structure from the specified centre
+<a class="xref" href="MonoGame.Extended.Point2.html">Point2</a> and the radius <span class="xref">System.Single</span>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public CircleF(Point2 center, float radius)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MonoGame.Extended.Point2.html">Point2</a></td>
+        <td><span class="parametername">center</span></td>
+        <td><p>The centre point.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">radius</span></td>
+        <td><p>The radius.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="fields">Fields
+  </h3>
+  
+  
+  <h4 id="MonoGame_Extended_CircleF_Center" data-uid="MonoGame.Extended.CircleF.Center">Center</h4>
+  <div class="markdown level1 summary"><p>The centre position of this <a class="xref" href="MonoGame.Extended.CircleF.html">CircleF</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[DataMember]
+public Point2 Center</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MonoGame.Extended.Point2.html">Point2</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="MonoGame_Extended_CircleF_Radius" data-uid="MonoGame.Extended.CircleF.Radius">Radius</h4>
+  <div class="markdown level1 summary"><p>The distance from the <a class="xref" href="MonoGame.Extended.CircleF.html#MonoGame_Extended_CircleF_Center">Center</a> point to any point on the boundary of this <a class="xref" href="MonoGame.Extended.CircleF.html">CircleF</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[DataMember]
+public float Radius</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="MonoGame_Extended_CircleF_Circumference_" data-uid="MonoGame.Extended.CircleF.Circumference*"></a>
+  <h4 id="MonoGame_Extended_CircleF_Circumference" data-uid="MonoGame.Extended.CircleF.Circumference">Circumference</h4>
+  <div class="markdown level1 summary"><p>Gets the distance around the boundary of this <a class="xref" href="MonoGame.Extended.CircleF.html">CircleF</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float Circumference { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MonoGame_Extended_CircleF_Diameter_" data-uid="MonoGame.Extended.CircleF.Diameter*"></a>
+  <h4 id="MonoGame_Extended_CircleF_Diameter" data-uid="MonoGame.Extended.CircleF.Diameter">Diameter</h4>
+  <div class="markdown level1 summary"><p>Gets the distance from a point to the opposite point, both on the boundary of this <a class="xref" href="MonoGame.Extended.CircleF.html">CircleF</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float Diameter { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MonoGame_Extended_CircleF_Position_" data-uid="MonoGame.Extended.CircleF.Position*"></a>
+  <h4 id="MonoGame_Extended_CircleF_Position" data-uid="MonoGame.Extended.CircleF.Position">Position</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the position of the circle.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Point2 Position { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MonoGame.Extended.Point2.html">Point2</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="MonoGame_Extended_CircleF_BoundaryPointAt_" data-uid="MonoGame.Extended.CircleF.BoundaryPointAt*"></a>
+  <h4 id="MonoGame_Extended_CircleF_BoundaryPointAt_System_Single_" data-uid="MonoGame.Extended.CircleF.BoundaryPointAt(System.Single)">BoundaryPointAt(Single)</h4>
+  <div class="markdown level1 summary"><p>Computes the <a class="xref" href="MonoGame.Extended.Point2.html">Point2</a> on the boundary of of this <a class="xref" href="MonoGame.Extended.CircleF.html">CircleF</a> using the specified angle.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Point2 BoundaryPointAt(float angle)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">angle</span></td>
+        <td><p>The angle in radians.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MonoGame.Extended.Point2.html">Point2</a></td>
+        <td><p>The <a class="xref" href="MonoGame.Extended.Point2.html">Point2</a> on the boundary of this <a class="xref" href="MonoGame.Extended.CircleF.html">CircleF</a> using <code data-dev-comment-type="paramref" class="paramref">angle</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MonoGame_Extended_CircleF_ClosestPointTo_" data-uid="MonoGame.Extended.CircleF.ClosestPointTo*"></a>
+  <h4 id="MonoGame_Extended_CircleF_ClosestPointTo_MonoGame_Extended_Point2_" data-uid="MonoGame.Extended.CircleF.ClosestPointTo(MonoGame.Extended.Point2)">ClosestPointTo(Point2)</h4>
+  <div class="markdown level1 summary"><p>Computes the closest <a class="xref" href="MonoGame.Extended.Point2.html">Point2</a> on this <a class="xref" href="MonoGame.Extended.CircleF.html">CircleF</a> to a specified
+<a class="xref" href="MonoGame.Extended.Point2.html">Point2</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Point2 ClosestPointTo(Point2 point)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MonoGame.Extended.Point2.html">Point2</a></td>
+        <td><span class="parametername">point</span></td>
+        <td><p>The point.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MonoGame.Extended.Point2.html">Point2</a></td>
+        <td><p>The closest <a class="xref" href="MonoGame.Extended.Point2.html">Point2</a> on this <a class="xref" href="MonoGame.Extended.CircleF.html">CircleF</a> to the <code data-dev-comment-type="paramref" class="paramref">point</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MonoGame_Extended_CircleF_Contains_" data-uid="MonoGame.Extended.CircleF.Contains*"></a>
+  <h4 id="MonoGame_Extended_CircleF_Contains_MonoGame_Extended_CircleF_MonoGame_Extended_Point2_" data-uid="MonoGame.Extended.CircleF.Contains(MonoGame.Extended.CircleF,MonoGame.Extended.Point2)">Contains(CircleF, Point2)</h4>
+  <div class="markdown level1 summary"><p>Determines whether the specified <a class="xref" href="MonoGame.Extended.CircleF.html">CircleF</a> contains the specified
+<a class="xref" href="MonoGame.Extended.Point2.html">Point2</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool Contains(CircleF circle, Point2 point)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MonoGame.Extended.CircleF.html">CircleF</a></td>
+        <td><span class="parametername">circle</span></td>
+        <td><p>The circle.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MonoGame.Extended.Point2.html">Point2</a></td>
+        <td><span class="parametername">point</span></td>
+        <td><p>The point.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p><code>true</code> if the <code data-dev-comment-type="paramref" class="paramref">circle</code> contains the <code data-dev-comment-type="paramref" class="paramref">point</code>; otherwise,
+<code>false</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MonoGame_Extended_CircleF_Contains_" data-uid="MonoGame.Extended.CircleF.Contains*"></a>
+  <h4 id="MonoGame_Extended_CircleF_Contains_MonoGame_Extended_CircleF__MonoGame_Extended_Point2_" data-uid="MonoGame.Extended.CircleF.Contains(MonoGame.Extended.CircleF@,MonoGame.Extended.Point2)">Contains(ref CircleF, Point2)</h4>
+  <div class="markdown level1 summary"><p>Determines whether the specified <a class="xref" href="MonoGame.Extended.CircleF.html">CircleF</a> contains the specified
+<a class="xref" href="MonoGame.Extended.Point2.html">Point2</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool Contains(ref CircleF circle, Point2 point)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MonoGame.Extended.CircleF.html">CircleF</a></td>
+        <td><span class="parametername">circle</span></td>
+        <td><p>The circle.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MonoGame.Extended.Point2.html">Point2</a></td>
+        <td><span class="parametername">point</span></td>
+        <td><p>The point.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p><code>true</code> if the <code data-dev-comment-type="paramref" class="paramref">circle</code> contains the <code data-dev-comment-type="paramref" class="paramref">point</code>; otherwise,
+<code>false</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MonoGame_Extended_CircleF_Contains_" data-uid="MonoGame.Extended.CircleF.Contains*"></a>
+  <h4 id="MonoGame_Extended_CircleF_Contains_MonoGame_Extended_Point2_" data-uid="MonoGame.Extended.CircleF.Contains(MonoGame.Extended.Point2)">Contains(Point2)</h4>
+  <div class="markdown level1 summary"><p>Determines whether this <a class="xref" href="MonoGame.Extended.CircleF.html">CircleF</a> contains the specified <a class="xref" href="MonoGame.Extended.Point2.html">Point2</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Contains(Point2 point)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MonoGame.Extended.Point2.html">Point2</a></td>
+        <td><span class="parametername">point</span></td>
+        <td><p>The point.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p><code>true</code> if this <a class="xref" href="MonoGame.Extended.BoundingRectangle.html">BoundingRectangle</a> contains the <code data-dev-comment-type="paramref" class="paramref">point</code>; otherwise,
+<code>false</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MonoGame_Extended_CircleF_CreateFrom_" data-uid="MonoGame.Extended.CircleF.CreateFrom*"></a>
+  <h4 id="MonoGame_Extended_CircleF_CreateFrom_MonoGame_Extended_Point2_MonoGame_Extended_Point2_" data-uid="MonoGame.Extended.CircleF.CreateFrom(MonoGame.Extended.Point2,MonoGame.Extended.Point2)">CreateFrom(Point2, Point2)</h4>
+  <div class="markdown level1 summary"><p>Computes the bounding <a class="xref" href="MonoGame.Extended.CircleF.html">CircleF</a> from a minimum <a class="xref" href="MonoGame.Extended.Point2.html">Point2</a> and maximum
+<a class="xref" href="MonoGame.Extended.Point2.html">Point2</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static CircleF CreateFrom(Point2 minimum, Point2 maximum)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MonoGame.Extended.Point2.html">Point2</a></td>
+        <td><span class="parametername">minimum</span></td>
+        <td><p>The minimum point.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MonoGame.Extended.Point2.html">Point2</a></td>
+        <td><span class="parametername">maximum</span></td>
+        <td><p>The maximum point.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MonoGame.Extended.CircleF.html">CircleF</a></td>
+        <td><p>An <a class="xref" href="MonoGame.Extended.CircleF.html">CircleF</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MonoGame_Extended_CircleF_CreateFrom_" data-uid="MonoGame.Extended.CircleF.CreateFrom*"></a>
+  <h4 id="MonoGame_Extended_CircleF_CreateFrom_MonoGame_Extended_Point2_MonoGame_Extended_Point2_MonoGame_Extended_CircleF__" data-uid="MonoGame.Extended.CircleF.CreateFrom(MonoGame.Extended.Point2,MonoGame.Extended.Point2,MonoGame.Extended.CircleF@)">CreateFrom(Point2, Point2, out CircleF)</h4>
+  <div class="markdown level1 summary"><p>Computes the bounding <a class="xref" href="MonoGame.Extended.CircleF.html">CircleF</a> from a minimum <a class="xref" href="MonoGame.Extended.Point2.html">Point2</a> and maximum
+<a class="xref" href="MonoGame.Extended.Point2.html">Point2</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void CreateFrom(Point2 minimum, Point2 maximum, out CircleF result)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MonoGame.Extended.Point2.html">Point2</a></td>
+        <td><span class="parametername">minimum</span></td>
+        <td><p>The minimum point.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MonoGame.Extended.Point2.html">Point2</a></td>
+        <td><span class="parametername">maximum</span></td>
+        <td><p>The maximum point.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MonoGame.Extended.CircleF.html">CircleF</a></td>
+        <td><span class="parametername">result</span></td>
+        <td><p>The resulting circle.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MonoGame_Extended_CircleF_CreateFrom_" data-uid="MonoGame.Extended.CircleF.CreateFrom*"></a>
+  <h4 id="MonoGame_Extended_CircleF_CreateFrom_System_Collections_Generic_IReadOnlyList_MonoGame_Extended_Point2__" data-uid="MonoGame.Extended.CircleF.CreateFrom(System.Collections.Generic.IReadOnlyList{MonoGame.Extended.Point2})">CreateFrom(IReadOnlyList&lt;Point2&gt;)</h4>
+  <div class="markdown level1 summary"><p>Computes the bounding <a class="xref" href="MonoGame.Extended.CircleF.html">CircleF</a> from a list of <a class="xref" href="MonoGame.Extended.Point2.html">Point2</a> structures.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static CircleF CreateFrom(IReadOnlyList&lt;Point2&gt; points)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IReadOnlyList</span>&lt;<a class="xref" href="MonoGame.Extended.Point2.html">Point2</a>&gt;</td>
+        <td><span class="parametername">points</span></td>
+        <td><p>The points.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MonoGame.Extended.CircleF.html">CircleF</a></td>
+        <td><p>An <a class="xref" href="MonoGame.Extended.CircleF.html">CircleF</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MonoGame_Extended_CircleF_CreateFrom_" data-uid="MonoGame.Extended.CircleF.CreateFrom*"></a>
+  <h4 id="MonoGame_Extended_CircleF_CreateFrom_System_Collections_Generic_IReadOnlyList_MonoGame_Extended_Point2__MonoGame_Extended_CircleF__" data-uid="MonoGame.Extended.CircleF.CreateFrom(System.Collections.Generic.IReadOnlyList{MonoGame.Extended.Point2},MonoGame.Extended.CircleF@)">CreateFrom(IReadOnlyList&lt;Point2&gt;, out CircleF)</h4>
+  <div class="markdown level1 summary"><p>Computes the bounding <a class="xref" href="MonoGame.Extended.CircleF.html">CircleF</a> from a list of <a class="xref" href="MonoGame.Extended.Point2.html">Point2</a> structures.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void CreateFrom(IReadOnlyList&lt;Point2&gt; points, out CircleF result)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IReadOnlyList</span>&lt;<a class="xref" href="MonoGame.Extended.Point2.html">Point2</a>&gt;</td>
+        <td><span class="parametername">points</span></td>
+        <td><p>The points.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MonoGame.Extended.CircleF.html">CircleF</a></td>
+        <td><span class="parametername">result</span></td>
+        <td><p>The resulting circle.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MonoGame_Extended_CircleF_Equals_" data-uid="MonoGame.Extended.CircleF.Equals*"></a>
+  <h4 id="MonoGame_Extended_CircleF_Equals_MonoGame_Extended_CircleF_" data-uid="MonoGame.Extended.CircleF.Equals(MonoGame.Extended.CircleF)">Equals(CircleF)</h4>
+  <div class="markdown level1 summary"><p>Indicates whether this <a class="xref" href="MonoGame.Extended.CircleF.html">CircleF</a> is equal to another <a class="xref" href="MonoGame.Extended.CircleF.html">CircleF</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Equals(CircleF circle)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MonoGame.Extended.CircleF.html">CircleF</a></td>
+        <td><span class="parametername">circle</span></td>
+        <td><p>The circle.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p><code>true</code> if this <a class="xref" href="MonoGame.Extended.CircleF.html">CircleF</a> is equal to the <code data-dev-comment-type="paramref" class="paramref">circle</code>; otherwise, <code>false</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MonoGame_Extended_CircleF_Equals_" data-uid="MonoGame.Extended.CircleF.Equals*"></a>
+  <h4 id="MonoGame_Extended_CircleF_Equals_MonoGame_Extended_CircleF__" data-uid="MonoGame.Extended.CircleF.Equals(MonoGame.Extended.CircleF@)">Equals(ref CircleF)</h4>
+  <div class="markdown level1 summary"><p>Indicates whether this <a class="xref" href="MonoGame.Extended.CircleF.html">CircleF</a> is equal to another <a class="xref" href="MonoGame.Extended.CircleF.html">CircleF</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Equals(ref CircleF circle)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MonoGame.Extended.CircleF.html">CircleF</a></td>
+        <td><span class="parametername">circle</span></td>
+        <td><p>The bounding rectangle.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p><code>true</code> if this <a class="xref" href="MonoGame.Extended.CircleF.html">CircleF</a> is equal to the <code data-dev-comment-type="paramref" class="paramref">circle</code>;
+otherwise,<code>false</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MonoGame_Extended_CircleF_Equals_" data-uid="MonoGame.Extended.CircleF.Equals*"></a>
+  <h4 id="MonoGame_Extended_CircleF_Equals_System_Object_" data-uid="MonoGame.Extended.CircleF.Equals(System.Object)">Equals(Object)</h4>
+  <div class="markdown level1 summary"><p>Returns a value indicating whether this <a class="xref" href="MonoGame.Extended.CircleF.html">CircleF</a> is equal to a specified object.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool Equals(object obj)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><span class="parametername">obj</span></td>
+        <td><p>The object to make the comparison with.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p><code>true</code> if this <a class="xref" href="MonoGame.Extended.CircleF.html">CircleF</a> is equal to <code data-dev-comment-type="paramref" class="paramref">obj</code>; otherwise, <code>false</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.ValueType.Equals(System.Object)</span></div>
+  
+  
+  <a id="MonoGame_Extended_CircleF_GetHashCode_" data-uid="MonoGame.Extended.CircleF.GetHashCode*"></a>
+  <h4 id="MonoGame_Extended_CircleF_GetHashCode" data-uid="MonoGame.Extended.CircleF.GetHashCode">GetHashCode()</h4>
+  <div class="markdown level1 summary"><p>Returns a hash code of this <a class="xref" href="MonoGame.Extended.CircleF.html">CircleF</a> suitable for use in hashing algorithms and data
+structures like a hash table.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override int GetHashCode()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><p>A hash code of this <a class="xref" href="MonoGame.Extended.CircleF.html">CircleF</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.ValueType.GetHashCode()</span></div>
+  
+  
+  <a id="MonoGame_Extended_CircleF_GetPointAlongEdge_" data-uid="MonoGame.Extended.CircleF.GetPointAlongEdge*"></a>
+  <h4 id="MonoGame_Extended_CircleF_GetPointAlongEdge_System_Single_" data-uid="MonoGame.Extended.CircleF.GetPointAlongEdge(System.Single)">GetPointAlongEdge(Single)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;Circle.GetPointAlongEdge() may be removed in the future. Use BoundaryPointAt() instead.&quot;)]
+public Point2 GetPointAlongEdge(float angle)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">angle</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MonoGame.Extended.Point2.html">Point2</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MonoGame_Extended_CircleF_Intersects_" data-uid="MonoGame.Extended.CircleF.Intersects*"></a>
+  <h4 id="MonoGame_Extended_CircleF_Intersects_MonoGame_Extended_BoundingRectangle_" data-uid="MonoGame.Extended.CircleF.Intersects(MonoGame.Extended.BoundingRectangle)">Intersects(BoundingRectangle)</h4>
+  <div class="markdown level1 summary"><p>Determines whether the specified <a class="xref" href="MonoGame.Extended.CircleF.html">CircleF</a> intersects with this <a class="xref" href="MonoGame.Extended.BoundingRectangle.html">BoundingRectangle</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Intersects(BoundingRectangle rectangle)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MonoGame.Extended.BoundingRectangle.html">BoundingRectangle</a></td>
+        <td><span class="parametername">rectangle</span></td>
+        <td><p>The rectangle.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p><code>true</code> if the <code data-dev-comment-type="paramref" class="paramref">rectangle</code> intersects with this <a class="xref" href="MonoGame.Extended.CircleF.html">CircleF</a>; otherwise,
+<code>false</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MonoGame_Extended_CircleF_Intersects_" data-uid="MonoGame.Extended.CircleF.Intersects*"></a>
+  <h4 id="MonoGame_Extended_CircleF_Intersects_MonoGame_Extended_BoundingRectangle__" data-uid="MonoGame.Extended.CircleF.Intersects(MonoGame.Extended.BoundingRectangle@)">Intersects(ref BoundingRectangle)</h4>
+  <div class="markdown level1 summary"><p>Determines whether the specified <a class="xref" href="MonoGame.Extended.CircleF.html">CircleF</a> intersects with this <a class="xref" href="MonoGame.Extended.BoundingRectangle.html">BoundingRectangle</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Intersects(ref BoundingRectangle rectangle)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MonoGame.Extended.BoundingRectangle.html">BoundingRectangle</a></td>
+        <td><span class="parametername">rectangle</span></td>
+        <td><p>The rectangle.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p><code>true</code> if the <code data-dev-comment-type="paramref" class="paramref">rectangle</code> intersects with this <a class="xref" href="MonoGame.Extended.CircleF.html">CircleF</a>; otherwise,
+<code>false</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MonoGame_Extended_CircleF_Intersects_" data-uid="MonoGame.Extended.CircleF.Intersects*"></a>
+  <h4 id="MonoGame_Extended_CircleF_Intersects_MonoGame_Extended_CircleF_" data-uid="MonoGame.Extended.CircleF.Intersects(MonoGame.Extended.CircleF)">Intersects(CircleF)</h4>
+  <div class="markdown level1 summary"><p>Determines whether the specified <a class="xref" href="MonoGame.Extended.CircleF.html">CircleF</a> intersects with this <a class="xref" href="MonoGame.Extended.CircleF.html">CircleF</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Intersects(CircleF circle)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MonoGame.Extended.CircleF.html">CircleF</a></td>
+        <td><span class="parametername">circle</span></td>
+        <td><p>The circle.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p><code>true</code> if the <code data-dev-comment-type="paramref" class="paramref">circle</code> intersects with this <a class="xref" href="MonoGame.Extended.CircleF.html">CircleF</a>; otherwise,
+<code>false</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MonoGame_Extended_CircleF_Intersects_" data-uid="MonoGame.Extended.CircleF.Intersects*"></a>
+  <h4 id="MonoGame_Extended_CircleF_Intersects_MonoGame_Extended_CircleF_MonoGame_Extended_BoundingRectangle_" data-uid="MonoGame.Extended.CircleF.Intersects(MonoGame.Extended.CircleF,MonoGame.Extended.BoundingRectangle)">Intersects(CircleF, BoundingRectangle)</h4>
+  <div class="markdown level1 summary"><p>Determines whether the specified <a class="xref" href="MonoGame.Extended.CircleF.html">CircleF</a> and <a class="xref" href="MonoGame.Extended.BoundingRectangle.html">BoundingRectangle</a> structures intersect.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool Intersects(CircleF circle, BoundingRectangle rectangle)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MonoGame.Extended.CircleF.html">CircleF</a></td>
+        <td><span class="parametername">circle</span></td>
+        <td><p>The circle.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MonoGame.Extended.BoundingRectangle.html">BoundingRectangle</a></td>
+        <td><span class="parametername">rectangle</span></td>
+        <td><p>The rectangle.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p><code>true</code> if the <code data-dev-comment-type="paramref" class="paramref">circle</code> intersects with the <see cref="!:rectangle"></see>; otherwise, <code>false</code>
+.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MonoGame_Extended_CircleF_Intersects_" data-uid="MonoGame.Extended.CircleF.Intersects*"></a>
+  <h4 id="MonoGame_Extended_CircleF_Intersects_MonoGame_Extended_CircleF_MonoGame_Extended_CircleF_" data-uid="MonoGame.Extended.CircleF.Intersects(MonoGame.Extended.CircleF,MonoGame.Extended.CircleF)">Intersects(CircleF, CircleF)</h4>
+  <div class="markdown level1 summary"><p>Determines whether the two specified <a class="xref" href="MonoGame.Extended.CircleF.html">CircleF</a> structures intersect.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool Intersects(CircleF first, CircleF second)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MonoGame.Extended.CircleF.html">CircleF</a></td>
+        <td><span class="parametername">first</span></td>
+        <td><p>The first circle.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MonoGame.Extended.CircleF.html">CircleF</a></td>
+        <td><span class="parametername">second</span></td>
+        <td><p>The second circle.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p><code>true</code> if the <code data-dev-comment-type="paramref" class="paramref">first</code> intersects with the <see cref="!:second"></see>; otherwise, <code>false</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MonoGame_Extended_CircleF_Intersects_" data-uid="MonoGame.Extended.CircleF.Intersects*"></a>
+  <h4 id="MonoGame_Extended_CircleF_Intersects_MonoGame_Extended_CircleF__" data-uid="MonoGame.Extended.CircleF.Intersects(MonoGame.Extended.CircleF@)">Intersects(ref CircleF)</h4>
+  <div class="markdown level1 summary"><p>Determines whether the specified <a class="xref" href="MonoGame.Extended.CircleF.html">CircleF</a> intersects with this <a class="xref" href="MonoGame.Extended.CircleF.html">CircleF</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Intersects(ref CircleF circle)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MonoGame.Extended.CircleF.html">CircleF</a></td>
+        <td><span class="parametername">circle</span></td>
+        <td><p>The circle.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p><code>true</code> if the <code data-dev-comment-type="paramref" class="paramref">circle</code> intersects with this <a class="xref" href="MonoGame.Extended.CircleF.html">CircleF</a>; otherwise,
+<code>false</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MonoGame_Extended_CircleF_Intersects_" data-uid="MonoGame.Extended.CircleF.Intersects*"></a>
+  <h4 id="MonoGame_Extended_CircleF_Intersects_MonoGame_Extended_CircleF__MonoGame_Extended_BoundingRectangle__" data-uid="MonoGame.Extended.CircleF.Intersects(MonoGame.Extended.CircleF@,MonoGame.Extended.BoundingRectangle@)">Intersects(ref CircleF, ref BoundingRectangle)</h4>
+  <div class="markdown level1 summary"><p>Determines whether the specified <a class="xref" href="MonoGame.Extended.CircleF.html">CircleF</a> and <a class="xref" href="MonoGame.Extended.BoundingRectangle.html">BoundingRectangle</a> structures intersect.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool Intersects(ref CircleF circle, ref BoundingRectangle rectangle)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MonoGame.Extended.CircleF.html">CircleF</a></td>
+        <td><span class="parametername">circle</span></td>
+        <td><p>The circle.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MonoGame.Extended.BoundingRectangle.html">BoundingRectangle</a></td>
+        <td><span class="parametername">rectangle</span></td>
+        <td><p>The rectangle.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p><code>true</code> if the <code data-dev-comment-type="paramref" class="paramref">circle</code> intersects with the <see cref="!:rectangle"></see>; otherwise, <code>false</code>
+.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MonoGame_Extended_CircleF_Intersects_" data-uid="MonoGame.Extended.CircleF.Intersects*"></a>
+  <h4 id="MonoGame_Extended_CircleF_Intersects_MonoGame_Extended_CircleF__MonoGame_Extended_CircleF__" data-uid="MonoGame.Extended.CircleF.Intersects(MonoGame.Extended.CircleF@,MonoGame.Extended.CircleF@)">Intersects(ref CircleF, ref CircleF)</h4>
+  <div class="markdown level1 summary"><p>Determines whether the two specified <a class="xref" href="MonoGame.Extended.CircleF.html">CircleF</a> structures intersect.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool Intersects(ref CircleF first, ref CircleF second)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MonoGame.Extended.CircleF.html">CircleF</a></td>
+        <td><span class="parametername">first</span></td>
+        <td><p>The first circle.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MonoGame.Extended.CircleF.html">CircleF</a></td>
+        <td><span class="parametername">second</span></td>
+        <td><p>The second circle.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p><code>true</code> if the <code data-dev-comment-type="paramref" class="paramref">first</code> intersects with the <see cref="!:second"></see>; otherwise, <code>false</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MonoGame_Extended_CircleF_ToRectangle_" data-uid="MonoGame.Extended.CircleF.ToRectangle*"></a>
+  <h4 id="MonoGame_Extended_CircleF_ToRectangle" data-uid="MonoGame.Extended.CircleF.ToRectangle">ToRectangle()</h4>
+  <div class="markdown level1 summary"><p>Performs a conversion from a specified <a class="xref" href="MonoGame.Extended.CircleF.html">CircleF</a> to a <span class="xref">Microsoft.Xna.Framework.Rectangle</span>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Rectangle ToRectangle()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Microsoft.Xna.Framework.Rectangle</span></td>
+        <td><p>The resulting <span class="xref">Microsoft.Xna.Framework.Rectangle</span>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MonoGame_Extended_CircleF_ToRectangleF_" data-uid="MonoGame.Extended.CircleF.ToRectangleF*"></a>
+  <h4 id="MonoGame_Extended_CircleF_ToRectangleF" data-uid="MonoGame.Extended.CircleF.ToRectangleF">ToRectangleF()</h4>
+  <div class="markdown level1 summary"><p>Performs a conversion from a specified <a class="xref" href="MonoGame.Extended.CircleF.html">CircleF</a> to a <a class="xref" href="MonoGame.Extended.RectangleF.html">RectangleF</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public RectangleF ToRectangleF()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MonoGame.Extended.RectangleF.html">RectangleF</a></td>
+        <td><p>The resulting <a class="xref" href="MonoGame.Extended.RectangleF.html">RectangleF</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MonoGame_Extended_CircleF_ToString_" data-uid="MonoGame.Extended.CircleF.ToString*"></a>
+  <h4 id="MonoGame_Extended_CircleF_ToString" data-uid="MonoGame.Extended.CircleF.ToString">ToString()</h4>
+  <div class="markdown level1 summary"><p>Returns a <span class="xref">System.String</span> that represents this <a class="xref" href="MonoGame.Extended.CircleF.html">CircleF</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override string ToString()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><p>A <span class="xref">System.String</span> that represents this <a class="xref" href="MonoGame.Extended.CircleF.html">CircleF</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.ValueType.ToString()</span></div>
+  <h3 id="operators">Operators
+  </h3>
+  
+  
+  <a id="MonoGame_Extended_CircleF_op_Equality_" data-uid="MonoGame.Extended.CircleF.op_Equality*"></a>
+  <h4 id="MonoGame_Extended_CircleF_op_Equality_MonoGame_Extended_CircleF_MonoGame_Extended_CircleF_" data-uid="MonoGame.Extended.CircleF.op_Equality(MonoGame.Extended.CircleF,MonoGame.Extended.CircleF)">Equality(CircleF, CircleF)</h4>
+  <div class="markdown level1 summary"><p>Compares two <a class="xref" href="MonoGame.Extended.CircleF.html">CircleF</a> structures. The result specifies whether the values of the
+<a class="xref" href="MonoGame.Extended.CircleF.html#MonoGame_Extended_CircleF_Center">Center</a> and <a class="xref" href="MonoGame.Extended.CircleF.html#MonoGame_Extended_CircleF_Radius">Radius</a> fields of the two <a class="xref" href="MonoGame.Extended.CircleF.html">CircleF</a> structures
+are equal.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool operator ==(CircleF first, CircleF second)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MonoGame.Extended.CircleF.html">CircleF</a></td>
+        <td><span class="parametername">first</span></td>
+        <td><p>The first circle.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MonoGame.Extended.CircleF.html">CircleF</a></td>
+        <td><span class="parametername">second</span></td>
+        <td><p>The second circle.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p><code>true</code> if the <a class="xref" href="MonoGame.Extended.CircleF.html#MonoGame_Extended_CircleF_Center">Center</a> and <a class="xref" href="MonoGame.Extended.CircleF.html#MonoGame_Extended_CircleF_Radius">Radius</a> fields of the two
+<a class="xref" href="MonoGame.Extended.BoundingRectangle.html">BoundingRectangle</a> structures are equal; otherwise, <code>false</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MonoGame_Extended_CircleF_op_Implicit_" data-uid="MonoGame.Extended.CircleF.op_Implicit*"></a>
+  <h4 id="MonoGame_Extended_CircleF_op_Implicit_Microsoft_Xna_Framework_Rectangle__MonoGame_Extended_CircleF" data-uid="MonoGame.Extended.CircleF.op_Implicit(Microsoft.Xna.Framework.Rectangle)~MonoGame.Extended.CircleF">Implicit(Rectangle to CircleF)</h4>
+  <div class="markdown level1 summary"><p>Performs an implicit conversion from a <span class="xref">Microsoft.Xna.Framework.Rectangle</span> to a <a class="xref" href="MonoGame.Extended.CircleF.html">CircleF</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static implicit operator CircleF(Rectangle rectangle)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Microsoft.Xna.Framework.Rectangle</span></td>
+        <td><span class="parametername">rectangle</span></td>
+        <td><p>The rectangle.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MonoGame.Extended.CircleF.html">CircleF</a></td>
+        <td><p>The resulting <a class="xref" href="MonoGame.Extended.CircleF.html">CircleF</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MonoGame_Extended_CircleF_op_Implicit_" data-uid="MonoGame.Extended.CircleF.op_Implicit*"></a>
+  <h4 id="MonoGame_Extended_CircleF_op_Implicit_MonoGame_Extended_CircleF__Microsoft_Xna_Framework_Rectangle" data-uid="MonoGame.Extended.CircleF.op_Implicit(MonoGame.Extended.CircleF)~Microsoft.Xna.Framework.Rectangle">Implicit(CircleF to Rectangle)</h4>
+  <div class="markdown level1 summary"><p>Performs an implicit conversion from a <a class="xref" href="MonoGame.Extended.CircleF.html">CircleF</a> to a <span class="xref">Microsoft.Xna.Framework.Rectangle</span>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static implicit operator Rectangle(CircleF circle)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MonoGame.Extended.CircleF.html">CircleF</a></td>
+        <td><span class="parametername">circle</span></td>
+        <td><p>The circle.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Microsoft.Xna.Framework.Rectangle</span></td>
+        <td><p>The resulting <span class="xref">Microsoft.Xna.Framework.Rectangle</span>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MonoGame_Extended_CircleF_op_Implicit_" data-uid="MonoGame.Extended.CircleF.op_Implicit*"></a>
+  <h4 id="MonoGame_Extended_CircleF_op_Implicit_MonoGame_Extended_CircleF__MonoGame_Extended_RectangleF" data-uid="MonoGame.Extended.CircleF.op_Implicit(MonoGame.Extended.CircleF)~MonoGame.Extended.RectangleF">Implicit(CircleF to RectangleF)</h4>
+  <div class="markdown level1 summary"><p>Performs an implicit conversion from a <a class="xref" href="MonoGame.Extended.CircleF.html">CircleF</a> to a <a class="xref" href="MonoGame.Extended.RectangleF.html">RectangleF</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static implicit operator RectangleF(CircleF circle)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MonoGame.Extended.CircleF.html">CircleF</a></td>
+        <td><span class="parametername">circle</span></td>
+        <td><p>The circle.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MonoGame.Extended.RectangleF.html">RectangleF</a></td>
+        <td><p>The resulting <a class="xref" href="MonoGame.Extended.RectangleF.html">RectangleF</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MonoGame_Extended_CircleF_op_Implicit_" data-uid="MonoGame.Extended.CircleF.op_Implicit*"></a>
+  <h4 id="MonoGame_Extended_CircleF_op_Implicit_MonoGame_Extended_RectangleF__MonoGame_Extended_CircleF" data-uid="MonoGame.Extended.CircleF.op_Implicit(MonoGame.Extended.RectangleF)~MonoGame.Extended.CircleF">Implicit(RectangleF to CircleF)</h4>
+  <div class="markdown level1 summary"><p>Performs an implicit conversion from a <a class="xref" href="MonoGame.Extended.RectangleF.html">RectangleF</a> to a <a class="xref" href="MonoGame.Extended.CircleF.html">CircleF</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static implicit operator CircleF(RectangleF rectangle)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MonoGame.Extended.RectangleF.html">RectangleF</a></td>
+        <td><span class="parametername">rectangle</span></td>
+        <td><p>The rectangle.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MonoGame.Extended.CircleF.html">CircleF</a></td>
+        <td><p>The resulting <a class="xref" href="MonoGame.Extended.CircleF.html">CircleF</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MonoGame_Extended_CircleF_op_Inequality_" data-uid="MonoGame.Extended.CircleF.op_Inequality*"></a>
+  <h4 id="MonoGame_Extended_CircleF_op_Inequality_MonoGame_Extended_CircleF_MonoGame_Extended_CircleF_" data-uid="MonoGame.Extended.CircleF.op_Inequality(MonoGame.Extended.CircleF,MonoGame.Extended.CircleF)">Inequality(CircleF, CircleF)</h4>
+  <div class="markdown level1 summary"><p>Compares two <a class="xref" href="MonoGame.Extended.CircleF.html">CircleF</a> structures. The result specifies whether the values of the
+<a class="xref" href="MonoGame.Extended.CircleF.html#MonoGame_Extended_CircleF_Center">Center</a> and <a class="xref" href="MonoGame.Extended.CircleF.html#MonoGame_Extended_CircleF_Radius">Radius</a> fields of the two <a class="xref" href="MonoGame.Extended.CircleF.html">CircleF</a> structures
+are unequal.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool operator !=(CircleF first, CircleF second)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MonoGame.Extended.CircleF.html">CircleF</a></td>
+        <td><span class="parametername">first</span></td>
+        <td><p>The first circle.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MonoGame.Extended.CircleF.html">CircleF</a></td>
+        <td><span class="parametername">second</span></td>
+        <td><p>The second circle.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p><code>true</code> if the <a class="xref" href="MonoGame.Extended.CircleF.html#MonoGame_Extended_CircleF_Center">Center</a> and <a class="xref" href="MonoGame.Extended.CircleF.html#MonoGame_Extended_CircleF_Radius">Radius</a> fields of the two
+<a class="xref" href="MonoGame.Extended.CircleF.html">CircleF</a> structures are unequal; otherwise, <code>false</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <span class="xref">System.IEquatable&lt;T&gt;</span>
+  </div>
+  <div>
+      <a class="xref" href="MonoGame.Extended.IEquatableByRef-1.html">IEquatableByRef&lt;T&gt;</a>
+  </div>
+  <div>
+      <a class="xref" href="MonoGame.Extended.IShapeF.html">IShapeF</a>
+  </div>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="MonoGame.Extended.Shape.html#MonoGame_Extended_Shape_Intersects_MonoGame_Extended_IShapeF_MonoGame_Extended_IShapeF_">Shape.Intersects(IShapeF, IShapeF)</a>
+  </div>
+  <h3 id="seealso">See Also</h3>
+  <div class="seealso">
+      <div><span class="xref">System.IEquatable</span>&lt;T&gt;</div>
+      <div><a class="xref" href="MonoGame.Extended.IEquatableByRef-1.html">IEquatableByRef</a>&lt;T&gt;</div>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

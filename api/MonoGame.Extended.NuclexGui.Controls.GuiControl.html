@@ -1,0 +1,848 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class GuiControl
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class GuiControl
+   ">
+    <meta name="generator" content="docfx 2.56.2.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="MonoGame.Extended.NuclexGui.Controls.GuiControl">
+  
+  
+  <h1 id="MonoGame_Extended_NuclexGui_Controls_GuiControl" data-uid="MonoGame.Extended.NuclexGui.Controls.GuiControl" class="text-break">Class GuiControl
+  </h1>
+  <div class="markdown level0 summary"><p>Represents an element in the user interface</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">GuiControl</span></div>
+      <div class="level2"><a class="xref" href="MonoGame.Extended.NuclexGui.Controls.Desktop.GuiDraggableControl.html">GuiDraggableControl</a></div>
+      <div class="level2"><a class="xref" href="MonoGame.Extended.NuclexGui.Controls.Desktop.GuiInputControl.html">GuiInputControl</a></div>
+      <div class="level2"><a class="xref" href="MonoGame.Extended.NuclexGui.Controls.Desktop.GuiListControl.html">GuiListControl</a></div>
+      <div class="level2"><a class="xref" href="MonoGame.Extended.NuclexGui.Controls.Desktop.GuiSliderControl.html">GuiSliderControl</a></div>
+      <div class="level2"><a class="xref" href="MonoGame.Extended.NuclexGui.Controls.GuiDesktopControl.html">GuiDesktopControl</a></div>
+      <div class="level2"><a class="xref" href="MonoGame.Extended.NuclexGui.Controls.GuiLabelControl.html">GuiLabelControl</a></div>
+      <div class="level2"><a class="xref" href="MonoGame.Extended.NuclexGui.Controls.GuiPressableControl.html">GuiPressableControl</a></div>
+      <div class="level2"><a class="xref" href="MonoGame.Extended.NuclexGui.Controls.GuiProgressControl.html">GuiProgressControl</a></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="MonoGame.Extended.NuclexGui.Controls.html">MonoGame.Extended.NuclexGui.Controls</a></h6>
+  <h6><strong>Assembly</strong>: MonoGame.Extended.NuclexGui.dll</h6>
+  <h5 id="MonoGame_Extended_NuclexGui_Controls_GuiControl_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class GuiControl</code></pre>
+  </div>
+  <h5 id="MonoGame_Extended_NuclexGui_Controls_GuiControl_remarks"><strong>Remarks</strong></h5>
+  <div class="markdown level0 remarks"><p>
+    Controls are always arranged in a tree where each control except the one at
+    the root of the tree has exactly one owner (the one at the root has no owner).
+    The design actively prevents you from assigning a control as child to
+    multiple parents.
+</p>
+<p>
+    The controls in the Nuclex.UserInterface library are fully independent of
+    their graphical representation. That means you can construct a dialog
+    without even having a graphics device in place, that you can move your
+    dialogs between different graphics devices and that you do not have to
+    even think about graphics device resets and similar trouble.
+</p>
+</div>
+  <h3 id="constructors">Constructors
+  </h3>
+  
+  
+  <a id="MonoGame_Extended_NuclexGui_Controls_GuiControl__ctor_" data-uid="MonoGame.Extended.NuclexGui.Controls.GuiControl.#ctor*"></a>
+  <h4 id="MonoGame_Extended_NuclexGui_Controls_GuiControl__ctor" data-uid="MonoGame.Extended.NuclexGui.Controls.GuiControl.#ctor">GuiControl()</h4>
+  <div class="markdown level1 summary"><p>Initializes a new control</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public GuiControl()</code></pre>
+  </div>
+  
+  
+  <a id="MonoGame_Extended_NuclexGui_Controls_GuiControl__ctor_" data-uid="MonoGame.Extended.NuclexGui.Controls.GuiControl.#ctor*"></a>
+  <h4 id="MonoGame_Extended_NuclexGui_Controls_GuiControl__ctor_System_Boolean_" data-uid="MonoGame.Extended.NuclexGui.Controls.GuiControl.#ctor(System.Boolean)">GuiControl(Boolean)</h4>
+  <div class="markdown level1 summary"><p>Initializes a new control</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected GuiControl(bool affectsOrdering)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">affectsOrdering</span></td>
+        <td><p>Whether the control comes to the top of the hierarchy when clicked</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="MonoGame_Extended_NuclexGui_Controls_GuiControl__ctor_System_Boolean__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>
+    The <code data-dev-comment-type="paramref" class="paramref">affectsOrdering</code> parameter should be set for windows
+    and other free-floating panels which exist in parallel and which the user
+    might want to put on top of their siblings by clicking them. If the user
+    clicks on a child control of such a panel/window control, the panel/window
+    control will also be moved into the foreground.
+</p>
+<p>
+    It should not be set for normal controls which usually have no overlap,
+    like buttons. Otherwise, a button placed on the desktop could overdraw a
+    window when the button is clicked. The behavior would be well-defined and
+    controlled, but the user probably doesn&apos;t expect this ;-)
+</p>
+</div>
+  <h3 id="fields">Fields
+  </h3>
+  
+  
+  <h4 id="MonoGame_Extended_NuclexGui_Controls_GuiControl_Bounds" data-uid="MonoGame.Extended.NuclexGui.Controls.GuiControl.Bounds">Bounds</h4>
+  <div class="markdown level1 summary"><p>Location and extents of the control</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public UniRectangle Bounds</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MonoGame.Extended.NuclexGui.UniRectangle.html">UniRectangle</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="MonoGame_Extended_NuclexGui_Controls_GuiControl_ActivatedControl_" data-uid="MonoGame.Extended.NuclexGui.Controls.GuiControl.ActivatedControl*"></a>
+  <h4 id="MonoGame_Extended_NuclexGui_Controls_GuiControl_ActivatedControl" data-uid="MonoGame.Extended.NuclexGui.Controls.GuiControl.ActivatedControl">ActivatedControl</h4>
+  <div class="markdown level1 summary"><p>Control that currently captured incoming input</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected GuiControl ActivatedControl { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MonoGame.Extended.NuclexGui.Controls.GuiControl.html">GuiControl</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MonoGame_Extended_NuclexGui_Controls_GuiControl_AffectsOrdering_" data-uid="MonoGame.Extended.NuclexGui.Controls.GuiControl.AffectsOrdering*"></a>
+  <h4 id="MonoGame_Extended_NuclexGui_Controls_GuiControl_AffectsOrdering" data-uid="MonoGame.Extended.NuclexGui.Controls.GuiControl.AffectsOrdering">AffectsOrdering</h4>
+  <div class="markdown level1 summary"><p>True if clicking the control or its children moves the control into
+the foreground of the drawing hierarchy</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool AffectsOrdering { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MonoGame_Extended_NuclexGui_Controls_GuiControl_Children_" data-uid="MonoGame.Extended.NuclexGui.Controls.GuiControl.Children*"></a>
+  <h4 id="MonoGame_Extended_NuclexGui_Controls_GuiControl_Children" data-uid="MonoGame.Extended.NuclexGui.Controls.GuiControl.Children">Children</h4>
+  <div class="markdown level1 summary"><p>Children of the control</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Collection&lt;GuiControl&gt; Children { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.ObjectModel.Collection</span>&lt;<a class="xref" href="MonoGame.Extended.NuclexGui.Controls.GuiControl.html">GuiControl</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MonoGame_Extended_NuclexGui_Controls_GuiControl_MouseOverControl_" data-uid="MonoGame.Extended.NuclexGui.Controls.GuiControl.MouseOverControl*"></a>
+  <h4 id="MonoGame_Extended_NuclexGui_Controls_GuiControl_MouseOverControl" data-uid="MonoGame.Extended.NuclexGui.Controls.GuiControl.MouseOverControl">MouseOverControl</h4>
+  <div class="markdown level1 summary"><p>Control the mouse is currently over</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected GuiControl MouseOverControl { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MonoGame.Extended.NuclexGui.Controls.GuiControl.html">GuiControl</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MonoGame_Extended_NuclexGui_Controls_GuiControl_Name_" data-uid="MonoGame.Extended.NuclexGui.Controls.GuiControl.Name*"></a>
+  <h4 id="MonoGame_Extended_NuclexGui_Controls_GuiControl_Name" data-uid="MonoGame.Extended.NuclexGui.Controls.GuiControl.Name">Name</h4>
+  <div class="markdown level1 summary"><p>Name that can be used to uniquely identify the control</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Name { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="MonoGame_Extended_NuclexGui_Controls_GuiControl_Name_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>This name acts as an unique identifier for a control. It primarily serves
+as a means to programmatically identify the control and as a debugging aid.
+Duplicate names are not allowed and will result in an exception being
+thrown, the only exception is when the control's name is set to null.</p>
+</div>
+  
+  
+  <a id="MonoGame_Extended_NuclexGui_Controls_GuiControl_Parent_" data-uid="MonoGame.Extended.NuclexGui.Controls.GuiControl.Parent*"></a>
+  <h4 id="MonoGame_Extended_NuclexGui_Controls_GuiControl_Parent" data-uid="MonoGame.Extended.NuclexGui.Controls.GuiControl.Parent">Parent</h4>
+  <div class="markdown level1 summary"><p>Parent control this control is contained in</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public GuiControl Parent { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MonoGame.Extended.NuclexGui.Controls.GuiControl.html">GuiControl</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="MonoGame_Extended_NuclexGui_Controls_GuiControl_Parent_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Can be null, but this is only the case for free-floating controls that have
+not been added into a Gui. The only control that really keeps this field
+set to null whilst the Gui is active is the root control in the Gui class.</p>
+</div>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="MonoGame_Extended_NuclexGui_Controls_GuiControl_BringToFront_" data-uid="MonoGame.Extended.NuclexGui.Controls.GuiControl.BringToFront*"></a>
+  <h4 id="MonoGame_Extended_NuclexGui_Controls_GuiControl_BringToFront" data-uid="MonoGame.Extended.NuclexGui.Controls.GuiControl.BringToFront">BringToFront()</h4>
+  <div class="markdown level1 summary"><p>Moves the control into the foreground</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void BringToFront()</code></pre>
+  </div>
+  
+  
+  <a id="MonoGame_Extended_NuclexGui_Controls_GuiControl_GetAbsoluteBounds_" data-uid="MonoGame.Extended.NuclexGui.Controls.GuiControl.GetAbsoluteBounds*"></a>
+  <h4 id="MonoGame_Extended_NuclexGui_Controls_GuiControl_GetAbsoluteBounds" data-uid="MonoGame.Extended.NuclexGui.Controls.GuiControl.GetAbsoluteBounds">GetAbsoluteBounds()</h4>
+  <div class="markdown level1 summary"><p>Obtains the absolute boundaries of the control in screen coordinates</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public RectangleF GetAbsoluteBounds()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MonoGame.Extended.RectangleF.html">RectangleF</a></td>
+        <td><p>The control's absolute screen coordinate boundaries</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="MonoGame_Extended_NuclexGui_Controls_GuiControl_GetAbsoluteBounds_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>This method resolves the unified coordinates into absolute screen coordinates
+that can be used to do hit-testing and rendering. The control is required to
+be part of a GUI hierarchy that is assigned to a screen for this to work
+since otherwise, there's no absolute coordinate frame into which the
+unified coordinates could be resolved.</p>
+</div>
+  
+  
+  <a id="MonoGame_Extended_NuclexGui_Controls_GuiControl_OnButtonPressed_" data-uid="MonoGame.Extended.NuclexGui.Controls.GuiControl.OnButtonPressed*"></a>
+  <h4 id="MonoGame_Extended_NuclexGui_Controls_GuiControl_OnButtonPressed_Microsoft_Xna_Framework_Input_Buttons_" data-uid="MonoGame.Extended.NuclexGui.Controls.GuiControl.OnButtonPressed(Microsoft.Xna.Framework.Input.Buttons)">OnButtonPressed(Buttons)</h4>
+  <div class="markdown level1 summary"><p>Called when a button on the gamepad has been pressed</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual bool OnButtonPressed(Buttons button)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Microsoft.Xna.Framework.Input.Buttons</span></td>
+        <td><span class="parametername">button</span></td>
+        <td><p>Button that has been pressed</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>True if the button press was handled by the control, otherwise false.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="MonoGame_Extended_NuclexGui_Controls_GuiControl_OnButtonPressed_Microsoft_Xna_Framework_Input_Buttons__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>If the control indicates that it didn't handle the key press, it will not
+receive the associated key release notification.</p>
+</div>
+  
+  
+  <a id="MonoGame_Extended_NuclexGui_Controls_GuiControl_OnButtonReleased_" data-uid="MonoGame.Extended.NuclexGui.Controls.GuiControl.OnButtonReleased*"></a>
+  <h4 id="MonoGame_Extended_NuclexGui_Controls_GuiControl_OnButtonReleased_Microsoft_Xna_Framework_Input_Buttons_" data-uid="MonoGame.Extended.NuclexGui.Controls.GuiControl.OnButtonReleased(Microsoft.Xna.Framework.Input.Buttons)">OnButtonReleased(Buttons)</h4>
+  <div class="markdown level1 summary"><p>Called when a button on the gamepad has been released</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void OnButtonReleased(Buttons button)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Microsoft.Xna.Framework.Input.Buttons</span></td>
+        <td><span class="parametername">button</span></td>
+        <td><p>Button that has been released</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MonoGame_Extended_NuclexGui_Controls_GuiControl_OnCommand_" data-uid="MonoGame.Extended.NuclexGui.Controls.GuiControl.OnCommand*"></a>
+  <h4 id="MonoGame_Extended_NuclexGui_Controls_GuiControl_OnCommand_MonoGame_Extended_NuclexGui_Input_Command_" data-uid="MonoGame.Extended.NuclexGui.Controls.GuiControl.OnCommand(MonoGame.Extended.NuclexGui.Input.Command)">OnCommand(Command)</h4>
+  <div class="markdown level1 summary"><p>Called when an input command was sent to the control</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual bool OnCommand(Command command)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MonoGame.Extended.NuclexGui.Input.Command.html">Command</a></td>
+        <td><span class="parametername">command</span></td>
+        <td><p>Input command that has been triggered</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>Whether the command has been processed by the control</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MonoGame_Extended_NuclexGui_Controls_GuiControl_OnKeyPressed_" data-uid="MonoGame.Extended.NuclexGui.Controls.GuiControl.OnKeyPressed*"></a>
+  <h4 id="MonoGame_Extended_NuclexGui_Controls_GuiControl_OnKeyPressed_Microsoft_Xna_Framework_Input_Keys_" data-uid="MonoGame.Extended.NuclexGui.Controls.GuiControl.OnKeyPressed(Microsoft.Xna.Framework.Input.Keys)">OnKeyPressed(Keys)</h4>
+  <div class="markdown level1 summary"><p>Called when a key on the keyboard has been pressed down</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual bool OnKeyPressed(Keys keyCode)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Microsoft.Xna.Framework.Input.Keys</span></td>
+        <td><span class="parametername">keyCode</span></td>
+        <td><p>Code of the key that was pressed</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>True if the key press was handled by the control, otherwise false.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="MonoGame_Extended_NuclexGui_Controls_GuiControl_OnKeyPressed_Microsoft_Xna_Framework_Input_Keys__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>If the control indicates that it didn't handle the key press, it will not
+receive the associated key release notification. This means that if you
+return false from this method, you should under no circumstances do anything
+with the information - you will not know when the key is released again
+and another control might pick it up, causing a second key response.</p>
+</div>
+  
+  
+  <a id="MonoGame_Extended_NuclexGui_Controls_GuiControl_OnKeyReleased_" data-uid="MonoGame.Extended.NuclexGui.Controls.GuiControl.OnKeyReleased*"></a>
+  <h4 id="MonoGame_Extended_NuclexGui_Controls_GuiControl_OnKeyReleased_Microsoft_Xna_Framework_Input_Keys_" data-uid="MonoGame.Extended.NuclexGui.Controls.GuiControl.OnKeyReleased(Microsoft.Xna.Framework.Input.Keys)">OnKeyReleased(Keys)</h4>
+  <div class="markdown level1 summary"><p>Called when a key on the keyboard has been released again</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void OnKeyReleased(Keys keyCode)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Microsoft.Xna.Framework.Input.Keys</span></td>
+        <td><span class="parametername">keyCode</span></td>
+        <td><p>Code of the key that was released</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MonoGame_Extended_NuclexGui_Controls_GuiControl_OnMouseEntered_" data-uid="MonoGame.Extended.NuclexGui.Controls.GuiControl.OnMouseEntered*"></a>
+  <h4 id="MonoGame_Extended_NuclexGui_Controls_GuiControl_OnMouseEntered" data-uid="MonoGame.Extended.NuclexGui.Controls.GuiControl.OnMouseEntered">OnMouseEntered()</h4>
+  <div class="markdown level1 summary"><p>Called when the mouse has entered the control and is now hovering over it</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void OnMouseEntered()</code></pre>
+  </div>
+  
+  
+  <a id="MonoGame_Extended_NuclexGui_Controls_GuiControl_OnMouseLeft_" data-uid="MonoGame.Extended.NuclexGui.Controls.GuiControl.OnMouseLeft*"></a>
+  <h4 id="MonoGame_Extended_NuclexGui_Controls_GuiControl_OnMouseLeft_System_Single_System_Single_" data-uid="MonoGame.Extended.NuclexGui.Controls.GuiControl.OnMouseLeft(System.Single,System.Single)">OnMouseLeft(Single, Single)</h4>
+  <div class="markdown level1 summary"><p>Called when the mouse has left the control and is no longer hovering over it</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void OnMouseLeft(float x, float y)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">x</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">y</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MonoGame_Extended_NuclexGui_Controls_GuiControl_OnMouseMoved_" data-uid="MonoGame.Extended.NuclexGui.Controls.GuiControl.OnMouseMoved*"></a>
+  <h4 id="MonoGame_Extended_NuclexGui_Controls_GuiControl_OnMouseMoved_System_Single_System_Single_" data-uid="MonoGame.Extended.NuclexGui.Controls.GuiControl.OnMouseMoved(System.Single,System.Single)">OnMouseMoved(Single, Single)</h4>
+  <div class="markdown level1 summary"><p>Called when the mouse position is updated</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void OnMouseMoved(float x, float y)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">x</span></td>
+        <td><p>X coordinate of the mouse cursor on the control</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">y</span></td>
+        <td><p>Y coordinate of the mouse cursor on the control</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MonoGame_Extended_NuclexGui_Controls_GuiControl_OnMousePressed_" data-uid="MonoGame.Extended.NuclexGui.Controls.GuiControl.OnMousePressed*"></a>
+  <h4 id="MonoGame_Extended_NuclexGui_Controls_GuiControl_OnMousePressed_MonoGame_Extended_Input_MouseButton_" data-uid="MonoGame.Extended.NuclexGui.Controls.GuiControl.OnMousePressed(MonoGame.Extended.Input.MouseButton)">OnMousePressed(MouseButton)</h4>
+  <div class="markdown level1 summary"><p>Called when a mouse button has been pressed down</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void OnMousePressed(MouseButton button)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MonoGame.Extended.Input.MouseButton.html">MouseButton</a></td>
+        <td><span class="parametername">button</span></td>
+        <td><p>Index of the button that has been pressed</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="MonoGame_Extended_NuclexGui_Controls_GuiControl_OnMousePressed_MonoGame_Extended_Input_MouseButton__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>If this method states that a mouse press is processed by returning
+true, that means the control did something with it and the mouse press
+should not be acted upon by any other listener.</p>
+</div>
+  
+  
+  <a id="MonoGame_Extended_NuclexGui_Controls_GuiControl_OnMouseReleased_" data-uid="MonoGame.Extended.NuclexGui.Controls.GuiControl.OnMouseReleased*"></a>
+  <h4 id="MonoGame_Extended_NuclexGui_Controls_GuiControl_OnMouseReleased_MonoGame_Extended_Input_MouseButton_" data-uid="MonoGame.Extended.NuclexGui.Controls.GuiControl.OnMouseReleased(MonoGame.Extended.Input.MouseButton)">OnMouseReleased(MouseButton)</h4>
+  <div class="markdown level1 summary"><p>Called when a mouse button has been released again</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void OnMouseReleased(MouseButton button)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MonoGame.Extended.Input.MouseButton.html">MouseButton</a></td>
+        <td><span class="parametername">button</span></td>
+        <td><p>Index of the button that has been released</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MonoGame_Extended_NuclexGui_Controls_GuiControl_OnMouseWheel_" data-uid="MonoGame.Extended.NuclexGui.Controls.GuiControl.OnMouseWheel*"></a>
+  <h4 id="MonoGame_Extended_NuclexGui_Controls_GuiControl_OnMouseWheel_System_Single_" data-uid="MonoGame.Extended.NuclexGui.Controls.GuiControl.OnMouseWheel(System.Single)">OnMouseWheel(Single)</h4>
+  <div class="markdown level1 summary"><p>Called when the mouse wheel has been rotated</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void OnMouseWheel(float ticks)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">ticks</span></td>
+        <td><p>Number of ticks that the mouse wheel has been rotated</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

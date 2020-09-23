@@ -1,0 +1,856 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Struct UniScalar
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Struct UniScalar
+   ">
+    <meta name="generator" content="docfx 2.56.2.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="MonoGame.Extended.NuclexGui.UniScalar">
+  
+  
+  <h1 id="MonoGame_Extended_NuclexGui_UniScalar" data-uid="MonoGame.Extended.NuclexGui.UniScalar" class="text-break">Struct UniScalar
+  </h1>
+  <div class="markdown level0 summary"><p>Stores a size or location on one axis</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="MonoGame.Extended.NuclexGui.html">MonoGame.Extended.NuclexGui</a></h6>
+  <h6><strong>Assembly</strong>: MonoGame.Extended.NuclexGui.dll</h6>
+  <h5 id="MonoGame_Extended_NuclexGui_UniScalar_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public struct UniScalar</code></pre>
+  </div>
+  <h5 id="MonoGame_Extended_NuclexGui_UniScalar_remarks"><strong>Remarks</strong></h5>
+  <div class="markdown level0 remarks"><p>
+    Any position or size in GUI uses a combined position consisting
+    of a fraction and an offset. The fraction specifies the position or size as a
+    fraction of the parent frame&apos;s bounds and usually is in the range between 0.0 and
+    1.0. The offset simply is the number of pixels to divert from the thusly
+    determined location.
+</p>
+<p>
+    Through the use of both fraction and offset, any kind of anchoring behavior can be
+    achieved that normally would require a complex anchoring and docking system as can
+    be seen in System.Windows.Forms.
+</p>
+<p>
+    If you, for example, wanted to always place a control 20 pixels from the right
+    border of its parent container, set the fraction of its position to 1.0 (always
+    on the right border) and the offset to -20.0 (go 20 units to the left from there).
+</p>
+<p>
+    You can achieve traditional absolute positioning by leaving the fraction at 0.0,
+    which is equivalent to the upper or left border of the parent container.
+</p>
+</div>
+  <h3 id="constructors">Constructors
+  </h3>
+  
+  
+  <a id="MonoGame_Extended_NuclexGui_UniScalar__ctor_" data-uid="MonoGame.Extended.NuclexGui.UniScalar.#ctor*"></a>
+  <h4 id="MonoGame_Extended_NuclexGui_UniScalar__ctor_System_Single_" data-uid="MonoGame.Extended.NuclexGui.UniScalar.#ctor(System.Single)">UniScalar(Single)</h4>
+  <div class="markdown level1 summary"><p>Initializes a new scalar from an offset only</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public UniScalar(float offset)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">offset</span></td>
+        <td><p>Offset in pixels this scalar indicates</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MonoGame_Extended_NuclexGui_UniScalar__ctor_" data-uid="MonoGame.Extended.NuclexGui.UniScalar.#ctor*"></a>
+  <h4 id="MonoGame_Extended_NuclexGui_UniScalar__ctor_System_Single_System_Single_" data-uid="MonoGame.Extended.NuclexGui.UniScalar.#ctor(System.Single,System.Single)">UniScalar(Single, Single)</h4>
+  <div class="markdown level1 summary"><p>Initializes a new dimension from an absolute and a relative part</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public UniScalar(float fraction, float offset)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">fraction</span></td>
+        <td><p>Fractional position within the parent frame</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">offset</span></td>
+        <td><p>Offset in pixels from the fractional position</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="fields">Fields
+  </h3>
+  
+  
+  <h4 id="MonoGame_Extended_NuclexGui_UniScalar_Fraction" data-uid="MonoGame.Extended.NuclexGui.UniScalar.Fraction">Fraction</h4>
+  <div class="markdown level1 summary"><p>Position of the scalar as fraction of the parent frame's bounds</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float Fraction</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="MonoGame_Extended_NuclexGui_UniScalar_Fraction_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>The relative part is normally in the 0.0 .. 1.0 range, denoting the
+fraction of the parent container's size the scalar will indicate.</p>
+</div>
+  
+  
+  <h4 id="MonoGame_Extended_NuclexGui_UniScalar_Offset" data-uid="MonoGame.Extended.NuclexGui.UniScalar.Offset">Offset</h4>
+  <div class="markdown level1 summary"><p>Offset of the scalar in pixels relative to its fractional position</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float Offset</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="MonoGame_Extended_NuclexGui_UniScalar_Offset_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>This part is taken literally without paying attention to the size of
+the parent container the coordinate is used in.</p>
+</div>
+  
+  
+  <h4 id="MonoGame_Extended_NuclexGui_UniScalar_Zero" data-uid="MonoGame.Extended.NuclexGui.UniScalar.Zero">Zero</h4>
+  <div class="markdown level1 summary"><p>A scalar that has been initialized to zero</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly UniScalar Zero</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MonoGame.Extended.NuclexGui.UniScalar.html">UniScalar</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="MonoGame_Extended_NuclexGui_UniScalar_Equals_" data-uid="MonoGame.Extended.NuclexGui.UniScalar.Equals*"></a>
+  <h4 id="MonoGame_Extended_NuclexGui_UniScalar_Equals_MonoGame_Extended_NuclexGui_UniScalar_" data-uid="MonoGame.Extended.NuclexGui.UniScalar.Equals(MonoGame.Extended.NuclexGui.UniScalar)">Equals(UniScalar)</h4>
+  <div class="markdown level1 summary"><p>Checks whether another instance is equal to this instance</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Equals(UniScalar other)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MonoGame.Extended.NuclexGui.UniScalar.html">UniScalar</a></td>
+        <td><span class="parametername">other</span></td>
+        <td><p>Other instance to compare to this instance</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>True if the other instance is equal to this instance</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MonoGame_Extended_NuclexGui_UniScalar_Equals_" data-uid="MonoGame.Extended.NuclexGui.UniScalar.Equals*"></a>
+  <h4 id="MonoGame_Extended_NuclexGui_UniScalar_Equals_System_Object_" data-uid="MonoGame.Extended.NuclexGui.UniScalar.Equals(System.Object)">Equals(Object)</h4>
+  <div class="markdown level1 summary"><p>Checks whether another instance is equal to this instance</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool Equals(object other)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><span class="parametername">other</span></td>
+        <td><p>Other instance to compare to this instance</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>True if the other instance is equal to this instance</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.ValueType.Equals(System.Object)</span></div>
+  
+  
+  <a id="MonoGame_Extended_NuclexGui_UniScalar_GetHashCode_" data-uid="MonoGame.Extended.NuclexGui.UniScalar.GetHashCode*"></a>
+  <h4 id="MonoGame_Extended_NuclexGui_UniScalar_GetHashCode" data-uid="MonoGame.Extended.NuclexGui.UniScalar.GetHashCode">GetHashCode()</h4>
+  <div class="markdown level1 summary"><p>Obtains a hash code of this instance</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override int GetHashCode()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><p>The hash code of the instance</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.ValueType.GetHashCode()</span></div>
+  
+  
+  <a id="MonoGame_Extended_NuclexGui_UniScalar_ToOffset_" data-uid="MonoGame.Extended.NuclexGui.UniScalar.ToOffset*"></a>
+  <h4 id="MonoGame_Extended_NuclexGui_UniScalar_ToOffset_System_Single_" data-uid="MonoGame.Extended.NuclexGui.UniScalar.ToOffset(System.Single)">ToOffset(Single)</h4>
+  <div class="markdown level1 summary"><p>Converts the scalar into a pure offset position</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float ToOffset(float containerSize)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">containerSize</span></td>
+        <td><p>Absolute dimension of the parent that the relative coordinate relates to</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><p>The absolute position in the parent container denoted by the dimension</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MonoGame_Extended_NuclexGui_UniScalar_ToString_" data-uid="MonoGame.Extended.NuclexGui.UniScalar.ToString*"></a>
+  <h4 id="MonoGame_Extended_NuclexGui_UniScalar_ToString" data-uid="MonoGame.Extended.NuclexGui.UniScalar.ToString">ToString()</h4>
+  <div class="markdown level1 summary"><p>Returns a human-readable string representation for the unified scalar</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override string ToString()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><p>The human-readable string representation of the unified scalar</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.ValueType.ToString()</span></div>
+  <h3 id="operators">Operators
+  </h3>
+  
+  
+  <a id="MonoGame_Extended_NuclexGui_UniScalar_op_Addition_" data-uid="MonoGame.Extended.NuclexGui.UniScalar.op_Addition*"></a>
+  <h4 id="MonoGame_Extended_NuclexGui_UniScalar_op_Addition_MonoGame_Extended_NuclexGui_UniScalar_MonoGame_Extended_NuclexGui_UniScalar_" data-uid="MonoGame.Extended.NuclexGui.UniScalar.op_Addition(MonoGame.Extended.NuclexGui.UniScalar,MonoGame.Extended.NuclexGui.UniScalar)">Addition(UniScalar, UniScalar)</h4>
+  <div class="markdown level1 summary"><p>Adds one scalar to another</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static UniScalar operator +(UniScalar scalar, UniScalar summand)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MonoGame.Extended.NuclexGui.UniScalar.html">UniScalar</a></td>
+        <td><span class="parametername">scalar</span></td>
+        <td><p>Base scalar to add to</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MonoGame.Extended.NuclexGui.UniScalar.html">UniScalar</a></td>
+        <td><span class="parametername">summand</span></td>
+        <td><p>Scalar to add to the base</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MonoGame.Extended.NuclexGui.UniScalar.html">UniScalar</a></td>
+        <td><p>The result of the addition</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MonoGame_Extended_NuclexGui_UniScalar_op_Division_" data-uid="MonoGame.Extended.NuclexGui.UniScalar.op_Division*"></a>
+  <h4 id="MonoGame_Extended_NuclexGui_UniScalar_op_Division_MonoGame_Extended_NuclexGui_UniScalar_MonoGame_Extended_NuclexGui_UniScalar_" data-uid="MonoGame.Extended.NuclexGui.UniScalar.op_Division(MonoGame.Extended.NuclexGui.UniScalar,MonoGame.Extended.NuclexGui.UniScalar)">Division(UniScalar, UniScalar)</h4>
+  <div class="markdown level1 summary"><p>Divides one scalar by another</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static UniScalar operator /(UniScalar scalar, UniScalar divisor)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MonoGame.Extended.NuclexGui.UniScalar.html">UniScalar</a></td>
+        <td><span class="parametername">scalar</span></td>
+        <td><p>Base scalar to be divided</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MonoGame.Extended.NuclexGui.UniScalar.html">UniScalar</a></td>
+        <td><span class="parametername">divisor</span></td>
+        <td><p>Divisor to divide by</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MonoGame.Extended.NuclexGui.UniScalar.html">UniScalar</a></td>
+        <td><p>The result of the division</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MonoGame_Extended_NuclexGui_UniScalar_op_Equality_" data-uid="MonoGame.Extended.NuclexGui.UniScalar.op_Equality*"></a>
+  <h4 id="MonoGame_Extended_NuclexGui_UniScalar_op_Equality_MonoGame_Extended_NuclexGui_UniScalar_MonoGame_Extended_NuclexGui_UniScalar_" data-uid="MonoGame.Extended.NuclexGui.UniScalar.op_Equality(MonoGame.Extended.NuclexGui.UniScalar,MonoGame.Extended.NuclexGui.UniScalar)">Equality(UniScalar, UniScalar)</h4>
+  <div class="markdown level1 summary"><p>Checks two scalars for equality</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool operator ==(UniScalar first, UniScalar second)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MonoGame.Extended.NuclexGui.UniScalar.html">UniScalar</a></td>
+        <td><span class="parametername">first</span></td>
+        <td><p>First scalar to be compared</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MonoGame.Extended.NuclexGui.UniScalar.html">UniScalar</a></td>
+        <td><span class="parametername">second</span></td>
+        <td><p>Second scalar to be compared</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>True if both instances are equal or both references are null</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MonoGame_Extended_NuclexGui_UniScalar_op_Implicit_" data-uid="MonoGame.Extended.NuclexGui.UniScalar.op_Implicit*"></a>
+  <h4 id="MonoGame_Extended_NuclexGui_UniScalar_op_Implicit_System_Single__MonoGame_Extended_NuclexGui_UniScalar" data-uid="MonoGame.Extended.NuclexGui.UniScalar.op_Implicit(System.Single)~MonoGame.Extended.NuclexGui.UniScalar">Implicit(Single to UniScalar)</h4>
+  <div class="markdown level1 summary"><p>Implicitely constructs a scalar using a float as the absolute part</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static implicit operator UniScalar(float offset)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">offset</span></td>
+        <td><p>Float that will be used for the scalar's absolute value</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MonoGame.Extended.NuclexGui.UniScalar.html">UniScalar</a></td>
+        <td><p>A new scalar constructed with the original float as its absolute part</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MonoGame_Extended_NuclexGui_UniScalar_op_Inequality_" data-uid="MonoGame.Extended.NuclexGui.UniScalar.op_Inequality*"></a>
+  <h4 id="MonoGame_Extended_NuclexGui_UniScalar_op_Inequality_MonoGame_Extended_NuclexGui_UniScalar_MonoGame_Extended_NuclexGui_UniScalar_" data-uid="MonoGame.Extended.NuclexGui.UniScalar.op_Inequality(MonoGame.Extended.NuclexGui.UniScalar,MonoGame.Extended.NuclexGui.UniScalar)">Inequality(UniScalar, UniScalar)</h4>
+  <div class="markdown level1 summary"><p>Checks two scalars for inequality</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool operator !=(UniScalar first, UniScalar second)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MonoGame.Extended.NuclexGui.UniScalar.html">UniScalar</a></td>
+        <td><span class="parametername">first</span></td>
+        <td><p>First scalar to be compared</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MonoGame.Extended.NuclexGui.UniScalar.html">UniScalar</a></td>
+        <td><span class="parametername">second</span></td>
+        <td><p>Second scalar to be compared</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>True if the instances differ or exactly one reference is set to null</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MonoGame_Extended_NuclexGui_UniScalar_op_Multiply_" data-uid="MonoGame.Extended.NuclexGui.UniScalar.op_Multiply*"></a>
+  <h4 id="MonoGame_Extended_NuclexGui_UniScalar_op_Multiply_MonoGame_Extended_NuclexGui_UniScalar_MonoGame_Extended_NuclexGui_UniScalar_" data-uid="MonoGame.Extended.NuclexGui.UniScalar.op_Multiply(MonoGame.Extended.NuclexGui.UniScalar,MonoGame.Extended.NuclexGui.UniScalar)">Multiply(UniScalar, UniScalar)</h4>
+  <div class="markdown level1 summary"><p>Multiplies one scalar with another</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static UniScalar operator *(UniScalar scalar, UniScalar factor)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MonoGame.Extended.NuclexGui.UniScalar.html">UniScalar</a></td>
+        <td><span class="parametername">scalar</span></td>
+        <td><p>Base scalar to be multiplied</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MonoGame.Extended.NuclexGui.UniScalar.html">UniScalar</a></td>
+        <td><span class="parametername">factor</span></td>
+        <td><p>Factor to multiply by</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MonoGame.Extended.NuclexGui.UniScalar.html">UniScalar</a></td>
+        <td><p>The result of the multiplication</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MonoGame_Extended_NuclexGui_UniScalar_op_Subtraction_" data-uid="MonoGame.Extended.NuclexGui.UniScalar.op_Subtraction*"></a>
+  <h4 id="MonoGame_Extended_NuclexGui_UniScalar_op_Subtraction_MonoGame_Extended_NuclexGui_UniScalar_MonoGame_Extended_NuclexGui_UniScalar_" data-uid="MonoGame.Extended.NuclexGui.UniScalar.op_Subtraction(MonoGame.Extended.NuclexGui.UniScalar,MonoGame.Extended.NuclexGui.UniScalar)">Subtraction(UniScalar, UniScalar)</h4>
+  <div class="markdown level1 summary"><p>Subtracts one scalar from another</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static UniScalar operator -(UniScalar scalar, UniScalar subtrahend)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MonoGame.Extended.NuclexGui.UniScalar.html">UniScalar</a></td>
+        <td><span class="parametername">scalar</span></td>
+        <td><p>Base scalar to subtract from</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MonoGame.Extended.NuclexGui.UniScalar.html">UniScalar</a></td>
+        <td><span class="parametername">subtrahend</span></td>
+        <td><p>Scalar to subtract from the base</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MonoGame.Extended.NuclexGui.UniScalar.html">UniScalar</a></td>
+        <td><p>The result of the subtraction</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

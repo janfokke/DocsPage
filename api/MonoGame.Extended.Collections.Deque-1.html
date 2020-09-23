@@ -1,0 +1,1466 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class Deque&lt;T&gt;
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class Deque&lt;T&gt;
+   ">
+    <meta name="generator" content="docfx 2.56.2.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="MonoGame.Extended.Collections.Deque`1">
+  
+  
+  <h1 id="MonoGame_Extended_Collections_Deque_1" data-uid="MonoGame.Extended.Collections.Deque`1" class="text-break">Class Deque&lt;T&gt;
+  </h1>
+  <div class="markdown level0 summary"><p>Represents a collection of objects which elements can added to or removed either from the front or back; a
+<a href="https://en.wikipedia.org/wiki/Double-ended_queue">double ended queue</a> (deque).</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">Deque&lt;T&gt;</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><span class="xref">System.Collections.Generic.IList</span>&lt;T&gt;</div>
+    <div><span class="xref">System.Collections.Generic.ICollection</span>&lt;T&gt;</div>
+    <div><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;T&gt;</div>
+    <div><span class="xref">System.Collections.IEnumerable</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="MonoGame.Extended.Collections.html">MonoGame.Extended.Collections</a></h6>
+  <h6><strong>Assembly</strong>: MonoGame.Extended.dll</h6>
+  <h5 id="MonoGame_Extended_Collections_Deque_1_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class Deque&lt;T&gt; : IList&lt;T&gt;, ICollection&lt;T&gt;, IEnumerable&lt;T&gt;, IEnumerable</code></pre>
+  </div>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td><p>The type of the elements in the deque.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="MonoGame_Extended_Collections_Deque_1_remarks"><strong>Remarks</strong></h5>
+  <div class="markdown level0 remarks"><p><a href="https://en.wikipedia.org/wiki/Circular_buffer">circular array</a> is used as the internal data
+structure for the <a class="xref" href="MonoGame.Extended.Collections.Deque-1.html">Deque&lt;T&gt;</a>.</p>
+</div>
+  <h3 id="constructors">Constructors
+  </h3>
+  
+  
+  <a id="MonoGame_Extended_Collections_Deque_1__ctor_" data-uid="MonoGame.Extended.Collections.Deque`1.#ctor*"></a>
+  <h4 id="MonoGame_Extended_Collections_Deque_1__ctor" data-uid="MonoGame.Extended.Collections.Deque`1.#ctor">Deque()</h4>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="MonoGame.Extended.Collections.Deque-1.html">Deque&lt;T&gt;</a> class that is empty and has the default initial capacity.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Deque()</code></pre>
+  </div>
+  <h5 id="MonoGame_Extended_Collections_Deque_1__ctor_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>
+    The capacity of a <a class="xref" href="MonoGame.Extended.Collections.Deque-1.html">Deque&lt;T&gt;</a> is the number of elements that the <a class="xref" href="MonoGame.Extended.Collections.Deque-1.html">Deque&lt;T&gt;</a> can
+    hold. As elements are added to a <a class="xref" href="MonoGame.Extended.Collections.Deque-1.html">Deque&lt;T&gt;</a>, <a class="xref" href="MonoGame.Extended.Collections.Deque-1.html#MonoGame_Extended_Collections_Deque_1_Capacity">Capacity</a> is automatically increased by
+<a class="xref" href="MonoGame.Extended.Collections.Deque-1.html#MonoGame_Extended_Collections_Deque_1_ResizeFunction">ResizeFunction</a> as required by reallocating the internal array.
+</p>
+<p>
+    If the size of the collection can be estimated, using the <a class="xref" href="MonoGame.Extended.Collections.Deque-1.html#MonoGame_Extended_Collections_Deque_1__ctor_System_Int32_">Deque(Int32)</a> constructor and
+    specifying the initial capacity eliminates the need to perform a number of resizing operations while adding
+    elements to the <a class="xref" href="MonoGame.Extended.Collections.Deque-1.html">Deque&lt;T&gt;</a>.
+</p>
+<p>
+    The capacity can be decreased by calling the <a class="xref" href="MonoGame.Extended.Collections.Deque-1.html#MonoGame_Extended_Collections_Deque_1_TrimExcess">TrimExcess()</a> method or by setting the
+<a class="xref" href="MonoGame.Extended.Collections.Deque-1.html#MonoGame_Extended_Collections_Deque_1_Capacity">Capacity</a> property explicitly. Decreasing, or increasing, the capacity reallocates memory and
+copies all the
+elements in the <a class="xref" href="MonoGame.Extended.Collections.Deque-1.html">Deque&lt;T&gt;</a>.
+</p>
+<p>This constructor is an O(1) operation.</p>
+</div>
+  
+  
+  <a id="MonoGame_Extended_Collections_Deque_1__ctor_" data-uid="MonoGame.Extended.Collections.Deque`1.#ctor*"></a>
+  <h4 id="MonoGame_Extended_Collections_Deque_1__ctor_System_Collections_Generic_IEnumerable__0__" data-uid="MonoGame.Extended.Collections.Deque`1.#ctor(System.Collections.Generic.IEnumerable{`0})">Deque(IEnumerable&lt;T&gt;)</h4>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="MonoGame.Extended.Collections.Deque-1.html">Deque&lt;T&gt;</a> class that contains elements copied from the specified
+collection and has sufficient capacity to accommodate the number of elements copied.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Deque(IEnumerable&lt;T&gt; collection)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;T&gt;</td>
+        <td><span class="parametername">collection</span></td>
+        <td><p>The collection whose elements are copied to the new deque.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="MonoGame_Extended_Collections_Deque_1__ctor_System_Collections_Generic_IEnumerable__0___remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>
+    The elements are copied onto the <a class="xref" href="MonoGame.Extended.Collections.Deque-1.html">Deque&lt;T&gt;</a> in the same order they are read by the enumerator of
+<code data-dev-comment-type="paramref" class="paramref">collection</code>.
+</p>
+<p>This constructor is an O(n) operation, where n is the number of elements in <code data-dev-comment-type="paramref" class="paramref">collection</code>.</p>
+</div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.ArgumentNullException</span></td>
+        <td><p><code data-dev-comment-type="paramref" class="paramref">collection</code> is null.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MonoGame_Extended_Collections_Deque_1__ctor_" data-uid="MonoGame.Extended.Collections.Deque`1.#ctor*"></a>
+  <h4 id="MonoGame_Extended_Collections_Deque_1__ctor_System_Int32_" data-uid="MonoGame.Extended.Collections.Deque`1.#ctor(System.Int32)">Deque(Int32)</h4>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="MonoGame.Extended.Collections.Deque-1.html">Deque&lt;T&gt;</a> class that is empty and has the specified initial
+capacity.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Deque(int capacity)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">capacity</span></td>
+        <td><p>The number of elements that the new <a class="xref" href="MonoGame.Extended.Collections.Deque-1.html">Deque&lt;T&gt;</a> can initially store.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="MonoGame_Extended_Collections_Deque_1__ctor_System_Int32__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>
+    The capacity of a <a class="xref" href="MonoGame.Extended.Collections.Deque-1.html">Deque&lt;T&gt;</a> is the number of elements that the <a class="xref" href="MonoGame.Extended.Collections.Deque-1.html">Deque&lt;T&gt;</a> can
+    hold. As elements are added to a <a class="xref" href="MonoGame.Extended.Collections.Deque-1.html">Deque&lt;T&gt;</a>, <a class="xref" href="MonoGame.Extended.Collections.Deque-1.html#MonoGame_Extended_Collections_Deque_1_Capacity">Capacity</a> is automatically increased by
+<a class="xref" href="MonoGame.Extended.Collections.Deque-1.html#MonoGame_Extended_Collections_Deque_1_ResizeFunction">ResizeFunction</a> as required by reallocating the internal array.
+</p>
+<p>
+    If the size of the collection can be estimated, specifying the initial capacity eliminates the need to
+    perform a number of resizing operations while adding elements to the <a class="xref" href="MonoGame.Extended.Collections.Deque-1.html">Deque&lt;T&gt;</a>.
+</p>
+<p>
+    The capacity can be decreased by calling the <a class="xref" href="MonoGame.Extended.Collections.Deque-1.html#MonoGame_Extended_Collections_Deque_1_TrimExcess">TrimExcess()</a> method or by setting the
+<a class="xref" href="MonoGame.Extended.Collections.Deque-1.html#MonoGame_Extended_Collections_Deque_1_Capacity">Capacity</a> property explicitly. Decreasing, or increasing, the capacity reallocates memory and
+copies all the elements in the <a class="xref" href="MonoGame.Extended.Collections.Deque-1.html">Deque&lt;T&gt;</a>.
+</p>
+<p>This constructor is an O(n) operation, where n is <code data-dev-comment-type="paramref" class="paramref">capacity</code>.</p>
+</div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.ArgumentOutOfRangeException</span></td>
+        <td><p><code data-dev-comment-type="paramref" class="paramref">capacity</code> is less than 0.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="MonoGame_Extended_Collections_Deque_1_Capacity_" data-uid="MonoGame.Extended.Collections.Deque`1.Capacity*"></a>
+  <h4 id="MonoGame_Extended_Collections_Deque_1_Capacity" data-uid="MonoGame.Extended.Collections.Deque`1.Capacity">Capacity</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the total number of elements the internal data structure can hold without resizing.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int Capacity { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><p>The number of elements that the <a class="xref" href="MonoGame.Extended.Collections.Deque-1.html">Deque&lt;T&gt;</a> can contain before resizing is required.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="MonoGame_Extended_Collections_Deque_1_Capacity_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Changing <a class="xref" href="MonoGame.Extended.Collections.Deque-1.html#MonoGame_Extended_Collections_Deque_1_Capacity">Capacity</a> reallocates memory and copies all the
+elements in the <a class="xref" href="MonoGame.Extended.Collections.Deque-1.html">Deque&lt;T&gt;</a>.</p>
+</div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.ArgumentOutOfRangeException</span></td>
+        <td><p><a class="xref" href="MonoGame.Extended.Collections.Deque-1.html#MonoGame_Extended_Collections_Deque_1_Capacity">Capacity</a> cannot be set to a value less than <a class="xref" href="MonoGame.Extended.Collections.Deque-1.html#MonoGame_Extended_Collections_Deque_1_Count">Count</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MonoGame_Extended_Collections_Deque_1_Count_" data-uid="MonoGame.Extended.Collections.Deque`1.Count*"></a>
+  <h4 id="MonoGame_Extended_Collections_Deque_1_Count" data-uid="MonoGame.Extended.Collections.Deque`1.Count">Count</h4>
+  <div class="markdown level1 summary"><p>Gets the number of elements contained in the <a class="xref" href="MonoGame.Extended.Collections.Deque-1.html">Deque&lt;T&gt;</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int Count { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><p>The number of elements contained in the <a class="xref" href="MonoGame.Extended.Collections.Deque-1.html">Deque&lt;T&gt;</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MonoGame_Extended_Collections_Deque_1_Item_" data-uid="MonoGame.Extended.Collections.Deque`1.Item*"></a>
+  <h4 id="MonoGame_Extended_Collections_Deque_1_Item_System_Int32_" data-uid="MonoGame.Extended.Collections.Deque`1.Item(System.Int32)">Item[Int32]</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the element at the specified index.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public T this[int index] { get; set; }</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">index</span></td>
+        <td><p>The zero-based index of the element to get or set.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><p>The element at the specified index.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="MonoGame_Extended_Collections_Deque_1_Item_System_Int32__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>
+<p>
+    Use <code>0</code> for the <code data-dev-comment-type="paramref" class="paramref">index</code> to get or set the element at the beginning of the
+<a class="xref" href="MonoGame.Extended.Collections.Deque-1.html">Deque&lt;T&gt;</a>, and use <code><a class="xref" href="MonoGame.Extended.Collections.Deque-1.html#MonoGame_Extended_Collections_Deque_1_Count">Count</a> - 1</code> for the <code data-dev-comment-type="paramref" class="paramref">index</code> to get the
+element at the end of the <a class="xref" href="MonoGame.Extended.Collections.Deque-1.html">Deque&lt;T&gt;</a>.
+</p>
+</div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.ArgumentOutOfRangeException</span></td>
+        <td><p>Index was out of range. Must be non-negative and less than <a class="xref" href="MonoGame.Extended.Collections.Deque-1.html#MonoGame_Extended_Collections_Deque_1_Count">Count</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MonoGame_Extended_Collections_Deque_1_ResizeFunction_" data-uid="MonoGame.Extended.Collections.Deque`1.ResizeFunction*"></a>
+  <h4 id="MonoGame_Extended_Collections_Deque_1_ResizeFunction" data-uid="MonoGame.Extended.Collections.Deque`1.ResizeFunction">ResizeFunction</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the resize function used to calculate and set <a class="xref" href="MonoGame.Extended.Collections.Deque-1.html#MonoGame_Extended_Collections_Deque_1_Capacity">Capacity</a> when a greater capacity is
+required.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Func&lt;int, int&gt; ResizeFunction { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Func</span>&lt;<span class="xref">System.Int32</span>, <span class="xref">System.Int32</span>&gt;</td>
+        <td><p>The <span class="xref">System.Func&lt;T, TResult&gt;</span> used to calculate and set <a class="xref" href="MonoGame.Extended.Collections.Deque-1.html#MonoGame_Extended_Collections_Deque_1_Capacity">Capacity</a> when a greater capacity
+is required.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="MonoGame_Extended_Collections_Deque_1_ResizeFunction_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>The default resize function is twice the <a class="xref" href="MonoGame.Extended.Collections.Deque-1.html#MonoGame_Extended_Collections_Deque_1_Capacity">Capacity</a>. Setting
+<a class="xref" href="MonoGame.Extended.Collections.Deque-1.html#MonoGame_Extended_Collections_Deque_1_ResizeFunction">ResizeFunction</a> to <code>null</code> will set it back to the default.</p>
+</div>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="MonoGame_Extended_Collections_Deque_1_AddToBack_" data-uid="MonoGame.Extended.Collections.Deque`1.AddToBack*"></a>
+  <h4 id="MonoGame_Extended_Collections_Deque_1_AddToBack__0_" data-uid="MonoGame.Extended.Collections.Deque`1.AddToBack(`0)">AddToBack(T)</h4>
+  <div class="markdown level1 summary"><p>Adds an element to the end of the <a class="xref" href="MonoGame.Extended.Collections.Deque-1.html">Deque&lt;T&gt;</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void AddToBack(T item)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><span class="parametername">item</span></td>
+        <td><p>The element to add to the <a class="xref" href="MonoGame.Extended.Collections.Deque-1.html">Deque&lt;T&gt;</a>. The value can be <code>null</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="MonoGame_Extended_Collections_Deque_1_AddToBack__0__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>
+    As elements are added to a <a class="xref" href="MonoGame.Extended.Collections.Deque-1.html">Deque&lt;T&gt;</a>, <a class="xref" href="MonoGame.Extended.Collections.Deque-1.html#MonoGame_Extended_Collections_Deque_1_Capacity">Capacity</a> is automatically increased by
+<a class="xref" href="MonoGame.Extended.Collections.Deque-1.html#MonoGame_Extended_Collections_Deque_1_ResizeFunction">ResizeFunction</a> as required by reallocating the internal circular array.
+</p>
+<p>
+    If <a class="xref" href="MonoGame.Extended.Collections.Deque-1.html#MonoGame_Extended_Collections_Deque_1_Count">Count</a> is less than <a class="xref" href="MonoGame.Extended.Collections.Deque-1.html#MonoGame_Extended_Collections_Deque_1_Capacity">Capacity</a>, this method is an O(1) operation. Otherwise the
+    internal circular array needs to be resized to accommodate the new element and this method becomes an O(n)
+    operation, where n is <a class="xref" href="MonoGame.Extended.Collections.Deque-1.html#MonoGame_Extended_Collections_Deque_1_Count">Count</a>.
+</p>
+</div>
+  
+  
+  <a id="MonoGame_Extended_Collections_Deque_1_AddToFront_" data-uid="MonoGame.Extended.Collections.Deque`1.AddToFront*"></a>
+  <h4 id="MonoGame_Extended_Collections_Deque_1_AddToFront__0_" data-uid="MonoGame.Extended.Collections.Deque`1.AddToFront(`0)">AddToFront(T)</h4>
+  <div class="markdown level1 summary"><p>Adds an element to the beginning of the <a class="xref" href="MonoGame.Extended.Collections.Deque-1.html">Deque&lt;T&gt;</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void AddToFront(T item)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><span class="parametername">item</span></td>
+        <td><p>The element to add to the <a class="xref" href="MonoGame.Extended.Collections.Deque-1.html">Deque&lt;T&gt;</a>. The value can be <code>null</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="MonoGame_Extended_Collections_Deque_1_AddToFront__0__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>
+    As elements are added to a <a class="xref" href="MonoGame.Extended.Collections.Deque-1.html">Deque&lt;T&gt;</a>, <a class="xref" href="MonoGame.Extended.Collections.Deque-1.html#MonoGame_Extended_Collections_Deque_1_Capacity">Capacity</a> is automatically increased by
+<a class="xref" href="MonoGame.Extended.Collections.Deque-1.html#MonoGame_Extended_Collections_Deque_1_ResizeFunction">ResizeFunction</a> as required by reallocating the internal circular array.
+</p>
+<p>
+    If <a class="xref" href="MonoGame.Extended.Collections.Deque-1.html#MonoGame_Extended_Collections_Deque_1_Count">Count</a> is less than <a class="xref" href="MonoGame.Extended.Collections.Deque-1.html#MonoGame_Extended_Collections_Deque_1_Capacity">Capacity</a>, this method is an O(1) operation. Otherwise the
+    internal circular array needs to be resized to accommodate the new element and this method becomes an O(n)
+    operation, where n is <a class="xref" href="MonoGame.Extended.Collections.Deque-1.html#MonoGame_Extended_Collections_Deque_1_Count">Count</a>.
+</p>
+</div>
+  
+  
+  <a id="MonoGame_Extended_Collections_Deque_1_Clear_" data-uid="MonoGame.Extended.Collections.Deque`1.Clear*"></a>
+  <h4 id="MonoGame_Extended_Collections_Deque_1_Clear" data-uid="MonoGame.Extended.Collections.Deque`1.Clear">Clear()</h4>
+  <div class="markdown level1 summary"><p>Removes all elements from the <a class="xref" href="MonoGame.Extended.Collections.Deque-1.html">Deque&lt;T&gt;</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Clear()</code></pre>
+  </div>
+  <h5 id="MonoGame_Extended_Collections_Deque_1_Clear_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>
+<a class="xref" href="MonoGame.Extended.Collections.Deque-1.html#MonoGame_Extended_Collections_Deque_1_Count">Count</a> is set to <code>0</code>, and references to other objects from elements of the collection are
+also released.
+</p>
+<p>
+<a class="xref" href="MonoGame.Extended.Collections.Deque-1.html#MonoGame_Extended_Collections_Deque_1_Capacity">Capacity</a> remains unchanged. To reset the capacity of the <a class="xref" href="MonoGame.Extended.Collections.Deque-1.html">Deque&lt;T&gt;</a>, call the
+<a class="xref" href="MonoGame.Extended.Collections.Deque-1.html#MonoGame_Extended_Collections_Deque_1_TrimExcess">TrimExcess()</a> method or set the <a class="xref" href="MonoGame.Extended.Collections.Deque-1.html#MonoGame_Extended_Collections_Deque_1_Capacity">Capacity</a> property explictly. Decreasing, or
+increasing, the capacity reallocates memory and copies all the elements in the <a class="xref" href="MonoGame.Extended.Collections.Deque-1.html">Deque&lt;T&gt;</a>.
+Trimming an empty <a class="xref" href="MonoGame.Extended.Collections.Deque-1.html">Deque&lt;T&gt;</a> sets <a class="xref" href="MonoGame.Extended.Collections.Deque-1.html#MonoGame_Extended_Collections_Deque_1_Capacity">Capacity</a> to the default capacity.
+</p>
+<p>This method is an O(n) operation, where n is <a class="xref" href="MonoGame.Extended.Collections.Deque-1.html#MonoGame_Extended_Collections_Deque_1_Count">Count</a>.</p>
+</div>
+  
+  
+  <a id="MonoGame_Extended_Collections_Deque_1_Contains_" data-uid="MonoGame.Extended.Collections.Deque`1.Contains*"></a>
+  <h4 id="MonoGame_Extended_Collections_Deque_1_Contains__0_" data-uid="MonoGame.Extended.Collections.Deque`1.Contains(`0)">Contains(T)</h4>
+  <div class="markdown level1 summary"><p>Determines whether an element is in the <a class="xref" href="MonoGame.Extended.Collections.Deque-1.html">Deque&lt;T&gt;</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Contains(T item)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><span class="parametername">item</span></td>
+        <td><p>The element to locate in the <a class="xref" href="MonoGame.Extended.Collections.Deque-1.html">Deque&lt;T&gt;</a>. The value can be <code>null</code> for reference
+types.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p><code>true</code> if <code data-dev-comment-type="paramref" class="paramref">item</code> is found in the <a class="xref" href="MonoGame.Extended.Collections.Deque-1.html">Deque&lt;T&gt;</a>; otherwise, false.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="MonoGame_Extended_Collections_Deque_1_Contains__0__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>
+    This method determines equality by using the default equality comparer, as defined by the object&apos;s
+    implementation
+    of the <span class="xref">System.IEquatable&lt;T&gt;.Equals(T)</span> method for the type of values in the list.
+</p>
+<p>
+    This method performs a linear search; therefore, this method is an O(n) operation, where n is
+<a class="xref" href="MonoGame.Extended.Collections.Deque-1.html#MonoGame_Extended_Collections_Deque_1_Count">Count</a>.
+</p>
+</div>
+  
+  
+  <a id="MonoGame_Extended_Collections_Deque_1_CopyTo_" data-uid="MonoGame.Extended.Collections.Deque`1.CopyTo*"></a>
+  <h4 id="MonoGame_Extended_Collections_Deque_1_CopyTo__0___System_Int32_" data-uid="MonoGame.Extended.Collections.Deque`1.CopyTo(`0[],System.Int32)">CopyTo(T[], Int32)</h4>
+  <div class="markdown level1 summary"><p>Copies the entire <a class="xref" href="MonoGame.Extended.Collections.Deque-1.html">Deque&lt;T&gt;</a> to a compatible one-dimensional array, starting at the specified index of
+the target array.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void CopyTo(T[] array, int arrayIndex = 0)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>T[]</td>
+        <td><span class="parametername">array</span></td>
+        <td><p>The one-dimensional <span class="xref">System.Array</span> that is the destination of the elements copied from
+<a class="xref" href="MonoGame.Extended.Collections.Deque-1.html">Deque&lt;T&gt;</a>. The <span class="xref">System.Array</span> must have zero-based indexing.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">arrayIndex</span></td>
+        <td><p>The zero-based index in <code data-dev-comment-type="paramref" class="paramref">array</code> at which copying begins.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="MonoGame_Extended_Collections_Deque_1_CopyTo__0___System_Int32__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>This method uses <span class="xref">System.Array.Copy(System.Array,System.Int32,System.Array,System.Int32,System.Int32)</span> to copy the elements. The elements are
+copied to the <span class="xref">System.Array</span> in the same order in which the enumerator iterates
+through the <a class="xref" href="MonoGame.Extended.Collections.Deque-1.html">Deque&lt;T&gt;</a>. This method is an O(n) operation, where n is <a class="xref" href="MonoGame.Extended.Collections.Deque-1.html#MonoGame_Extended_Collections_Deque_1_Count">Count</a>.</p>
+</div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.ArgumentNullException</span></td>
+        <td><p><code data-dev-comment-type="paramref" class="paramref">array</code> is null.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.ArgumentOutOfRangeException</span></td>
+        <td><p><code data-dev-comment-type="paramref" class="paramref">arrayIndex</code> is less than 0.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.ArgumentException</span></td>
+        <td><p>The number of elements in the source <a class="xref" href="MonoGame.Extended.Collections.Deque-1.html">Deque&lt;T&gt;</a> is greater than the
+available space from <code data-dev-comment-type="paramref" class="paramref">arrayIndex</code> to the end of the destination <code data-dev-comment-type="paramref" class="paramref">array</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MonoGame_Extended_Collections_Deque_1_Get_" data-uid="MonoGame.Extended.Collections.Deque`1.Get*"></a>
+  <h4 id="MonoGame_Extended_Collections_Deque_1_Get_System_Int32__0__" data-uid="MonoGame.Extended.Collections.Deque`1.Get(System.Int32,`0@)">Get(Int32, out T)</h4>
+  <div class="markdown level1 summary"><p>Returns the element at the specified index of the <a class="xref" href="MonoGame.Extended.Collections.Deque-1.html">Deque&lt;T&gt;</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Get(int index, out T item)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">index</span></td>
+        <td><p>The zero-based index of the element to get.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><span class="parametername">item</span></td>
+        <td><p>When this method returns, contains the element at the specified index of the
+<a class="xref" href="MonoGame.Extended.Collections.Deque-1.html">Deque&lt;T&gt;</a>, if <code data-dev-comment-type="paramref" class="paramref">index</code> was non-negative and less than <a class="xref" href="MonoGame.Extended.Collections.Deque-1.html#MonoGame_Extended_Collections_Deque_1_Count">Count</a>;
+otherwise, the default value for the type of the value parameter. This parameter is passed uninitialized.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p><code>true</code> if <code data-dev-comment-type="paramref" class="paramref">item</code> was successfully retrieved at <code data-dev-comment-type="paramref" class="paramref">index</code> from the of the
+<a class="xref" href="MonoGame.Extended.Collections.Deque-1.html">Deque&lt;T&gt;</a>;
+otherwise, <code>false</code> if <code data-dev-comment-type="paramref" class="paramref">index</code> was non-negative and less than <a class="xref" href="MonoGame.Extended.Collections.Deque-1.html#MonoGame_Extended_Collections_Deque_1_Count">Count</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MonoGame_Extended_Collections_Deque_1_GetBack_" data-uid="MonoGame.Extended.Collections.Deque`1.GetBack*"></a>
+  <h4 id="MonoGame_Extended_Collections_Deque_1_GetBack__0__" data-uid="MonoGame.Extended.Collections.Deque`1.GetBack(`0@)">GetBack(out T)</h4>
+  <div class="markdown level1 summary"><p>Returns the element at the end of the <a class="xref" href="MonoGame.Extended.Collections.Deque-1.html">Deque&lt;T&gt;</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool GetBack(out T item)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><span class="parametername">item</span></td>
+        <td><p>When this method returns, contains the element at the end of the <a class="xref" href="MonoGame.Extended.Collections.Deque-1.html">Deque&lt;T&gt;</a>, if
+<a class="xref" href="MonoGame.Extended.Collections.Deque-1.html">Deque&lt;T&gt;</a> was not empty; otherwise, the default value for the type of the value parameter. This
+parameter is passed uninitialized.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p><code>true</code> if <code data-dev-comment-type="paramref" class="paramref">item</code> was successfully from the end of the <a class="xref" href="MonoGame.Extended.Collections.Deque-1.html">Deque&lt;T&gt;</a>;
+otherwise, <code>false</code> if the <a class="xref" href="MonoGame.Extended.Collections.Deque-1.html">Deque&lt;T&gt;</a> is empty.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MonoGame_Extended_Collections_Deque_1_GetEnumerator_" data-uid="MonoGame.Extended.Collections.Deque`1.GetEnumerator*"></a>
+  <h4 id="MonoGame_Extended_Collections_Deque_1_GetEnumerator" data-uid="MonoGame.Extended.Collections.Deque`1.GetEnumerator">GetEnumerator()</h4>
+  <div class="markdown level1 summary"><p>Returns an enumerator that iterates through the <a class="xref" href="MonoGame.Extended.Collections.Deque-1.html">Deque&lt;T&gt;</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IEnumerator&lt;T&gt; GetEnumerator()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerator</span>&lt;T&gt;</td>
+        <td><p>An <span class="xref">System.Collections.Generic.IEnumerator&lt;T&gt;</span> that can be used to iterate through the <a class="xref" href="MonoGame.Extended.Collections.Deque-1.html">Deque&lt;T&gt;</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MonoGame_Extended_Collections_Deque_1_GetFront_" data-uid="MonoGame.Extended.Collections.Deque`1.GetFront*"></a>
+  <h4 id="MonoGame_Extended_Collections_Deque_1_GetFront__0__" data-uid="MonoGame.Extended.Collections.Deque`1.GetFront(`0@)">GetFront(out T)</h4>
+  <div class="markdown level1 summary"><p>Returns the element at the beginning of the <a class="xref" href="MonoGame.Extended.Collections.Deque-1.html">Deque&lt;T&gt;</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool GetFront(out T item)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><span class="parametername">item</span></td>
+        <td><p>When this method returns, contains the element at the beginning of the <a class="xref" href="MonoGame.Extended.Collections.Deque-1.html">Deque&lt;T&gt;</a>, if
+<a class="xref" href="MonoGame.Extended.Collections.Deque-1.html">Deque&lt;T&gt;</a> was not empty; otherwise, the default value for the type of the value parameter. This
+parameter is passed uninitialized.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p><code>true</code> if <code data-dev-comment-type="paramref" class="paramref">item</code> was successfully from the beginning of the <a class="xref" href="MonoGame.Extended.Collections.Deque-1.html">Deque&lt;T&gt;</a>;
+otherwise, <code>false</code> if the <a class="xref" href="MonoGame.Extended.Collections.Deque-1.html">Deque&lt;T&gt;</a> is empty.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MonoGame_Extended_Collections_Deque_1_IndexOf_" data-uid="MonoGame.Extended.Collections.Deque`1.IndexOf*"></a>
+  <h4 id="MonoGame_Extended_Collections_Deque_1_IndexOf__0_" data-uid="MonoGame.Extended.Collections.Deque`1.IndexOf(`0)">IndexOf(T)</h4>
+  <div class="markdown level1 summary"><p>Searches for the specified element and returns the zero-based index of the first occurrence within the entire
+<a class="xref" href="MonoGame.Extended.Collections.Deque-1.html">Deque&lt;T&gt;</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int IndexOf(T item)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><span class="parametername">item</span></td>
+        <td><p>The element to locate in the <a class="xref" href="MonoGame.Extended.Collections.Deque-1.html">Deque&lt;T&gt;</a>. The value can be <code>null</code> for reference
+types.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><p>The zero-based index of the first occurrence of <code data-dev-comment-type="paramref" class="paramref">item</code> within the entire
+<a class="xref" href="MonoGame.Extended.Collections.Deque-1.html">Deque&lt;T&gt;</a>, if found; otherwise, <code>-1</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="MonoGame_Extended_Collections_Deque_1_IndexOf__0__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>
+    This method is an O(1) operation if <code data-dev-comment-type="paramref" class="paramref">item</code> is at the front or back of the
+<a class="xref" href="MonoGame.Extended.Collections.Deque-1.html">Deque&lt;T&gt;</a>; otherwise, this method is an O(n) operation where n is <a class="xref" href="MonoGame.Extended.Collections.Deque-1.html#MonoGame_Extended_Collections_Deque_1_Count">Count</a>.
+</p>
+</div>
+  
+  
+  <a id="MonoGame_Extended_Collections_Deque_1_Pop_" data-uid="MonoGame.Extended.Collections.Deque`1.Pop*"></a>
+  <h4 id="MonoGame_Extended_Collections_Deque_1_Pop" data-uid="MonoGame.Extended.Collections.Deque`1.Pop">Pop()</h4>
+  <div class="markdown level1 summary"><p>Removes and returns the last item.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public T Pop()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><p>The item that was removed</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MonoGame_Extended_Collections_Deque_1_Remove_" data-uid="MonoGame.Extended.Collections.Deque`1.Remove*"></a>
+  <h4 id="MonoGame_Extended_Collections_Deque_1_Remove__0_" data-uid="MonoGame.Extended.Collections.Deque`1.Remove(`0)">Remove(T)</h4>
+  <div class="markdown level1 summary"><p>Removes the first occurrence of a specific element from the <a class="xref" href="MonoGame.Extended.Collections.Deque-1.html">Deque&lt;T&gt;</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Remove(T item)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><span class="parametername">item</span></td>
+        <td><p>The element to remove from the <a class="xref" href="MonoGame.Extended.Collections.Deque-1.html">Deque&lt;T&gt;</a>. The value can be <code>null</code> for reference
+types.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p><code>true</code> if <code data-dev-comment-type="paramref" class="paramref">item</code> was successfully removed; otherwise, false. This method also returns false
+if <code data-dev-comment-type="paramref" class="paramref">item</code> is not found in the <a class="xref" href="MonoGame.Extended.Collections.Deque-1.html">Deque&lt;T&gt;</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="MonoGame_Extended_Collections_Deque_1_Remove__0__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>
+    This method is an O(1) operation if <code data-dev-comment-type="paramref" class="paramref">item</code> is at the front or back of the
+<a class="xref" href="MonoGame.Extended.Collections.Deque-1.html">Deque&lt;T&gt;</a>; otherwise, this method is an O(n) operation where n is <a class="xref" href="MonoGame.Extended.Collections.Deque-1.html#MonoGame_Extended_Collections_Deque_1_Count">Count</a>.
+</p>
+</div>
+  
+  
+  <a id="MonoGame_Extended_Collections_Deque_1_RemoveAt_" data-uid="MonoGame.Extended.Collections.Deque`1.RemoveAt*"></a>
+  <h4 id="MonoGame_Extended_Collections_Deque_1_RemoveAt_System_Int32_" data-uid="MonoGame.Extended.Collections.Deque`1.RemoveAt(System.Int32)">RemoveAt(Int32)</h4>
+  <div class="markdown level1 summary"><p>Removes the element at the specified index of the <a class="xref" href="MonoGame.Extended.Collections.Deque-1.html">Deque&lt;T&gt;</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void RemoveAt(int index)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">index</span></td>
+        <td><p>The zero-based index of the element to remove.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.ArgumentOutOfRangeException</span></td>
+        <td><p><code data-dev-comment-type="paramref" class="paramref">index</code> is less than 0.</p>
+<p>-or-</p>
+<p><code data-dev-comment-type="paramref" class="paramref">index</code> is equal to or greater than <a class="xref" href="MonoGame.Extended.Collections.Deque-1.html#MonoGame_Extended_Collections_Deque_1_Count">Count</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MonoGame_Extended_Collections_Deque_1_RemoveFromBack_" data-uid="MonoGame.Extended.Collections.Deque`1.RemoveFromBack*"></a>
+  <h4 id="MonoGame_Extended_Collections_Deque_1_RemoveFromBack" data-uid="MonoGame.Extended.Collections.Deque`1.RemoveFromBack">RemoveFromBack()</h4>
+  <div class="markdown level1 summary"><p>Removes the element at the end of the <a class="xref" href="MonoGame.Extended.Collections.Deque-1.html">Deque&lt;T&gt;</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool RemoveFromBack()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p><code>true</code> if the element was successfully removed from the end of the <a class="xref" href="MonoGame.Extended.Collections.Deque-1.html">Deque&lt;T&gt;</a>;
+otherwise, <code>false</code> if the <a class="xref" href="MonoGame.Extended.Collections.Deque-1.html">Deque&lt;T&gt;</a> is empty.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="MonoGame_Extended_Collections_Deque_1_RemoveFromBack_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>
+    This method is similar to the <a class="xref" href="MonoGame.Extended.Collections.Deque-1.html#MonoGame_Extended_Collections_Deque_1_GetBack__0__">GetBack(out T)</a> method, but <a class="xref" href="MonoGame.Extended.Collections.Deque-1.html#MonoGame_Extended_Collections_Deque_1_GetBack__0__">GetBack(out T)</a> does not
+    modify the <a class="xref" href="MonoGame.Extended.Collections.Deque-1.html">Deque&lt;T&gt;</a>.
+</p>
+<p>
+<code>null</code> can be added to the <a class="xref" href="MonoGame.Extended.Collections.Deque-1.html">Deque&lt;T&gt;</a> as a value. To distinguish between a null value and
+the end of the <a class="xref" href="MonoGame.Extended.Collections.Deque-1.html">Deque&lt;T&gt;</a>, check whether the return value of <a class="xref" href="MonoGame.Extended.Collections.Deque-1.html#MonoGame_Extended_Collections_Deque_1_RemoveFromBack">RemoveFromBack()</a> is
+<code>false</code> or
+<a class="xref" href="MonoGame.Extended.Collections.Deque-1.html#MonoGame_Extended_Collections_Deque_1_Count">Count</a> is <code>0</code>.
+</p>
+<p>
+    This method is an O(1) operation.
+</p>
+</div>
+  
+  
+  <a id="MonoGame_Extended_Collections_Deque_1_RemoveFromBack_" data-uid="MonoGame.Extended.Collections.Deque`1.RemoveFromBack*"></a>
+  <h4 id="MonoGame_Extended_Collections_Deque_1_RemoveFromBack__0__" data-uid="MonoGame.Extended.Collections.Deque`1.RemoveFromBack(`0@)">RemoveFromBack(out T)</h4>
+  <div class="markdown level1 summary"><p>Removes the element at the end of the <a class="xref" href="MonoGame.Extended.Collections.Deque-1.html">Deque&lt;T&gt;</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool RemoveFromBack(out T item)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><span class="parametername">item</span></td>
+        <td><p>When this method returns, contains the element removed from the end of the
+<a class="xref" href="MonoGame.Extended.Collections.Deque-1.html">Deque&lt;T&gt;</a>, if the <a class="xref" href="MonoGame.Extended.Collections.Deque-1.html">Deque&lt;T&gt;</a> was not empty; otherwise, the default value for the type of
+the value parameter. This parameter is passed uninitialized.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p><code>true</code> if <code data-dev-comment-type="paramref" class="paramref">item</code> was successfully removed from the end of the <a class="xref" href="MonoGame.Extended.Collections.Deque-1.html">Deque&lt;T&gt;</a>;
+otherwise, <code>false</code> if the <a class="xref" href="MonoGame.Extended.Collections.Deque-1.html">Deque&lt;T&gt;</a> is empty.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="MonoGame_Extended_Collections_Deque_1_RemoveFromBack__0___remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>
+    This method is similar to the <a class="xref" href="MonoGame.Extended.Collections.Deque-1.html#MonoGame_Extended_Collections_Deque_1_GetBack__0__">GetBack(out T)</a> method, but <a class="xref" href="MonoGame.Extended.Collections.Deque-1.html#MonoGame_Extended_Collections_Deque_1_GetBack__0__">GetBack(out T)</a> does not
+    modify the <a class="xref" href="MonoGame.Extended.Collections.Deque-1.html">Deque&lt;T&gt;</a>.
+</p>
+<p>
+<code>null</code> can be added to the <a class="xref" href="MonoGame.Extended.Collections.Deque-1.html">Deque&lt;T&gt;</a> as a value. To distinguish between a null value and
+the end of the <a class="xref" href="MonoGame.Extended.Collections.Deque-1.html">Deque&lt;T&gt;</a>, check whether the return value of <a class="xref" href="MonoGame.Extended.Collections.Deque-1.html#MonoGame_Extended_Collections_Deque_1_RemoveFromBack__0__">RemoveFromBack(out T)</a>
+is
+<code>false</code> or
+<a class="xref" href="MonoGame.Extended.Collections.Deque-1.html#MonoGame_Extended_Collections_Deque_1_Count">Count</a> is <code>0</code>.
+</p>
+<p>
+    This method is an O(1) operation.
+</p>
+</div>
+  
+  
+  <a id="MonoGame_Extended_Collections_Deque_1_RemoveFromFront_" data-uid="MonoGame.Extended.Collections.Deque`1.RemoveFromFront*"></a>
+  <h4 id="MonoGame_Extended_Collections_Deque_1_RemoveFromFront" data-uid="MonoGame.Extended.Collections.Deque`1.RemoveFromFront">RemoveFromFront()</h4>
+  <div class="markdown level1 summary"><p>Removes the element at the beginning of the <a class="xref" href="MonoGame.Extended.Collections.Deque-1.html">Deque&lt;T&gt;</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool RemoveFromFront()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p><code>true</code> if the element was successfully removed from the beginning of the <a class="xref" href="MonoGame.Extended.Collections.Deque-1.html">Deque&lt;T&gt;</a>;
+otherwise, <code>false</code> if the <a class="xref" href="MonoGame.Extended.Collections.Deque-1.html">Deque&lt;T&gt;</a> is empty.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="MonoGame_Extended_Collections_Deque_1_RemoveFromFront_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>
+    This method is similar to the <a class="xref" href="MonoGame.Extended.Collections.Deque-1.html#MonoGame_Extended_Collections_Deque_1_GetFront__0__">GetFront(out T)</a> method, but <a class="xref" href="MonoGame.Extended.Collections.Deque-1.html#MonoGame_Extended_Collections_Deque_1_GetFront__0__">GetFront(out T)</a> does not
+    modify the <a class="xref" href="MonoGame.Extended.Collections.Deque-1.html">Deque&lt;T&gt;</a>.
+</p>
+<p>
+<code>null</code> can be added to the <a class="xref" href="MonoGame.Extended.Collections.Deque-1.html">Deque&lt;T&gt;</a> as a value. To distinguish between a null value and
+the end of the <a class="xref" href="MonoGame.Extended.Collections.Deque-1.html">Deque&lt;T&gt;</a>, check whether the return value of <a class="xref" href="MonoGame.Extended.Collections.Deque-1.html#MonoGame_Extended_Collections_Deque_1_RemoveFromFront">RemoveFromFront()</a> is
+<code>false</code> or
+<a class="xref" href="MonoGame.Extended.Collections.Deque-1.html#MonoGame_Extended_Collections_Deque_1_Count">Count</a> is <code>0</code>.
+</p>
+<p>
+    This method is an O(1) operation.
+</p>
+</div>
+  
+  
+  <a id="MonoGame_Extended_Collections_Deque_1_RemoveFromFront_" data-uid="MonoGame.Extended.Collections.Deque`1.RemoveFromFront*"></a>
+  <h4 id="MonoGame_Extended_Collections_Deque_1_RemoveFromFront__0__" data-uid="MonoGame.Extended.Collections.Deque`1.RemoveFromFront(`0@)">RemoveFromFront(out T)</h4>
+  <div class="markdown level1 summary"><p>Removes the element at the beginning of the <a class="xref" href="MonoGame.Extended.Collections.Deque-1.html">Deque&lt;T&gt;</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool RemoveFromFront(out T item)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><span class="parametername">item</span></td>
+        <td><p>When this method returns, contains the element removed from the beginning of the
+<a class="xref" href="MonoGame.Extended.Collections.Deque-1.html">Deque&lt;T&gt;</a>, if the <a class="xref" href="MonoGame.Extended.Collections.Deque-1.html">Deque&lt;T&gt;</a> was not empty; otherwise, the default value for the type of
+the value parameter. This parameter is passed uninitialized.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p><code>true</code> if <code data-dev-comment-type="paramref" class="paramref">item</code> was successfully removed from the beginning of the <a class="xref" href="MonoGame.Extended.Collections.Deque-1.html">Deque&lt;T&gt;</a>;
+otherwise, <code>false</code> if the <a class="xref" href="MonoGame.Extended.Collections.Deque-1.html">Deque&lt;T&gt;</a> is empty.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="MonoGame_Extended_Collections_Deque_1_RemoveFromFront__0___remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>
+    This method is similar to the <a class="xref" href="MonoGame.Extended.Collections.Deque-1.html#MonoGame_Extended_Collections_Deque_1_GetFront__0__">GetFront(out T)</a> method, but <a class="xref" href="MonoGame.Extended.Collections.Deque-1.html#MonoGame_Extended_Collections_Deque_1_GetFront__0__">GetFront(out T)</a> does not
+    modify the <a class="xref" href="MonoGame.Extended.Collections.Deque-1.html">Deque&lt;T&gt;</a>.
+</p>
+<p>
+<code>null</code> can be added to the <a class="xref" href="MonoGame.Extended.Collections.Deque-1.html">Deque&lt;T&gt;</a> as a value. To distinguish between a null value and
+the end of the <a class="xref" href="MonoGame.Extended.Collections.Deque-1.html">Deque&lt;T&gt;</a>, check whether the return value of <a class="xref" href="MonoGame.Extended.Collections.Deque-1.html#MonoGame_Extended_Collections_Deque_1_RemoveFromFront__0__">RemoveFromFront(out T)</a>
+is
+<code>false</code> or
+<a class="xref" href="MonoGame.Extended.Collections.Deque-1.html#MonoGame_Extended_Collections_Deque_1_Count">Count</a> is <code>0</code>.
+</p>
+<p>
+    This method is an O(1) operation.
+</p>
+</div>
+  
+  
+  <a id="MonoGame_Extended_Collections_Deque_1_TrimExcess_" data-uid="MonoGame.Extended.Collections.Deque`1.TrimExcess*"></a>
+  <h4 id="MonoGame_Extended_Collections_Deque_1_TrimExcess" data-uid="MonoGame.Extended.Collections.Deque`1.TrimExcess">TrimExcess()</h4>
+  <div class="markdown level1 summary"><p>Sets the capacity to the actual number of elements in the <a class="xref" href="MonoGame.Extended.Collections.Deque-1.html">Deque&lt;T&gt;</a>, if that number is less than a
+threshold value.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void TrimExcess()</code></pre>
+  </div>
+  <h5 id="MonoGame_Extended_Collections_Deque_1_TrimExcess_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>
+    This method can be used to minimize the <a class="xref" href="MonoGame.Extended.Collections.Deque-1.html">Deque&lt;T&gt;</a>&apos;s memory overhead if no new elements will be
+    added. The cost of reallocating and copying the elements of a <a class="xref" href="MonoGame.Extended.Collections.Deque-1.html">Deque&lt;T&gt;</a> can be considerable.
+    However, the <a class="xref" href="MonoGame.Extended.Collections.Deque-1.html#MonoGame_Extended_Collections_Deque_1_TrimExcess">TrimExcess()</a> method does nothing if the <a class="xref" href="MonoGame.Extended.Collections.Deque-1.html#MonoGame_Extended_Collections_Deque_1_Count">Count</a> is more than 90% of
+<a class="xref" href="MonoGame.Extended.Collections.Deque-1.html#MonoGame_Extended_Collections_Deque_1_Capacity">Capacity</a>. This avoids incurring a large reallocation cost for a relatively small gain.
+</p>
+<p>
+    If <a class="xref" href="MonoGame.Extended.Collections.Deque-1.html#MonoGame_Extended_Collections_Deque_1_Count">Count</a> is more than 90% of <a class="xref" href="MonoGame.Extended.Collections.Deque-1.html#MonoGame_Extended_Collections_Deque_1_Capacity">Capacity</a>, this method is an O(1) operation; O(n)
+    otherwise, where n is <a class="xref" href="MonoGame.Extended.Collections.Deque-1.html#MonoGame_Extended_Collections_Deque_1_Count">Count</a>.
+</p>
+<p>
+    To reset a <a class="xref" href="MonoGame.Extended.Collections.Deque-1.html">Deque&lt;T&gt;</a> to its initial state, call the <a class="xref" href="MonoGame.Extended.Collections.Deque-1.html#MonoGame_Extended_Collections_Deque_1_Clear">Clear()</a> method before calling
+    the <a class="xref" href="MonoGame.Extended.Collections.Deque-1.html#MonoGame_Extended_Collections_Deque_1_TrimExcess">TrimExcess()</a> method. Trimming an empty <a class="xref" href="MonoGame.Extended.Collections.Deque-1.html">Deque&lt;T&gt;</a> sets <a class="xref" href="MonoGame.Extended.Collections.Deque-1.html#MonoGame_Extended_Collections_Deque_1_Capacity">Capacity</a> to
+    the default capacity.
+</p>
+<p>The capacity can also be set using the <a class="xref" href="MonoGame.Extended.Collections.Deque-1.html#MonoGame_Extended_Collections_Deque_1_Capacity">Capacity</a> property.</p>
+</div>
+  <h3 id="eii">Explicit Interface Implementations
+  </h3>
+  
+  
+  <a id="MonoGame_Extended_Collections_Deque_1_System_Collections_Generic_ICollection_T__Add_" data-uid="MonoGame.Extended.Collections.Deque`1.System#Collections#Generic#ICollection{T}#Add*"></a>
+  <h4 id="MonoGame_Extended_Collections_Deque_1_System_Collections_Generic_ICollection_T__Add__0_" data-uid="MonoGame.Extended.Collections.Deque`1.System#Collections#Generic#ICollection{T}#Add(`0)">ICollection&lt;T&gt;.Add(T)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void ICollection&lt;T&gt;.Add(T item)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><span class="parametername">item</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MonoGame_Extended_Collections_Deque_1_System_Collections_Generic_ICollection_T__IsReadOnly_" data-uid="MonoGame.Extended.Collections.Deque`1.System#Collections#Generic#ICollection{T}#IsReadOnly*"></a>
+  <h4 id="MonoGame_Extended_Collections_Deque_1_System_Collections_Generic_ICollection_T__IsReadOnly" data-uid="MonoGame.Extended.Collections.Deque`1.System#Collections#Generic#ICollection{T}#IsReadOnly">ICollection&lt;T&gt;.IsReadOnly</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool ICollection&lt;T&gt;.IsReadOnly { get; }</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MonoGame_Extended_Collections_Deque_1_System_Collections_Generic_IList_T__Insert_" data-uid="MonoGame.Extended.Collections.Deque`1.System#Collections#Generic#IList{T}#Insert*"></a>
+  <h4 id="MonoGame_Extended_Collections_Deque_1_System_Collections_Generic_IList_T__Insert_System_Int32__0_" data-uid="MonoGame.Extended.Collections.Deque`1.System#Collections#Generic#IList{T}#Insert(System.Int32,`0)">IList&lt;T&gt;.Insert(Int32, T)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void IList&lt;T&gt;.Insert(int index, T item)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">index</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><span class="parametername">item</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MonoGame_Extended_Collections_Deque_1_System_Collections_IEnumerable_GetEnumerator_" data-uid="MonoGame.Extended.Collections.Deque`1.System#Collections#IEnumerable#GetEnumerator*"></a>
+  <h4 id="MonoGame_Extended_Collections_Deque_1_System_Collections_IEnumerable_GetEnumerator" data-uid="MonoGame.Extended.Collections.Deque`1.System#Collections#IEnumerable#GetEnumerator">IEnumerable.GetEnumerator()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IEnumerator IEnumerable.GetEnumerator()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.IEnumerator</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <span class="xref">System.Collections.Generic.IList&lt;T&gt;</span>
+  </div>
+  <div>
+      <span class="xref">System.Collections.Generic.ICollection&lt;T&gt;</span>
+  </div>
+  <div>
+      <span class="xref">System.Collections.Generic.IEnumerable&lt;T&gt;</span>
+  </div>
+  <div>
+      <span class="xref">System.Collections.IEnumerable</span>
+  </div>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="MonoGame.Extended.Collections.ListExtensions.html#MonoGame_Extended_Collections_ListExtensions_Shuffle__1_System_Collections_Generic_IList___0__System_Random_">ListExtensions.Shuffle&lt;T&gt;(IList&lt;T&gt;, Random)</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

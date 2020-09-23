@@ -1,0 +1,464 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Interface IFlatGuiGraphics
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Interface IFlatGuiGraphics
+   ">
+    <meta name="generator" content="docfx 2.56.2.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="MonoGame.Extended.NuclexGui.Visuals.Flat.IFlatGuiGraphics">
+  
+  
+  <h1 id="MonoGame_Extended_NuclexGui_Visuals_Flat_IFlatGuiGraphics" data-uid="MonoGame.Extended.NuclexGui.Visuals.Flat.IFlatGuiGraphics" class="text-break">Interface IFlatGuiGraphics
+  </h1>
+  <div class="markdown level0 summary"><p>Provides drawing methods for GUI controls</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="MonoGame.Extended.NuclexGui.Visuals.Flat.html">MonoGame.Extended.NuclexGui.Visuals.Flat</a></h6>
+  <h6><strong>Assembly</strong>: MonoGame.Extended.NuclexGui.dll</h6>
+  <h5 id="MonoGame_Extended_NuclexGui_Visuals_Flat_IFlatGuiGraphics_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public interface IFlatGuiGraphics</code></pre>
+  </div>
+  <h5 id="MonoGame_Extended_NuclexGui_Visuals_Flat_IFlatGuiGraphics_remarks"><strong>Remarks</strong></h5>
+  <div class="markdown level0 remarks"><p>Analogous to System.Drawing.Graphics, but provides specialized methods for
+drawing a GUI with a dynamic, switchable theme.</p>
+</div>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="MonoGame_Extended_NuclexGui_Visuals_Flat_IFlatGuiGraphics_DrawCaret_" data-uid="MonoGame.Extended.NuclexGui.Visuals.Flat.IFlatGuiGraphics.DrawCaret*"></a>
+  <h4 id="MonoGame_Extended_NuclexGui_Visuals_Flat_IFlatGuiGraphics_DrawCaret_System_String_MonoGame_Extended_RectangleF_System_String_System_Int32_" data-uid="MonoGame.Extended.NuclexGui.Visuals.Flat.IFlatGuiGraphics.DrawCaret(System.String,MonoGame.Extended.RectangleF,System.String,System.Int32)">DrawCaret(String, RectangleF, String, Int32)</h4>
+  <div class="markdown level1 summary"><p>Draws a caret for text input at the specified index</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void DrawCaret(string frameName, RectangleF bounds, string text, int index)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">frameName</span></td>
+        <td><p>Class of the element for which to draw a caret</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MonoGame.Extended.RectangleF.html">RectangleF</a></td>
+        <td><span class="parametername">bounds</span></td>
+        <td><p>Region that will be covered by the drawn element</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">text</span></td>
+        <td><p>Text for which a caret will be drawn</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">index</span></td>
+        <td><p>Index the caret will be drawn at</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MonoGame_Extended_NuclexGui_Visuals_Flat_IFlatGuiGraphics_DrawElement_" data-uid="MonoGame.Extended.NuclexGui.Visuals.Flat.IFlatGuiGraphics.DrawElement*"></a>
+  <h4 id="MonoGame_Extended_NuclexGui_Visuals_Flat_IFlatGuiGraphics_DrawElement_System_String_MonoGame_Extended_RectangleF_" data-uid="MonoGame.Extended.NuclexGui.Visuals.Flat.IFlatGuiGraphics.DrawElement(System.String,MonoGame.Extended.RectangleF)">DrawElement(String, RectangleF)</h4>
+  <div class="markdown level1 summary"><p>Draws a GUI element onto the drawing buffer</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void DrawElement(string frameName, RectangleF bounds)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">frameName</span></td>
+        <td><p>Class of the element to draw</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MonoGame.Extended.RectangleF.html">RectangleF</a></td>
+        <td><span class="parametername">bounds</span></td>
+        <td><p>Region that will be covered by the drawn element</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="MonoGame_Extended_NuclexGui_Visuals_Flat_IFlatGuiGraphics_DrawElement_System_String_MonoGame_Extended_RectangleF__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>
+    GUI elements are the basic building blocks of a GUI:
+</p>
+</div>
+  
+  
+  <a id="MonoGame_Extended_NuclexGui_Visuals_Flat_IFlatGuiGraphics_DrawImage_" data-uid="MonoGame.Extended.NuclexGui.Visuals.Flat.IFlatGuiGraphics.DrawImage*"></a>
+  <h4 id="MonoGame_Extended_NuclexGui_Visuals_Flat_IFlatGuiGraphics_DrawImage_MonoGame_Extended_RectangleF_Microsoft_Xna_Framework_Graphics_Texture2D_Microsoft_Xna_Framework_Rectangle_" data-uid="MonoGame.Extended.NuclexGui.Visuals.Flat.IFlatGuiGraphics.DrawImage(MonoGame.Extended.RectangleF,Microsoft.Xna.Framework.Graphics.Texture2D,Microsoft.Xna.Framework.Rectangle)">DrawImage(RectangleF, Texture2D, Rectangle)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void DrawImage(RectangleF bounds, Texture2D texture, Rectangle sourceRectangle)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MonoGame.Extended.RectangleF.html">RectangleF</a></td>
+        <td><span class="parametername">bounds</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Microsoft.Xna.Framework.Graphics.Texture2D</span></td>
+        <td><span class="parametername">texture</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Microsoft.Xna.Framework.Rectangle</span></td>
+        <td><span class="parametername">sourceRectangle</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MonoGame_Extended_NuclexGui_Visuals_Flat_IFlatGuiGraphics_DrawString_" data-uid="MonoGame.Extended.NuclexGui.Visuals.Flat.IFlatGuiGraphics.DrawString*"></a>
+  <h4 id="MonoGame_Extended_NuclexGui_Visuals_Flat_IFlatGuiGraphics_DrawString_System_String_MonoGame_Extended_RectangleF_System_String_" data-uid="MonoGame.Extended.NuclexGui.Visuals.Flat.IFlatGuiGraphics.DrawString(System.String,MonoGame.Extended.RectangleF,System.String)">DrawString(String, RectangleF, String)</h4>
+  <div class="markdown level1 summary"><p>Draws text into the drawing buffer for the specified element</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void DrawString(string frameName, RectangleF bounds, string text)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">frameName</span></td>
+        <td><p>Class of the element for which to draw text</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MonoGame.Extended.RectangleF.html">RectangleF</a></td>
+        <td><span class="parametername">bounds</span></td>
+        <td><p>Region that will be covered by the drawn element</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">text</span></td>
+        <td><p>Text that will be drawn</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MonoGame_Extended_NuclexGui_Visuals_Flat_IFlatGuiGraphics_GetClosestOpening_" data-uid="MonoGame.Extended.NuclexGui.Visuals.Flat.IFlatGuiGraphics.GetClosestOpening*"></a>
+  <h4 id="MonoGame_Extended_NuclexGui_Visuals_Flat_IFlatGuiGraphics_GetClosestOpening_System_String_MonoGame_Extended_RectangleF_System_String_Microsoft_Xna_Framework_Vector2_" data-uid="MonoGame.Extended.NuclexGui.Visuals.Flat.IFlatGuiGraphics.GetClosestOpening(System.String,MonoGame.Extended.RectangleF,System.String,Microsoft.Xna.Framework.Vector2)">GetClosestOpening(String, RectangleF, String, Vector2)</h4>
+  <div class="markdown level1 summary"><p>Locates the closest gap between two letters to the provided position</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">int GetClosestOpening(string frameName, RectangleF bounds, string text, Vector2 position)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">frameName</span></td>
+        <td><p>Class of the element in which to find the gap</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MonoGame.Extended.RectangleF.html">RectangleF</a></td>
+        <td><span class="parametername">bounds</span></td>
+        <td><p>Region that will be covered by the drawn element</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">text</span></td>
+        <td><p>Text in which the closest gap will be found</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Microsoft.Xna.Framework.Vector2</span></td>
+        <td><span class="parametername">position</span></td>
+        <td><p>Position of which to determien the closest gap</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><p>The index of the gap the position is closest to</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MonoGame_Extended_NuclexGui_Visuals_Flat_IFlatGuiGraphics_MeasureString_" data-uid="MonoGame.Extended.NuclexGui.Visuals.Flat.IFlatGuiGraphics.MeasureString*"></a>
+  <h4 id="MonoGame_Extended_NuclexGui_Visuals_Flat_IFlatGuiGraphics_MeasureString_System_String_MonoGame_Extended_RectangleF_System_String_" data-uid="MonoGame.Extended.NuclexGui.Visuals.Flat.IFlatGuiGraphics.MeasureString(System.String,MonoGame.Extended.RectangleF,System.String)">MeasureString(String, RectangleF, String)</h4>
+  <div class="markdown level1 summary"><p>Measures the extents of a string in the frame's area</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">RectangleF MeasureString(string frameName, RectangleF bounds, string text)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">frameName</span></td>
+        <td><p>Class of the element whose text will be measured</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MonoGame.Extended.RectangleF.html">RectangleF</a></td>
+        <td><span class="parametername">bounds</span></td>
+        <td><p>Region that will be covered by the drawn element</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">text</span></td>
+        <td><p>Text that will be measured</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MonoGame.Extended.RectangleF.html">RectangleF</a></td>
+        <td><p>The size and extents of the specified string within the frame</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MonoGame_Extended_NuclexGui_Visuals_Flat_IFlatGuiGraphics_SetClipRegion_" data-uid="MonoGame.Extended.NuclexGui.Visuals.Flat.IFlatGuiGraphics.SetClipRegion*"></a>
+  <h4 id="MonoGame_Extended_NuclexGui_Visuals_Flat_IFlatGuiGraphics_SetClipRegion_MonoGame_Extended_RectangleF_" data-uid="MonoGame.Extended.NuclexGui.Visuals.Flat.IFlatGuiGraphics.SetClipRegion(MonoGame.Extended.RectangleF)">SetClipRegion(RectangleF)</h4>
+  <div class="markdown level1 summary"><p>Sets the clipping region for any future drawing commands</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IDisposable SetClipRegion(RectangleF clipRegion)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MonoGame.Extended.RectangleF.html">RectangleF</a></td>
+        <td><span class="parametername">clipRegion</span></td>
+        <td><p>Clipping region that will be set</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.IDisposable</span></td>
+        <td><p>An object that will unset the clipping region upon its destruction.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="MonoGame_Extended_NuclexGui_Visuals_Flat_IFlatGuiGraphics_SetClipRegion_MonoGame_Extended_RectangleF__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Clipping regions can be stacked, though this is not very typical for
+a game GUI and also not recommended practice due to performance constraints.
+Unless clipping is implemented in software, setting up a clip region
+on current hardware requires the drawing queue to be flushed, negatively
+impacting rendering performance (in technical terms, a clipping region
+change likely causes 2 more DrawPrimitive() calls from the painter).</p>
+</div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

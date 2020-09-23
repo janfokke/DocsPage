@@ -1,0 +1,1812 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Struct BoundingRectangle
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Struct BoundingRectangle
+   ">
+    <meta name="generator" content="docfx 2.56.2.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="MonoGame.Extended.BoundingRectangle">
+  
+  
+  <h1 id="MonoGame_Extended_BoundingRectangle" data-uid="MonoGame.Extended.BoundingRectangle" class="text-break">Struct BoundingRectangle
+  </h1>
+  <div class="markdown level0 summary"><p>An axis-aligned, four sided, two dimensional box defined by a centre <a class="xref" href="MonoGame.Extended.Point2.html">Point2</a> and a radii
+<span class="xref">Microsoft.Xna.Framework.Vector2</span>.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><span class="xref">System.IEquatable</span>&lt;<a class="xref" href="MonoGame.Extended.BoundingRectangle.html">BoundingRectangle</a>&gt;</div>
+    <div><a class="xref" href="MonoGame.Extended.IEquatableByRef-1.html">IEquatableByRef</a>&lt;<a class="xref" href="MonoGame.Extended.BoundingRectangle.html">BoundingRectangle</a>&gt;</div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="MonoGame.Extended.html">MonoGame.Extended</a></h6>
+  <h6><strong>Assembly</strong>: MonoGame.Extended.dll</h6>
+  <h5 id="MonoGame_Extended_BoundingRectangle_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public struct BoundingRectangle : IEquatable&lt;BoundingRectangle&gt;, IEquatableByRef&lt;BoundingRectangle&gt;</code></pre>
+  </div>
+  <h5 id="MonoGame_Extended_BoundingRectangle_remarks"><strong>Remarks</strong></h5>
+  <div class="markdown level0 remarks"><p>
+    An <a class="xref" href="MonoGame.Extended.BoundingRectangle.html">BoundingRectangle</a> is categorized by having its faces oriented in such a way that its
+    face normals are at all times parallel with the axes of the given coordinate system.
+</p>
+<p>
+    The <a class="xref" href="MonoGame.Extended.BoundingRectangle.html">BoundingRectangle</a> of a rotated <a class="xref" href="MonoGame.Extended.BoundingRectangle.html">BoundingRectangle</a> will be equivalent or larger
+    in size
+    than the original depending on the angle of rotation.
+</p>
+</div>
+  <h3 id="constructors">Constructors
+  </h3>
+  
+  
+  <a id="MonoGame_Extended_BoundingRectangle__ctor_" data-uid="MonoGame.Extended.BoundingRectangle.#ctor*"></a>
+  <h4 id="MonoGame_Extended_BoundingRectangle__ctor_MonoGame_Extended_Point2_MonoGame_Extended_Size2_" data-uid="MonoGame.Extended.BoundingRectangle.#ctor(MonoGame.Extended.Point2,MonoGame.Extended.Size2)">BoundingRectangle(Point2, Size2)</h4>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="MonoGame.Extended.BoundingRectangle.html">BoundingRectangle</a> structure from the specified centre
+<a class="xref" href="MonoGame.Extended.Point2.html">Point2</a> and the radii <a class="xref" href="MonoGame.Extended.Size2.html">Size2</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public BoundingRectangle(Point2 center, Size2 halfExtents)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MonoGame.Extended.Point2.html">Point2</a></td>
+        <td><span class="parametername">center</span></td>
+        <td><p>The centre <a class="xref" href="MonoGame.Extended.Point2.html">Point2</a>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MonoGame.Extended.Size2.html">Size2</a></td>
+        <td><span class="parametername">halfExtents</span></td>
+        <td><p>The radii <span class="xref">Microsoft.Xna.Framework.Vector2</span>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="fields">Fields
+  </h3>
+  
+  
+  <h4 id="MonoGame_Extended_BoundingRectangle_Center" data-uid="MonoGame.Extended.BoundingRectangle.Center">Center</h4>
+  <div class="markdown level1 summary"><p>The centre position of this <a class="xref" href="MonoGame.Extended.BoundingRectangle.html">BoundingRectangle</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Point2 Center</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MonoGame.Extended.Point2.html">Point2</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="MonoGame_Extended_BoundingRectangle_Empty" data-uid="MonoGame.Extended.BoundingRectangle.Empty">Empty</h4>
+  <div class="markdown level1 summary"><p>The <a class="xref" href="MonoGame.Extended.BoundingRectangle.html">BoundingRectangle</a> with <a class="xref" href="MonoGame.Extended.BoundingRectangle.html#MonoGame_Extended_BoundingRectangle_Center">Center</a> <a class="xref" href="MonoGame.Extended.Point2.html#MonoGame_Extended_Point2_Zero">Zero</a> and
+<a class="xref" href="MonoGame.Extended.BoundingRectangle.html#MonoGame_Extended_BoundingRectangle_HalfExtents">HalfExtents</a> set to <span class="xref">Microsoft.Xna.Framework.Vector2.Zero</span>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly BoundingRectangle Empty</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MonoGame.Extended.BoundingRectangle.html">BoundingRectangle</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="MonoGame_Extended_BoundingRectangle_HalfExtents" data-uid="MonoGame.Extended.BoundingRectangle.HalfExtents">HalfExtents</h4>
+  <div class="markdown level1 summary"><p>The distance from the <a class="xref" href="MonoGame.Extended.BoundingRectangle.html#MonoGame_Extended_BoundingRectangle_Center">Center</a> point along both axes to any point on the boundary of this
+<a class="xref" href="MonoGame.Extended.BoundingRectangle.html">BoundingRectangle</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Vector2 HalfExtents</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Microsoft.Xna.Framework.Vector2</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="MonoGame_Extended_BoundingRectangle_ClosestPointTo_" data-uid="MonoGame.Extended.BoundingRectangle.ClosestPointTo*"></a>
+  <h4 id="MonoGame_Extended_BoundingRectangle_ClosestPointTo_MonoGame_Extended_Point2_" data-uid="MonoGame.Extended.BoundingRectangle.ClosestPointTo(MonoGame.Extended.Point2)">ClosestPointTo(Point2)</h4>
+  <div class="markdown level1 summary"><p>Computes the closest <a class="xref" href="MonoGame.Extended.Point2.html">Point2</a> on this <a class="xref" href="MonoGame.Extended.BoundingRectangle.html">BoundingRectangle</a> to a specified
+<a class="xref" href="MonoGame.Extended.Point2.html">Point2</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Point2 ClosestPointTo(Point2 point)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MonoGame.Extended.Point2.html">Point2</a></td>
+        <td><span class="parametername">point</span></td>
+        <td><p>The point.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MonoGame.Extended.Point2.html">Point2</a></td>
+        <td><p>The closest <a class="xref" href="MonoGame.Extended.Point2.html">Point2</a> on this <a class="xref" href="MonoGame.Extended.BoundingRectangle.html">BoundingRectangle</a> to the <code data-dev-comment-type="paramref" class="paramref">point</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MonoGame_Extended_BoundingRectangle_Contains_" data-uid="MonoGame.Extended.BoundingRectangle.Contains*"></a>
+  <h4 id="MonoGame_Extended_BoundingRectangle_Contains_MonoGame_Extended_BoundingRectangle_MonoGame_Extended_Point2_" data-uid="MonoGame.Extended.BoundingRectangle.Contains(MonoGame.Extended.BoundingRectangle,MonoGame.Extended.Point2)">Contains(BoundingRectangle, Point2)</h4>
+  <div class="markdown level1 summary"><p>Determines whether the specified <a class="xref" href="MonoGame.Extended.BoundingRectangle.html">BoundingRectangle</a> contains the specified
+<a class="xref" href="MonoGame.Extended.Point2.html">Point2</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool Contains(BoundingRectangle boundingRectangle, Point2 point)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MonoGame.Extended.BoundingRectangle.html">BoundingRectangle</a></td>
+        <td><span class="parametername">boundingRectangle</span></td>
+        <td><p>The bounding rectangle.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MonoGame.Extended.Point2.html">Point2</a></td>
+        <td><span class="parametername">point</span></td>
+        <td><p>The point.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p><code>true</code> if the <code data-dev-comment-type="paramref" class="paramref">boundingRectangle</code> contains the <code data-dev-comment-type="paramref" class="paramref">point</code>; otherwise,
+<code>false</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MonoGame_Extended_BoundingRectangle_Contains_" data-uid="MonoGame.Extended.BoundingRectangle.Contains*"></a>
+  <h4 id="MonoGame_Extended_BoundingRectangle_Contains_MonoGame_Extended_BoundingRectangle__MonoGame_Extended_Point2__" data-uid="MonoGame.Extended.BoundingRectangle.Contains(MonoGame.Extended.BoundingRectangle@,MonoGame.Extended.Point2@)">Contains(ref BoundingRectangle, ref Point2)</h4>
+  <div class="markdown level1 summary"><p>Determines whether the specified <a class="xref" href="MonoGame.Extended.BoundingRectangle.html">BoundingRectangle</a> contains the specified
+<a class="xref" href="MonoGame.Extended.Point2.html">Point2</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool Contains(ref BoundingRectangle boundingRectangle, ref Point2 point)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MonoGame.Extended.BoundingRectangle.html">BoundingRectangle</a></td>
+        <td><span class="parametername">boundingRectangle</span></td>
+        <td><p>The bounding rectangle.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MonoGame.Extended.Point2.html">Point2</a></td>
+        <td><span class="parametername">point</span></td>
+        <td><p>The point.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p><code>true</code> if the <code data-dev-comment-type="paramref" class="paramref">boundingRectangle</code> contains the <code data-dev-comment-type="paramref" class="paramref">point</code>; otherwise,
+<code>false</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MonoGame_Extended_BoundingRectangle_Contains_" data-uid="MonoGame.Extended.BoundingRectangle.Contains*"></a>
+  <h4 id="MonoGame_Extended_BoundingRectangle_Contains_MonoGame_Extended_Point2_" data-uid="MonoGame.Extended.BoundingRectangle.Contains(MonoGame.Extended.Point2)">Contains(Point2)</h4>
+  <div class="markdown level1 summary"><p>Determines whether this <a class="xref" href="MonoGame.Extended.BoundingRectangle.html">BoundingRectangle</a> contains the specified <a class="xref" href="MonoGame.Extended.Point2.html">Point2</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Contains(Point2 point)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MonoGame.Extended.Point2.html">Point2</a></td>
+        <td><span class="parametername">point</span></td>
+        <td><p>The point.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p><code>true</code> if this <a class="xref" href="MonoGame.Extended.BoundingRectangle.html">BoundingRectangle</a> contains the <code data-dev-comment-type="paramref" class="paramref">point</code>; otherwise,
+<code>false</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MonoGame_Extended_BoundingRectangle_CreateFrom_" data-uid="MonoGame.Extended.BoundingRectangle.CreateFrom*"></a>
+  <h4 id="MonoGame_Extended_BoundingRectangle_CreateFrom_MonoGame_Extended_Point2_MonoGame_Extended_Point2_" data-uid="MonoGame.Extended.BoundingRectangle.CreateFrom(MonoGame.Extended.Point2,MonoGame.Extended.Point2)">CreateFrom(Point2, Point2)</h4>
+  <div class="markdown level1 summary"><p>Computes the <a class="xref" href="MonoGame.Extended.BoundingRectangle.html">BoundingRectangle</a> from a minimum <a class="xref" href="MonoGame.Extended.Point2.html">Point2</a> and maximum
+<a class="xref" href="MonoGame.Extended.Point2.html">Point2</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static BoundingRectangle CreateFrom(Point2 minimum, Point2 maximum)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MonoGame.Extended.Point2.html">Point2</a></td>
+        <td><span class="parametername">minimum</span></td>
+        <td><p>The minimum point.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MonoGame.Extended.Point2.html">Point2</a></td>
+        <td><span class="parametername">maximum</span></td>
+        <td><p>The maximum point.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MonoGame.Extended.BoundingRectangle.html">BoundingRectangle</a></td>
+        <td><p>The resulting <a class="xref" href="MonoGame.Extended.BoundingRectangle.html">BoundingRectangle</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MonoGame_Extended_BoundingRectangle_CreateFrom_" data-uid="MonoGame.Extended.BoundingRectangle.CreateFrom*"></a>
+  <h4 id="MonoGame_Extended_BoundingRectangle_CreateFrom_MonoGame_Extended_Point2_MonoGame_Extended_Point2_MonoGame_Extended_BoundingRectangle__" data-uid="MonoGame.Extended.BoundingRectangle.CreateFrom(MonoGame.Extended.Point2,MonoGame.Extended.Point2,MonoGame.Extended.BoundingRectangle@)">CreateFrom(Point2, Point2, out BoundingRectangle)</h4>
+  <div class="markdown level1 summary"><p>Computes the <a class="xref" href="MonoGame.Extended.BoundingRectangle.html">BoundingRectangle</a> from a minimum <a class="xref" href="MonoGame.Extended.Point2.html">Point2</a> and maximum
+<a class="xref" href="MonoGame.Extended.Point2.html">Point2</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void CreateFrom(Point2 minimum, Point2 maximum, out BoundingRectangle result)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MonoGame.Extended.Point2.html">Point2</a></td>
+        <td><span class="parametername">minimum</span></td>
+        <td><p>The minimum point.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MonoGame.Extended.Point2.html">Point2</a></td>
+        <td><span class="parametername">maximum</span></td>
+        <td><p>The maximum point.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MonoGame.Extended.BoundingRectangle.html">BoundingRectangle</a></td>
+        <td><span class="parametername">result</span></td>
+        <td><p>The resulting bounding rectangle.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MonoGame_Extended_BoundingRectangle_CreateFrom_" data-uid="MonoGame.Extended.BoundingRectangle.CreateFrom*"></a>
+  <h4 id="MonoGame_Extended_BoundingRectangle_CreateFrom_System_Collections_Generic_IReadOnlyList_MonoGame_Extended_Point2__" data-uid="MonoGame.Extended.BoundingRectangle.CreateFrom(System.Collections.Generic.IReadOnlyList{MonoGame.Extended.Point2})">CreateFrom(IReadOnlyList&lt;Point2&gt;)</h4>
+  <div class="markdown level1 summary"><p>Computes the <a class="xref" href="MonoGame.Extended.BoundingRectangle.html">BoundingRectangle</a> from a list of <a class="xref" href="MonoGame.Extended.Point2.html">Point2</a> structures.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static BoundingRectangle CreateFrom(IReadOnlyList&lt;Point2&gt; points)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IReadOnlyList</span>&lt;<a class="xref" href="MonoGame.Extended.Point2.html">Point2</a>&gt;</td>
+        <td><span class="parametername">points</span></td>
+        <td><p>The points.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MonoGame.Extended.BoundingRectangle.html">BoundingRectangle</a></td>
+        <td><p>The resulting <a class="xref" href="MonoGame.Extended.BoundingRectangle.html">BoundingRectangle</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MonoGame_Extended_BoundingRectangle_CreateFrom_" data-uid="MonoGame.Extended.BoundingRectangle.CreateFrom*"></a>
+  <h4 id="MonoGame_Extended_BoundingRectangle_CreateFrom_System_Collections_Generic_IReadOnlyList_MonoGame_Extended_Point2__MonoGame_Extended_BoundingRectangle__" data-uid="MonoGame.Extended.BoundingRectangle.CreateFrom(System.Collections.Generic.IReadOnlyList{MonoGame.Extended.Point2},MonoGame.Extended.BoundingRectangle@)">CreateFrom(IReadOnlyList&lt;Point2&gt;, out BoundingRectangle)</h4>
+  <div class="markdown level1 summary"><p>Computes the <a class="xref" href="MonoGame.Extended.BoundingRectangle.html">BoundingRectangle</a> from a list of <a class="xref" href="MonoGame.Extended.Point2.html">Point2</a> structures.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void CreateFrom(IReadOnlyList&lt;Point2&gt; points, out BoundingRectangle result)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IReadOnlyList</span>&lt;<a class="xref" href="MonoGame.Extended.Point2.html">Point2</a>&gt;</td>
+        <td><span class="parametername">points</span></td>
+        <td><p>The points.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MonoGame.Extended.BoundingRectangle.html">BoundingRectangle</a></td>
+        <td><span class="parametername">result</span></td>
+        <td><p>The resulting bounding rectangle.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MonoGame_Extended_BoundingRectangle_Equals_" data-uid="MonoGame.Extended.BoundingRectangle.Equals*"></a>
+  <h4 id="MonoGame_Extended_BoundingRectangle_Equals_MonoGame_Extended_BoundingRectangle_" data-uid="MonoGame.Extended.BoundingRectangle.Equals(MonoGame.Extended.BoundingRectangle)">Equals(BoundingRectangle)</h4>
+  <div class="markdown level1 summary"><p>Indicates whether this <a class="xref" href="MonoGame.Extended.BoundingRectangle.html">BoundingRectangle</a> is equal to another
+<a class="xref" href="MonoGame.Extended.BoundingRectangle.html">BoundingRectangle</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Equals(BoundingRectangle boundingRectangle)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MonoGame.Extended.BoundingRectangle.html">BoundingRectangle</a></td>
+        <td><span class="parametername">boundingRectangle</span></td>
+        <td><p>The bounding rectangle.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p><code>true</code> if this <a class="xref" href="MonoGame.Extended.BoundingRectangle.html">BoundingRectangle</a> is equal to the <code data-dev-comment-type="paramref" class="paramref">boundingRectangle</code>;
+otherwise, <code>false</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MonoGame_Extended_BoundingRectangle_Equals_" data-uid="MonoGame.Extended.BoundingRectangle.Equals*"></a>
+  <h4 id="MonoGame_Extended_BoundingRectangle_Equals_MonoGame_Extended_BoundingRectangle__" data-uid="MonoGame.Extended.BoundingRectangle.Equals(MonoGame.Extended.BoundingRectangle@)">Equals(ref BoundingRectangle)</h4>
+  <div class="markdown level1 summary"><p>Indicates whether this <a class="xref" href="MonoGame.Extended.BoundingRectangle.html">BoundingRectangle</a> is equal to another <a class="xref" href="MonoGame.Extended.BoundingRectangle.html">BoundingRectangle</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Equals(ref BoundingRectangle boundingRectangle)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MonoGame.Extended.BoundingRectangle.html">BoundingRectangle</a></td>
+        <td><span class="parametername">boundingRectangle</span></td>
+        <td><p>The bounding rectangle.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p><code>true</code> if this <a class="xref" href="MonoGame.Extended.BoundingRectangle.html">BoundingRectangle</a> is equal to the <code data-dev-comment-type="paramref" class="paramref">boundingRectangle</code>;
+otherwise,
+<code>false</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MonoGame_Extended_BoundingRectangle_Equals_" data-uid="MonoGame.Extended.BoundingRectangle.Equals*"></a>
+  <h4 id="MonoGame_Extended_BoundingRectangle_Equals_System_Object_" data-uid="MonoGame.Extended.BoundingRectangle.Equals(System.Object)">Equals(Object)</h4>
+  <div class="markdown level1 summary"><p>Returns a value indicating whether this <a class="xref" href="MonoGame.Extended.BoundingRectangle.html">BoundingRectangle</a> is equal to a specified object.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool Equals(object obj)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><span class="parametername">obj</span></td>
+        <td><p>The object to make the comparison with.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p><code>true</code> if this  <a class="xref" href="MonoGame.Extended.BoundingRectangle.html">BoundingRectangle</a> is equal to <code data-dev-comment-type="paramref" class="paramref">obj</code>; otherwise, <code>false</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.ValueType.Equals(System.Object)</span></div>
+  
+  
+  <a id="MonoGame_Extended_BoundingRectangle_GetHashCode_" data-uid="MonoGame.Extended.BoundingRectangle.GetHashCode*"></a>
+  <h4 id="MonoGame_Extended_BoundingRectangle_GetHashCode" data-uid="MonoGame.Extended.BoundingRectangle.GetHashCode">GetHashCode()</h4>
+  <div class="markdown level1 summary"><p>Returns a hash code of this <a class="xref" href="MonoGame.Extended.BoundingRectangle.html">BoundingRectangle</a> suitable for use in hashing algorithms and data
+structures like a hash table.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override int GetHashCode()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><p>A hash code of this <a class="xref" href="MonoGame.Extended.BoundingRectangle.html">BoundingRectangle</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.ValueType.GetHashCode()</span></div>
+  
+  
+  <a id="MonoGame_Extended_BoundingRectangle_Intersection_" data-uid="MonoGame.Extended.BoundingRectangle.Intersection*"></a>
+  <h4 id="MonoGame_Extended_BoundingRectangle_Intersection_MonoGame_Extended_BoundingRectangle_" data-uid="MonoGame.Extended.BoundingRectangle.Intersection(MonoGame.Extended.BoundingRectangle)">Intersection(BoundingRectangle)</h4>
+  <div class="markdown level1 summary"><p>Computes the <a class="xref" href="MonoGame.Extended.BoundingRectangle.html">BoundingRectangle</a> that is in common between the specified
+<a class="xref" href="MonoGame.Extended.BoundingRectangle.html">BoundingRectangle</a> and this <a class="xref" href="MonoGame.Extended.BoundingRectangle.html">BoundingRectangle</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public BoundingRectangle Intersection(BoundingRectangle boundingRectangle)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MonoGame.Extended.BoundingRectangle.html">BoundingRectangle</a></td>
+        <td><span class="parametername">boundingRectangle</span></td>
+        <td><p>The bounding rectangle.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MonoGame.Extended.BoundingRectangle.html">BoundingRectangle</a></td>
+        <td><p>A <a class="xref" href="MonoGame.Extended.BoundingRectangle.html">BoundingRectangle</a> that is in common between both the <code data-dev-comment-type="paramref" class="paramref">boundingRectangle</code> and
+this <a class="xref" href="MonoGame.Extended.BoundingRectangle.html">BoundingRectangle</a>, if they intersect; otherwise, <a class="xref" href="MonoGame.Extended.BoundingRectangle.html#MonoGame_Extended_BoundingRectangle_Empty">Empty</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MonoGame_Extended_BoundingRectangle_Intersection_" data-uid="MonoGame.Extended.BoundingRectangle.Intersection*"></a>
+  <h4 id="MonoGame_Extended_BoundingRectangle_Intersection_MonoGame_Extended_BoundingRectangle_MonoGame_Extended_BoundingRectangle_" data-uid="MonoGame.Extended.BoundingRectangle.Intersection(MonoGame.Extended.BoundingRectangle,MonoGame.Extended.BoundingRectangle)">Intersection(BoundingRectangle, BoundingRectangle)</h4>
+  <div class="markdown level1 summary"><p>Computes the <a class="xref" href="MonoGame.Extended.BoundingRectangle.html">BoundingRectangle</a> that is in common between the two specified
+<a class="xref" href="MonoGame.Extended.BoundingRectangle.html">BoundingRectangle</a> structures.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static BoundingRectangle Intersection(BoundingRectangle first, BoundingRectangle second)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MonoGame.Extended.BoundingRectangle.html">BoundingRectangle</a></td>
+        <td><span class="parametername">first</span></td>
+        <td><p>The first bounding rectangle.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MonoGame.Extended.BoundingRectangle.html">BoundingRectangle</a></td>
+        <td><span class="parametername">second</span></td>
+        <td><p>The second bounding rectangle.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MonoGame.Extended.BoundingRectangle.html">BoundingRectangle</a></td>
+        <td><p>A <a class="xref" href="MonoGame.Extended.BoundingRectangle.html">BoundingRectangle</a> that is in common between both the <code data-dev-comment-type="paramref" class="paramref">first</code> and
+the <code data-dev-comment-type="paramref" class="paramref">second</code>, if they intersect; otherwise, <a class="xref" href="MonoGame.Extended.BoundingRectangle.html#MonoGame_Extended_BoundingRectangle_Empty">Empty</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MonoGame_Extended_BoundingRectangle_Intersection_" data-uid="MonoGame.Extended.BoundingRectangle.Intersection*"></a>
+  <h4 id="MonoGame_Extended_BoundingRectangle_Intersection_MonoGame_Extended_BoundingRectangle__MonoGame_Extended_BoundingRectangle__MonoGame_Extended_BoundingRectangle__" data-uid="MonoGame.Extended.BoundingRectangle.Intersection(MonoGame.Extended.BoundingRectangle@,MonoGame.Extended.BoundingRectangle@,MonoGame.Extended.BoundingRectangle@)">Intersection(ref BoundingRectangle, ref BoundingRectangle, out BoundingRectangle)</h4>
+  <div class="markdown level1 summary"><p>Computes the <a class="xref" href="MonoGame.Extended.BoundingRectangle.html">BoundingRectangle</a> that is in common between the two specified
+<a class="xref" href="MonoGame.Extended.BoundingRectangle.html">BoundingRectangle</a> structures.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void Intersection(ref BoundingRectangle first, ref BoundingRectangle second, out BoundingRectangle result)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MonoGame.Extended.BoundingRectangle.html">BoundingRectangle</a></td>
+        <td><span class="parametername">first</span></td>
+        <td><p>The first bounding rectangle.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MonoGame.Extended.BoundingRectangle.html">BoundingRectangle</a></td>
+        <td><span class="parametername">second</span></td>
+        <td><p>The second bounding rectangle.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MonoGame.Extended.BoundingRectangle.html">BoundingRectangle</a></td>
+        <td><span class="parametername">result</span></td>
+        <td><p>The resulting bounding rectangle that is in common between both the <code data-dev-comment-type="paramref" class="paramref">first</code> and
+the <code data-dev-comment-type="paramref" class="paramref">second</code>, if they intersect; otherwise, <a class="xref" href="MonoGame.Extended.BoundingRectangle.html#MonoGame_Extended_BoundingRectangle_Empty">Empty</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MonoGame_Extended_BoundingRectangle_Intersects_" data-uid="MonoGame.Extended.BoundingRectangle.Intersects*"></a>
+  <h4 id="MonoGame_Extended_BoundingRectangle_Intersects_MonoGame_Extended_BoundingRectangle_" data-uid="MonoGame.Extended.BoundingRectangle.Intersects(MonoGame.Extended.BoundingRectangle)">Intersects(BoundingRectangle)</h4>
+  <div class="markdown level1 summary"><p>Determines whether the specified <a class="xref" href="MonoGame.Extended.BoundingRectangle.html">BoundingRectangle</a> intersects with this
+<a class="xref" href="MonoGame.Extended.BoundingRectangle.html">BoundingRectangle</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Intersects(BoundingRectangle boundingRectangle)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MonoGame.Extended.BoundingRectangle.html">BoundingRectangle</a></td>
+        <td><span class="parametername">boundingRectangle</span></td>
+        <td><p>The bounding rectangle.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p><code>true</code> if the <code data-dev-comment-type="paramref" class="paramref">boundingRectangle</code> intersects with this
+<a class="xref" href="MonoGame.Extended.BoundingRectangle.html">BoundingRectangle</a>; otherwise,
+<code>false</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MonoGame_Extended_BoundingRectangle_Intersects_" data-uid="MonoGame.Extended.BoundingRectangle.Intersects*"></a>
+  <h4 id="MonoGame_Extended_BoundingRectangle_Intersects_MonoGame_Extended_BoundingRectangle_MonoGame_Extended_BoundingRectangle_" data-uid="MonoGame.Extended.BoundingRectangle.Intersects(MonoGame.Extended.BoundingRectangle,MonoGame.Extended.BoundingRectangle)">Intersects(BoundingRectangle, BoundingRectangle)</h4>
+  <div class="markdown level1 summary"><p>Determines whether the two specified <a class="xref" href="MonoGame.Extended.BoundingRectangle.html">BoundingRectangle</a> structures intersect.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool Intersects(BoundingRectangle first, BoundingRectangle second)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MonoGame.Extended.BoundingRectangle.html">BoundingRectangle</a></td>
+        <td><span class="parametername">first</span></td>
+        <td><p>The first bounding rectangle.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MonoGame.Extended.BoundingRectangle.html">BoundingRectangle</a></td>
+        <td><span class="parametername">second</span></td>
+        <td><p>The second bounding rectangle.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p><code>true</code> if the <code data-dev-comment-type="paramref" class="paramref">first</code> intersects with the <see cref="!:second"></see>; otherwise, <code>false</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MonoGame_Extended_BoundingRectangle_Intersects_" data-uid="MonoGame.Extended.BoundingRectangle.Intersects*"></a>
+  <h4 id="MonoGame_Extended_BoundingRectangle_Intersects_MonoGame_Extended_BoundingRectangle__" data-uid="MonoGame.Extended.BoundingRectangle.Intersects(MonoGame.Extended.BoundingRectangle@)">Intersects(ref BoundingRectangle)</h4>
+  <div class="markdown level1 summary"><p>Determines whether the specified <a class="xref" href="MonoGame.Extended.BoundingRectangle.html">BoundingRectangle</a> intersects with this
+<a class="xref" href="MonoGame.Extended.BoundingRectangle.html">BoundingRectangle</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Intersects(ref BoundingRectangle boundingRectangle)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MonoGame.Extended.BoundingRectangle.html">BoundingRectangle</a></td>
+        <td><span class="parametername">boundingRectangle</span></td>
+        <td><p>The bounding rectangle.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p><code>true</code> if the <code data-dev-comment-type="paramref" class="paramref">boundingRectangle</code> intersects with this
+<a class="xref" href="MonoGame.Extended.BoundingRectangle.html">BoundingRectangle</a>; otherwise,
+<code>false</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MonoGame_Extended_BoundingRectangle_Intersects_" data-uid="MonoGame.Extended.BoundingRectangle.Intersects*"></a>
+  <h4 id="MonoGame_Extended_BoundingRectangle_Intersects_MonoGame_Extended_BoundingRectangle__MonoGame_Extended_BoundingRectangle__" data-uid="MonoGame.Extended.BoundingRectangle.Intersects(MonoGame.Extended.BoundingRectangle@,MonoGame.Extended.BoundingRectangle@)">Intersects(ref BoundingRectangle, ref BoundingRectangle)</h4>
+  <div class="markdown level1 summary"><p>Determines whether the two specified <a class="xref" href="MonoGame.Extended.BoundingRectangle.html">BoundingRectangle</a> structures intersect.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool Intersects(ref BoundingRectangle first, ref BoundingRectangle second)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MonoGame.Extended.BoundingRectangle.html">BoundingRectangle</a></td>
+        <td><span class="parametername">first</span></td>
+        <td><p>The first bounding rectangle.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MonoGame.Extended.BoundingRectangle.html">BoundingRectangle</a></td>
+        <td><span class="parametername">second</span></td>
+        <td><p>The second bounding rectangle.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p><code>true</code> if the <code data-dev-comment-type="paramref" class="paramref">first</code> intersects with the <see cref="!:second"></see>; otherwise, <code>false</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MonoGame_Extended_BoundingRectangle_SquaredDistanceTo_" data-uid="MonoGame.Extended.BoundingRectangle.SquaredDistanceTo*"></a>
+  <h4 id="MonoGame_Extended_BoundingRectangle_SquaredDistanceTo_MonoGame_Extended_Point2_" data-uid="MonoGame.Extended.BoundingRectangle.SquaredDistanceTo(MonoGame.Extended.Point2)">SquaredDistanceTo(Point2)</h4>
+  <div class="markdown level1 summary"><p>Computes the squared distance from this <a class="xref" href="MonoGame.Extended.BoundingRectangle.html">BoundingRectangle</a> to a <a class="xref" href="MonoGame.Extended.Point2.html">Point2</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float SquaredDistanceTo(Point2 point)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MonoGame.Extended.Point2.html">Point2</a></td>
+        <td><span class="parametername">point</span></td>
+        <td><p>The point.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><p>The squared distance from this <a class="xref" href="MonoGame.Extended.BoundingRectangle.html">BoundingRectangle</a> to the <code data-dev-comment-type="paramref" class="paramref">point</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MonoGame_Extended_BoundingRectangle_ToString_" data-uid="MonoGame.Extended.BoundingRectangle.ToString*"></a>
+  <h4 id="MonoGame_Extended_BoundingRectangle_ToString" data-uid="MonoGame.Extended.BoundingRectangle.ToString">ToString()</h4>
+  <div class="markdown level1 summary"><p>Returns a <span class="xref">System.String</span> that represents this <a class="xref" href="MonoGame.Extended.BoundingRectangle.html">BoundingRectangle</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override string ToString()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><p>A <span class="xref">System.String</span> that represents this <a class="xref" href="MonoGame.Extended.BoundingRectangle.html">BoundingRectangle</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.ValueType.ToString()</span></div>
+  
+  
+  <a id="MonoGame_Extended_BoundingRectangle_Transform_" data-uid="MonoGame.Extended.BoundingRectangle.Transform*"></a>
+  <h4 id="MonoGame_Extended_BoundingRectangle_Transform_MonoGame_Extended_BoundingRectangle_MonoGame_Extended_Matrix2__" data-uid="MonoGame.Extended.BoundingRectangle.Transform(MonoGame.Extended.BoundingRectangle,MonoGame.Extended.Matrix2@)">Transform(BoundingRectangle, ref Matrix2)</h4>
+  <div class="markdown level1 summary"><p>Computes the <a class="xref" href="MonoGame.Extended.BoundingRectangle.html">BoundingRectangle</a> from the specified <a class="xref" href="MonoGame.Extended.BoundingRectangle.html">BoundingRectangle</a> transformed by
+the
+specified <a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static BoundingRectangle Transform(BoundingRectangle boundingRectangle, ref Matrix2 transformMatrix)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MonoGame.Extended.BoundingRectangle.html">BoundingRectangle</a></td>
+        <td><span class="parametername">boundingRectangle</span></td>
+        <td><p>The bounding rectangle.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a></td>
+        <td><span class="parametername">transformMatrix</span></td>
+        <td><p>The transform matrix.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MonoGame.Extended.BoundingRectangle.html">BoundingRectangle</a></td>
+        <td><p>The <a class="xref" href="MonoGame.Extended.BoundingRectangle.html">BoundingRectangle</a> from the <code data-dev-comment-type="paramref" class="paramref">boundingRectangle</code> transformed by the
+<code data-dev-comment-type="paramref" class="paramref">transformMatrix</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="MonoGame_Extended_BoundingRectangle_Transform_MonoGame_Extended_BoundingRectangle_MonoGame_Extended_Matrix2___remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>
+    If a transformed <a class="xref" href="MonoGame.Extended.BoundingRectangle.html">BoundingRectangle</a> is used for <code data-dev-comment-type="paramref" class="paramref">boundingRectangle</code> then the
+    resulting <a class="xref" href="MonoGame.Extended.BoundingRectangle.html">BoundingRectangle</a> will have the compounded transformation, which most likely is
+    not desired.
+</p>
+</div>
+  
+  
+  <a id="MonoGame_Extended_BoundingRectangle_Transform_" data-uid="MonoGame.Extended.BoundingRectangle.Transform*"></a>
+  <h4 id="MonoGame_Extended_BoundingRectangle_Transform_MonoGame_Extended_BoundingRectangle__MonoGame_Extended_Matrix2__MonoGame_Extended_BoundingRectangle__" data-uid="MonoGame.Extended.BoundingRectangle.Transform(MonoGame.Extended.BoundingRectangle@,MonoGame.Extended.Matrix2@,MonoGame.Extended.BoundingRectangle@)">Transform(ref BoundingRectangle, ref Matrix2, out BoundingRectangle)</h4>
+  <div class="markdown level1 summary"><p>Computes the <a class="xref" href="MonoGame.Extended.BoundingRectangle.html">BoundingRectangle</a> from the specified <a class="xref" href="MonoGame.Extended.BoundingRectangle.html">BoundingRectangle</a> transformed by
+the
+specified <a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void Transform(ref BoundingRectangle boundingRectangle, ref Matrix2 transformMatrix, out BoundingRectangle result)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MonoGame.Extended.BoundingRectangle.html">BoundingRectangle</a></td>
+        <td><span class="parametername">boundingRectangle</span></td>
+        <td><p>The bounding rectangle.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a></td>
+        <td><span class="parametername">transformMatrix</span></td>
+        <td><p>The transform matrix.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MonoGame.Extended.BoundingRectangle.html">BoundingRectangle</a></td>
+        <td><span class="parametername">result</span></td>
+        <td><p>The resulting bounding rectangle.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="MonoGame_Extended_BoundingRectangle_Transform_MonoGame_Extended_BoundingRectangle__MonoGame_Extended_Matrix2__MonoGame_Extended_BoundingRectangle___remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>
+    If a transformed <a class="xref" href="MonoGame.Extended.BoundingRectangle.html">BoundingRectangle</a> is used for <code data-dev-comment-type="paramref" class="paramref">boundingRectangle</code> then the
+    resulting <a class="xref" href="MonoGame.Extended.BoundingRectangle.html">BoundingRectangle</a> will have the compounded transformation, which most likely is
+    not desired.
+</p>
+</div>
+  
+  
+  <a id="MonoGame_Extended_BoundingRectangle_Union_" data-uid="MonoGame.Extended.BoundingRectangle.Union*"></a>
+  <h4 id="MonoGame_Extended_BoundingRectangle_Union_MonoGame_Extended_BoundingRectangle_" data-uid="MonoGame.Extended.BoundingRectangle.Union(MonoGame.Extended.BoundingRectangle)">Union(BoundingRectangle)</h4>
+  <div class="markdown level1 summary"><p>Computes the <a class="xref" href="MonoGame.Extended.BoundingRectangle.html">BoundingRectangle</a> that contains both the specified
+<a class="xref" href="MonoGame.Extended.BoundingRectangle.html">BoundingRectangle</a> and this <a class="xref" href="MonoGame.Extended.BoundingRectangle.html">BoundingRectangle</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public BoundingRectangle Union(BoundingRectangle boundingRectangle)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MonoGame.Extended.BoundingRectangle.html">BoundingRectangle</a></td>
+        <td><span class="parametername">boundingRectangle</span></td>
+        <td><p>The bounding rectangle.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MonoGame.Extended.BoundingRectangle.html">BoundingRectangle</a></td>
+        <td><p>A <a class="xref" href="MonoGame.Extended.BoundingRectangle.html">BoundingRectangle</a> that contains both the <code data-dev-comment-type="paramref" class="paramref">boundingRectangle</code> and
+this
+<a class="xref" href="MonoGame.Extended.BoundingRectangle.html">BoundingRectangle</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MonoGame_Extended_BoundingRectangle_Union_" data-uid="MonoGame.Extended.BoundingRectangle.Union*"></a>
+  <h4 id="MonoGame_Extended_BoundingRectangle_Union_MonoGame_Extended_BoundingRectangle_MonoGame_Extended_BoundingRectangle_" data-uid="MonoGame.Extended.BoundingRectangle.Union(MonoGame.Extended.BoundingRectangle,MonoGame.Extended.BoundingRectangle)">Union(BoundingRectangle, BoundingRectangle)</h4>
+  <div class="markdown level1 summary"><p>Computes the <a class="xref" href="MonoGame.Extended.BoundingRectangle.html">BoundingRectangle</a> that contains the two specified
+<a class="xref" href="MonoGame.Extended.BoundingRectangle.html">BoundingRectangle</a> structures.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static BoundingRectangle Union(BoundingRectangle first, BoundingRectangle second)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MonoGame.Extended.BoundingRectangle.html">BoundingRectangle</a></td>
+        <td><span class="parametername">first</span></td>
+        <td><p>The first bounding rectangle.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MonoGame.Extended.BoundingRectangle.html">BoundingRectangle</a></td>
+        <td><span class="parametername">second</span></td>
+        <td><p>The second bounding rectangle.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MonoGame.Extended.BoundingRectangle.html">BoundingRectangle</a></td>
+        <td><p>A <a class="xref" href="MonoGame.Extended.BoundingRectangle.html">BoundingRectangle</a> that contains both the <code data-dev-comment-type="paramref" class="paramref">first</code> and the
+<code data-dev-comment-type="paramref" class="paramref">second</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MonoGame_Extended_BoundingRectangle_Union_" data-uid="MonoGame.Extended.BoundingRectangle.Union*"></a>
+  <h4 id="MonoGame_Extended_BoundingRectangle_Union_MonoGame_Extended_BoundingRectangle__MonoGame_Extended_BoundingRectangle__MonoGame_Extended_BoundingRectangle__" data-uid="MonoGame.Extended.BoundingRectangle.Union(MonoGame.Extended.BoundingRectangle@,MonoGame.Extended.BoundingRectangle@,MonoGame.Extended.BoundingRectangle@)">Union(ref BoundingRectangle, ref BoundingRectangle, out BoundingRectangle)</h4>
+  <div class="markdown level1 summary"><p>Computes the <a class="xref" href="MonoGame.Extended.BoundingRectangle.html">BoundingRectangle</a> that contains the two specified
+<a class="xref" href="MonoGame.Extended.BoundingRectangle.html">BoundingRectangle</a> structures.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void Union(ref BoundingRectangle first, ref BoundingRectangle second, out BoundingRectangle result)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MonoGame.Extended.BoundingRectangle.html">BoundingRectangle</a></td>
+        <td><span class="parametername">first</span></td>
+        <td><p>The first bounding rectangle.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MonoGame.Extended.BoundingRectangle.html">BoundingRectangle</a></td>
+        <td><span class="parametername">second</span></td>
+        <td><p>The second bounding rectangle.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MonoGame.Extended.BoundingRectangle.html">BoundingRectangle</a></td>
+        <td><span class="parametername">result</span></td>
+        <td><p>The resulting bounding rectangle that contains both the <code data-dev-comment-type="paramref" class="paramref">first</code> and the
+<code data-dev-comment-type="paramref" class="paramref">second</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MonoGame_Extended_BoundingRectangle_UpdateFromPoints_" data-uid="MonoGame.Extended.BoundingRectangle.UpdateFromPoints*"></a>
+  <h4 id="MonoGame_Extended_BoundingRectangle_UpdateFromPoints_System_Collections_Generic_IReadOnlyList_MonoGame_Extended_Point2__" data-uid="MonoGame.Extended.BoundingRectangle.UpdateFromPoints(System.Collections.Generic.IReadOnlyList{MonoGame.Extended.Point2})">UpdateFromPoints(IReadOnlyList&lt;Point2&gt;)</h4>
+  <div class="markdown level1 summary"><p>Updates this <a class="xref" href="MonoGame.Extended.BoundingRectangle.html">BoundingRectangle</a> from a list of <a class="xref" href="MonoGame.Extended.Point2.html">Point2</a> structures.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void UpdateFromPoints(IReadOnlyList&lt;Point2&gt; points)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IReadOnlyList</span>&lt;<a class="xref" href="MonoGame.Extended.Point2.html">Point2</a>&gt;</td>
+        <td><span class="parametername">points</span></td>
+        <td><p>The points.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="operators">Operators
+  </h3>
+  
+  
+  <a id="MonoGame_Extended_BoundingRectangle_op_Equality_" data-uid="MonoGame.Extended.BoundingRectangle.op_Equality*"></a>
+  <h4 id="MonoGame_Extended_BoundingRectangle_op_Equality_MonoGame_Extended_BoundingRectangle_MonoGame_Extended_BoundingRectangle_" data-uid="MonoGame.Extended.BoundingRectangle.op_Equality(MonoGame.Extended.BoundingRectangle,MonoGame.Extended.BoundingRectangle)">Equality(BoundingRectangle, BoundingRectangle)</h4>
+  <div class="markdown level1 summary"><p>Compares two <a class="xref" href="MonoGame.Extended.BoundingRectangle.html">BoundingRectangle</a> structures. The result specifies whether the values of the
+<a class="xref" href="MonoGame.Extended.BoundingRectangle.html#MonoGame_Extended_BoundingRectangle_Center">Center</a> and <a class="xref" href="MonoGame.Extended.BoundingRectangle.html#MonoGame_Extended_BoundingRectangle_HalfExtents">HalfExtents</a> fields of the two <a class="xref" href="MonoGame.Extended.BoundingRectangle.html">BoundingRectangle</a> structures
+are equal.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool operator ==(BoundingRectangle first, BoundingRectangle second)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MonoGame.Extended.BoundingRectangle.html">BoundingRectangle</a></td>
+        <td><span class="parametername">first</span></td>
+        <td><p>The first bounding rectangle.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MonoGame.Extended.BoundingRectangle.html">BoundingRectangle</a></td>
+        <td><span class="parametername">second</span></td>
+        <td><p>The second bounding rectangle.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p><code>true</code> if the <a class="xref" href="MonoGame.Extended.BoundingRectangle.html#MonoGame_Extended_BoundingRectangle_Center">Center</a> and <a class="xref" href="MonoGame.Extended.BoundingRectangle.html#MonoGame_Extended_BoundingRectangle_HalfExtents">HalfExtents</a> fields of the two
+<a class="xref" href="MonoGame.Extended.BoundingRectangle.html">BoundingRectangle</a> structures are equal; otherwise, <code>false</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MonoGame_Extended_BoundingRectangle_op_Implicit_" data-uid="MonoGame.Extended.BoundingRectangle.op_Implicit*"></a>
+  <h4 id="MonoGame_Extended_BoundingRectangle_op_Implicit_Microsoft_Xna_Framework_Rectangle__MonoGame_Extended_BoundingRectangle" data-uid="MonoGame.Extended.BoundingRectangle.op_Implicit(Microsoft.Xna.Framework.Rectangle)~MonoGame.Extended.BoundingRectangle">Implicit(Rectangle to BoundingRectangle)</h4>
+  <div class="markdown level1 summary"><p>Performs an implicit conversion from a <span class="xref">Microsoft.Xna.Framework.Rectangle</span> to a <a class="xref" href="MonoGame.Extended.BoundingRectangle.html">BoundingRectangle</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static implicit operator BoundingRectangle(Rectangle rectangle)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Microsoft.Xna.Framework.Rectangle</span></td>
+        <td><span class="parametername">rectangle</span></td>
+        <td><p>The rectangle.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MonoGame.Extended.BoundingRectangle.html">BoundingRectangle</a></td>
+        <td><p>The resulting <a class="xref" href="MonoGame.Extended.BoundingRectangle.html">BoundingRectangle</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MonoGame_Extended_BoundingRectangle_op_Implicit_" data-uid="MonoGame.Extended.BoundingRectangle.op_Implicit*"></a>
+  <h4 id="MonoGame_Extended_BoundingRectangle_op_Implicit_MonoGame_Extended_BoundingRectangle__Microsoft_Xna_Framework_Rectangle" data-uid="MonoGame.Extended.BoundingRectangle.op_Implicit(MonoGame.Extended.BoundingRectangle)~Microsoft.Xna.Framework.Rectangle">Implicit(BoundingRectangle to Rectangle)</h4>
+  <div class="markdown level1 summary"><p>Performs an implicit conversion from a <a class="xref" href="MonoGame.Extended.BoundingRectangle.html">BoundingRectangle</a> to a <span class="xref">Microsoft.Xna.Framework.Rectangle</span>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static implicit operator Rectangle(BoundingRectangle boundingRectangle)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MonoGame.Extended.BoundingRectangle.html">BoundingRectangle</a></td>
+        <td><span class="parametername">boundingRectangle</span></td>
+        <td><p>The bounding rectangle.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Microsoft.Xna.Framework.Rectangle</span></td>
+        <td><p>The resulting <span class="xref">Microsoft.Xna.Framework.Rectangle</span>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MonoGame_Extended_BoundingRectangle_op_Implicit_" data-uid="MonoGame.Extended.BoundingRectangle.op_Implicit*"></a>
+  <h4 id="MonoGame_Extended_BoundingRectangle_op_Implicit_MonoGame_Extended_BoundingRectangle__MonoGame_Extended_RectangleF" data-uid="MonoGame.Extended.BoundingRectangle.op_Implicit(MonoGame.Extended.BoundingRectangle)~MonoGame.Extended.RectangleF">Implicit(BoundingRectangle to RectangleF)</h4>
+  <div class="markdown level1 summary"><p>Performs an implicit conversion from a <a class="xref" href="MonoGame.Extended.BoundingRectangle.html">BoundingRectangle</a> to a <a class="xref" href="MonoGame.Extended.RectangleF.html">RectangleF</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static implicit operator RectangleF(BoundingRectangle boundingRectangle)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MonoGame.Extended.BoundingRectangle.html">BoundingRectangle</a></td>
+        <td><span class="parametername">boundingRectangle</span></td>
+        <td><p>The bounding rectangle.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MonoGame.Extended.RectangleF.html">RectangleF</a></td>
+        <td><p>The resulting <span class="xref">Microsoft.Xna.Framework.Rectangle</span>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MonoGame_Extended_BoundingRectangle_op_Implicit_" data-uid="MonoGame.Extended.BoundingRectangle.op_Implicit*"></a>
+  <h4 id="MonoGame_Extended_BoundingRectangle_op_Implicit_MonoGame_Extended_RectangleF__MonoGame_Extended_BoundingRectangle" data-uid="MonoGame.Extended.BoundingRectangle.op_Implicit(MonoGame.Extended.RectangleF)~MonoGame.Extended.BoundingRectangle">Implicit(RectangleF to BoundingRectangle)</h4>
+  <div class="markdown level1 summary"><p>Performs an implicit conversion from a <a class="xref" href="MonoGame.Extended.RectangleF.html">RectangleF</a> to a <a class="xref" href="MonoGame.Extended.BoundingRectangle.html">BoundingRectangle</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static implicit operator BoundingRectangle(RectangleF rectangle)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MonoGame.Extended.RectangleF.html">RectangleF</a></td>
+        <td><span class="parametername">rectangle</span></td>
+        <td><p>The rectangle.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MonoGame.Extended.BoundingRectangle.html">BoundingRectangle</a></td>
+        <td><p>The resulting <a class="xref" href="MonoGame.Extended.BoundingRectangle.html">BoundingRectangle</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MonoGame_Extended_BoundingRectangle_op_Inequality_" data-uid="MonoGame.Extended.BoundingRectangle.op_Inequality*"></a>
+  <h4 id="MonoGame_Extended_BoundingRectangle_op_Inequality_MonoGame_Extended_BoundingRectangle_MonoGame_Extended_BoundingRectangle_" data-uid="MonoGame.Extended.BoundingRectangle.op_Inequality(MonoGame.Extended.BoundingRectangle,MonoGame.Extended.BoundingRectangle)">Inequality(BoundingRectangle, BoundingRectangle)</h4>
+  <div class="markdown level1 summary"><p>Compares two <a class="xref" href="MonoGame.Extended.BoundingRectangle.html">BoundingRectangle</a> structures. The result specifies whether the values of the
+<a class="xref" href="MonoGame.Extended.BoundingRectangle.html#MonoGame_Extended_BoundingRectangle_Center">Center</a> and <a class="xref" href="MonoGame.Extended.BoundingRectangle.html#MonoGame_Extended_BoundingRectangle_HalfExtents">HalfExtents</a> fields of the two <a class="xref" href="MonoGame.Extended.BoundingRectangle.html">BoundingRectangle</a> structures
+are unequal.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool operator !=(BoundingRectangle first, BoundingRectangle second)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MonoGame.Extended.BoundingRectangle.html">BoundingRectangle</a></td>
+        <td><span class="parametername">first</span></td>
+        <td><p>The first bounding rectangle.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MonoGame.Extended.BoundingRectangle.html">BoundingRectangle</a></td>
+        <td><span class="parametername">second</span></td>
+        <td><p>The second bounding rectangle.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p><code>true</code> if the <a class="xref" href="MonoGame.Extended.BoundingRectangle.html#MonoGame_Extended_BoundingRectangle_Center">Center</a> and <a class="xref" href="MonoGame.Extended.BoundingRectangle.html#MonoGame_Extended_BoundingRectangle_HalfExtents">HalfExtents</a> fields of the two
+<a class="xref" href="MonoGame.Extended.BoundingRectangle.html">BoundingRectangle</a> structures are unequal; otherwise, <code>false</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <span class="xref">System.IEquatable&lt;T&gt;</span>
+  </div>
+  <div>
+      <a class="xref" href="MonoGame.Extended.IEquatableByRef-1.html">IEquatableByRef&lt;T&gt;</a>
+  </div>
+  <h3 id="seealso">See Also</h3>
+  <div class="seealso">
+      <div><span class="xref">System.IEquatable</span>&lt;T&gt;</div>
+      <div><a class="xref" href="MonoGame.Extended.IEquatableByRef-1.html">IEquatableByRef</a>&lt;T&gt;</div>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

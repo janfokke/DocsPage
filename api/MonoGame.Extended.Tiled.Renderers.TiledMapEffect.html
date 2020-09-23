@@ -1,0 +1,354 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class TiledMapEffect
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class TiledMapEffect
+   ">
+    <meta name="generator" content="docfx 2.56.2.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="MonoGame.Extended.Tiled.Renderers.TiledMapEffect">
+  
+  
+  <h1 id="MonoGame_Extended_Tiled_Renderers_TiledMapEffect" data-uid="MonoGame.Extended.Tiled.Renderers.TiledMapEffect" class="text-break">Class TiledMapEffect
+  </h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">Microsoft.Xna.Framework.Graphics.GraphicsResource</span></div>
+    <div class="level2"><span class="xref">Microsoft.Xna.Framework.Graphics.Effect</span></div>
+    <div class="level3"><a class="xref" href="MonoGame.Extended.Graphics.Effects.MatrixChainEffect.html">MatrixChainEffect</a></div>
+    <div class="level4"><a class="xref" href="MonoGame.Extended.Graphics.Effects.DefaultEffect.html">DefaultEffect</a></div>
+    <div class="level5"><span class="xref">TiledMapEffect</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><span class="xref">System.IDisposable</span></div>
+    <div><a class="xref" href="MonoGame.Extended.Graphics.IMatrixChainEffect.html">IMatrixChainEffect</a></div>
+    <div><a class="xref" href="MonoGame.Extended.Tiled.Renderers.ITiledMapEffect.html">ITiledMapEffect</a></div>
+    <div><span class="xref">Microsoft.Xna.Framework.Graphics.IEffectMatrices</span></div>
+    <div><a class="xref" href="MonoGame.Extended.Graphics.Effects.ITextureEffect.html">ITextureEffect</a></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="MonoGame.Extended.Graphics.Effects.DefaultEffect.html#MonoGame_Extended_Graphics_Effects_DefaultEffect_DirtyTextureBitMask">DefaultEffect.DirtyTextureBitMask</a>
+    </div>
+    <div>
+      <a class="xref" href="MonoGame.Extended.Graphics.Effects.DefaultEffect.html#MonoGame_Extended_Graphics_Effects_DefaultEffect_DirtyShaderIndexBitMask">DefaultEffect.DirtyShaderIndexBitMask</a>
+    </div>
+    <div>
+      <a class="xref" href="MonoGame.Extended.Graphics.Effects.DefaultEffect.html#MonoGame_Extended_Graphics_Effects_DefaultEffect_DirtyMaterialColorBitMask">DefaultEffect.DirtyMaterialColorBitMask</a>
+    </div>
+    <div>
+      <a class="xref" href="MonoGame.Extended.Graphics.Effects.DefaultEffect.html#MonoGame_Extended_Graphics_Effects_DefaultEffect_Texture">DefaultEffect.Texture</a>
+    </div>
+    <div>
+      <a class="xref" href="MonoGame.Extended.Graphics.Effects.DefaultEffect.html#MonoGame_Extended_Graphics_Effects_DefaultEffect_Alpha">DefaultEffect.Alpha</a>
+    </div>
+    <div>
+      <a class="xref" href="MonoGame.Extended.Graphics.Effects.DefaultEffect.html#MonoGame_Extended_Graphics_Effects_DefaultEffect_TextureEnabled">DefaultEffect.TextureEnabled</a>
+    </div>
+    <div>
+      <a class="xref" href="MonoGame.Extended.Graphics.Effects.DefaultEffect.html#MonoGame_Extended_Graphics_Effects_DefaultEffect_VertexColorEnabled">DefaultEffect.VertexColorEnabled</a>
+    </div>
+    <div>
+      <a class="xref" href="MonoGame.Extended.Graphics.Effects.DefaultEffect.html#MonoGame_Extended_Graphics_Effects_DefaultEffect_OnApply">DefaultEffect.OnApply()</a>
+    </div>
+    <div>
+      <a class="xref" href="MonoGame.Extended.Graphics.Effects.DefaultEffect.html#MonoGame_Extended_Graphics_Effects_DefaultEffect_UpdateMaterialColor">DefaultEffect.UpdateMaterialColor()</a>
+    </div>
+    <div>
+      <a class="xref" href="MonoGame.Extended.Graphics.Effects.MatrixChainEffect.html#MonoGame_Extended_Graphics_Effects_MatrixChainEffect_DirtyWorldViewProjectionBitMask">MatrixChainEffect.DirtyWorldViewProjectionBitMask</a>
+    </div>
+    <div>
+      <a class="xref" href="MonoGame.Extended.Graphics.Effects.MatrixChainEffect.html#MonoGame_Extended_Graphics_Effects_MatrixChainEffect_UseDefaultProjectionBitMask">MatrixChainEffect.UseDefaultProjectionBitMask</a>
+    </div>
+    <div>
+      <a class="xref" href="MonoGame.Extended.Graphics.Effects.MatrixChainEffect.html#MonoGame_Extended_Graphics_Effects_MatrixChainEffect_Flags">MatrixChainEffect.Flags</a>
+    </div>
+    <div>
+      <a class="xref" href="MonoGame.Extended.Graphics.Effects.MatrixChainEffect.html#MonoGame_Extended_Graphics_Effects_MatrixChainEffect_World">MatrixChainEffect.World</a>
+    </div>
+    <div>
+      <a class="xref" href="MonoGame.Extended.Graphics.Effects.MatrixChainEffect.html#MonoGame_Extended_Graphics_Effects_MatrixChainEffect_View">MatrixChainEffect.View</a>
+    </div>
+    <div>
+      <a class="xref" href="MonoGame.Extended.Graphics.Effects.MatrixChainEffect.html#MonoGame_Extended_Graphics_Effects_MatrixChainEffect_Projection">MatrixChainEffect.Projection</a>
+    </div>
+    <div>
+      <a class="xref" href="MonoGame.Extended.Graphics.Effects.MatrixChainEffect.html#MonoGame_Extended_Graphics_Effects_MatrixChainEffect_SetWorld_Microsoft_Xna_Framework_Matrix__">MatrixChainEffect.SetWorld(Matrix)</a>
+    </div>
+    <div>
+      <a class="xref" href="MonoGame.Extended.Graphics.Effects.MatrixChainEffect.html#MonoGame_Extended_Graphics_Effects_MatrixChainEffect_SetView_Microsoft_Xna_Framework_Matrix__">MatrixChainEffect.SetView(Matrix)</a>
+    </div>
+    <div>
+      <a class="xref" href="MonoGame.Extended.Graphics.Effects.MatrixChainEffect.html#MonoGame_Extended_Graphics_Effects_MatrixChainEffect_SetProjection_Microsoft_Xna_Framework_Matrix__">MatrixChainEffect.SetProjection(Matrix)</a>
+    </div>
+    <div>
+      <span class="xref">Microsoft.Xna.Framework.Graphics.Effect.Clone()</span>
+    </div>
+    <div>
+      <span class="xref">Microsoft.Xna.Framework.Graphics.Effect.Dispose(System.Boolean)</span>
+    </div>
+    <div>
+      <span class="xref">Microsoft.Xna.Framework.Graphics.Effect.GraphicsDeviceResetting()</span>
+    </div>
+    <div>
+      <span class="xref">Microsoft.Xna.Framework.Graphics.Effect.Parameters</span>
+    </div>
+    <div>
+      <span class="xref">Microsoft.Xna.Framework.Graphics.Effect.Techniques</span>
+    </div>
+    <div>
+      <span class="xref">Microsoft.Xna.Framework.Graphics.Effect.CurrentTechnique</span>
+    </div>
+    <div>
+      <span class="xref">Microsoft.Xna.Framework.Graphics.GraphicsResource.Dispose()</span>
+    </div>
+    <div>
+      <span class="xref">Microsoft.Xna.Framework.Graphics.GraphicsResource.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">Microsoft.Xna.Framework.Graphics.GraphicsResource.GraphicsDevice</span>
+    </div>
+    <div>
+      <span class="xref">Microsoft.Xna.Framework.Graphics.GraphicsResource.IsDisposed</span>
+    </div>
+    <div>
+      <span class="xref">Microsoft.Xna.Framework.Graphics.GraphicsResource.Name</span>
+    </div>
+    <div>
+      <span class="xref">Microsoft.Xna.Framework.Graphics.GraphicsResource.Tag</span>
+    </div>
+    <div>
+      <span class="xref">Microsoft.Xna.Framework.Graphics.GraphicsResource.Disposing</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="MonoGame.Extended.Tiled.Renderers.html">MonoGame.Extended.Tiled.Renderers</a></h6>
+  <h6><strong>Assembly</strong>: MonoGame.Extended.Tiled.dll</h6>
+  <h5 id="MonoGame_Extended_Tiled_Renderers_TiledMapEffect_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class TiledMapEffect : DefaultEffect, IDisposable, IMatrixChainEffect, ITiledMapEffect, IEffectMatrices, ITextureEffect</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  
+  
+  <a id="MonoGame_Extended_Tiled_Renderers_TiledMapEffect__ctor_" data-uid="MonoGame.Extended.Tiled.Renderers.TiledMapEffect.#ctor*"></a>
+  <h4 id="MonoGame_Extended_Tiled_Renderers_TiledMapEffect__ctor_Microsoft_Xna_Framework_Graphics_Effect_" data-uid="MonoGame.Extended.Tiled.Renderers.TiledMapEffect.#ctor(Microsoft.Xna.Framework.Graphics.Effect)">TiledMapEffect(Effect)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TiledMapEffect(Effect cloneSource)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Microsoft.Xna.Framework.Graphics.Effect</span></td>
+        <td><span class="parametername">cloneSource</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MonoGame_Extended_Tiled_Renderers_TiledMapEffect__ctor_" data-uid="MonoGame.Extended.Tiled.Renderers.TiledMapEffect.#ctor*"></a>
+  <h4 id="MonoGame_Extended_Tiled_Renderers_TiledMapEffect__ctor_Microsoft_Xna_Framework_Graphics_GraphicsDevice_" data-uid="MonoGame.Extended.Tiled.Renderers.TiledMapEffect.#ctor(Microsoft.Xna.Framework.Graphics.GraphicsDevice)">TiledMapEffect(GraphicsDevice)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TiledMapEffect(GraphicsDevice graphicsDevice)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Microsoft.Xna.Framework.Graphics.GraphicsDevice</span></td>
+        <td><span class="parametername">graphicsDevice</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MonoGame_Extended_Tiled_Renderers_TiledMapEffect__ctor_" data-uid="MonoGame.Extended.Tiled.Renderers.TiledMapEffect.#ctor*"></a>
+  <h4 id="MonoGame_Extended_Tiled_Renderers_TiledMapEffect__ctor_Microsoft_Xna_Framework_Graphics_GraphicsDevice_System_Byte___" data-uid="MonoGame.Extended.Tiled.Renderers.TiledMapEffect.#ctor(Microsoft.Xna.Framework.Graphics.GraphicsDevice,System.Byte[])">TiledMapEffect(GraphicsDevice, Byte[])</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TiledMapEffect(GraphicsDevice graphicsDevice, byte[] byteCode)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Microsoft.Xna.Framework.Graphics.GraphicsDevice</span></td>
+        <td><span class="parametername">graphicsDevice</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Byte</span>[]</td>
+        <td><span class="parametername">byteCode</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <span class="xref">System.IDisposable</span>
+  </div>
+  <div>
+      <a class="xref" href="MonoGame.Extended.Graphics.IMatrixChainEffect.html">IMatrixChainEffect</a>
+  </div>
+  <div>
+      <a class="xref" href="MonoGame.Extended.Tiled.Renderers.ITiledMapEffect.html">ITiledMapEffect</a>
+  </div>
+  <div>
+      <span class="xref">Microsoft.Xna.Framework.Graphics.IEffectMatrices</span>
+  </div>
+  <div>
+      <a class="xref" href="MonoGame.Extended.Graphics.Effects.ITextureEffect.html">ITextureEffect</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

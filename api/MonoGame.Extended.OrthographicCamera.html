@@ -1,0 +1,1017 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class OrthographicCamera
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class OrthographicCamera
+   ">
+    <meta name="generator" content="docfx 2.56.2.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="MonoGame.Extended.OrthographicCamera">
+  
+  
+  <h1 id="MonoGame_Extended_OrthographicCamera" data-uid="MonoGame.Extended.OrthographicCamera" class="text-break">Class OrthographicCamera
+  </h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><a class="xref" href="MonoGame.Extended.Camera-1.html">Camera</a>&lt;<span class="xref">Microsoft.Xna.Framework.Vector2</span>&gt;</div>
+    <div class="level2"><span class="xref">OrthographicCamera</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="MonoGame.Extended.IMovable.html">IMovable</a></div>
+    <div><a class="xref" href="MonoGame.Extended.IRotatable.html">IRotatable</a></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="MonoGame.Extended.html">MonoGame.Extended</a></h6>
+  <h6><strong>Assembly</strong>: MonoGame.Extended.dll</h6>
+  <h5 id="MonoGame_Extended_OrthographicCamera_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed class OrthographicCamera : Camera&lt;Vector2&gt;, IMovable, IRotatable</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  
+  
+  <a id="MonoGame_Extended_OrthographicCamera__ctor_" data-uid="MonoGame.Extended.OrthographicCamera.#ctor*"></a>
+  <h4 id="MonoGame_Extended_OrthographicCamera__ctor_Microsoft_Xna_Framework_Graphics_GraphicsDevice_" data-uid="MonoGame.Extended.OrthographicCamera.#ctor(Microsoft.Xna.Framework.Graphics.GraphicsDevice)">OrthographicCamera(GraphicsDevice)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public OrthographicCamera(GraphicsDevice graphicsDevice)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Microsoft.Xna.Framework.Graphics.GraphicsDevice</span></td>
+        <td><span class="parametername">graphicsDevice</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MonoGame_Extended_OrthographicCamera__ctor_" data-uid="MonoGame.Extended.OrthographicCamera.#ctor*"></a>
+  <h4 id="MonoGame_Extended_OrthographicCamera__ctor_MonoGame_Extended_ViewportAdapters_ViewportAdapter_" data-uid="MonoGame.Extended.OrthographicCamera.#ctor(MonoGame.Extended.ViewportAdapters.ViewportAdapter)">OrthographicCamera(ViewportAdapter)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public OrthographicCamera(ViewportAdapter viewportAdapter)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MonoGame.Extended.ViewportAdapters.ViewportAdapter.html">ViewportAdapter</a></td>
+        <td><span class="parametername">viewportAdapter</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="MonoGame_Extended_OrthographicCamera_BoundingRectangle_" data-uid="MonoGame.Extended.OrthographicCamera.BoundingRectangle*"></a>
+  <h4 id="MonoGame_Extended_OrthographicCamera_BoundingRectangle" data-uid="MonoGame.Extended.OrthographicCamera.BoundingRectangle">BoundingRectangle</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override RectangleF BoundingRectangle { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MonoGame.Extended.RectangleF.html">RectangleF</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">MonoGame.Extended.Camera&lt;Microsoft.Xna.Framework.Vector2&gt;.BoundingRectangle</span></div>
+  
+  
+  <a id="MonoGame_Extended_OrthographicCamera_Center_" data-uid="MonoGame.Extended.OrthographicCamera.Center*"></a>
+  <h4 id="MonoGame_Extended_OrthographicCamera_Center" data-uid="MonoGame.Extended.OrthographicCamera.Center">Center</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override Vector2 Center { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Microsoft.Xna.Framework.Vector2</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">MonoGame.Extended.Camera&lt;Microsoft.Xna.Framework.Vector2&gt;.Center</span></div>
+  
+  
+  <a id="MonoGame_Extended_OrthographicCamera_MaximumZoom_" data-uid="MonoGame.Extended.OrthographicCamera.MaximumZoom*"></a>
+  <h4 id="MonoGame_Extended_OrthographicCamera_MaximumZoom" data-uid="MonoGame.Extended.OrthographicCamera.MaximumZoom">MaximumZoom</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override float MaximumZoom { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">MonoGame.Extended.Camera&lt;Microsoft.Xna.Framework.Vector2&gt;.MaximumZoom</span></div>
+  
+  
+  <a id="MonoGame_Extended_OrthographicCamera_MinimumZoom_" data-uid="MonoGame.Extended.OrthographicCamera.MinimumZoom*"></a>
+  <h4 id="MonoGame_Extended_OrthographicCamera_MinimumZoom" data-uid="MonoGame.Extended.OrthographicCamera.MinimumZoom">MinimumZoom</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override float MinimumZoom { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">MonoGame.Extended.Camera&lt;Microsoft.Xna.Framework.Vector2&gt;.MinimumZoom</span></div>
+  
+  
+  <a id="MonoGame_Extended_OrthographicCamera_Origin_" data-uid="MonoGame.Extended.OrthographicCamera.Origin*"></a>
+  <h4 id="MonoGame_Extended_OrthographicCamera_Origin" data-uid="MonoGame.Extended.OrthographicCamera.Origin">Origin</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override Vector2 Origin { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Microsoft.Xna.Framework.Vector2</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">MonoGame.Extended.Camera&lt;Microsoft.Xna.Framework.Vector2&gt;.Origin</span></div>
+  
+  
+  <a id="MonoGame_Extended_OrthographicCamera_Position_" data-uid="MonoGame.Extended.OrthographicCamera.Position*"></a>
+  <h4 id="MonoGame_Extended_OrthographicCamera_Position" data-uid="MonoGame.Extended.OrthographicCamera.Position">Position</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override Vector2 Position { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Microsoft.Xna.Framework.Vector2</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">MonoGame.Extended.Camera&lt;Microsoft.Xna.Framework.Vector2&gt;.Position</span></div>
+  
+  
+  <a id="MonoGame_Extended_OrthographicCamera_Rotation_" data-uid="MonoGame.Extended.OrthographicCamera.Rotation*"></a>
+  <h4 id="MonoGame_Extended_OrthographicCamera_Rotation" data-uid="MonoGame.Extended.OrthographicCamera.Rotation">Rotation</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override float Rotation { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">MonoGame.Extended.Camera&lt;Microsoft.Xna.Framework.Vector2&gt;.Rotation</span></div>
+  
+  
+  <a id="MonoGame_Extended_OrthographicCamera_Zoom_" data-uid="MonoGame.Extended.OrthographicCamera.Zoom*"></a>
+  <h4 id="MonoGame_Extended_OrthographicCamera_Zoom" data-uid="MonoGame.Extended.OrthographicCamera.Zoom">Zoom</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override float Zoom { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">MonoGame.Extended.Camera&lt;Microsoft.Xna.Framework.Vector2&gt;.Zoom</span></div>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="MonoGame_Extended_OrthographicCamera_Contains_" data-uid="MonoGame.Extended.OrthographicCamera.Contains*"></a>
+  <h4 id="MonoGame_Extended_OrthographicCamera_Contains_Microsoft_Xna_Framework_Point_" data-uid="MonoGame.Extended.OrthographicCamera.Contains(Microsoft.Xna.Framework.Point)">Contains(Point)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ContainmentType Contains(Point point)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Microsoft.Xna.Framework.Point</span></td>
+        <td><span class="parametername">point</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Microsoft.Xna.Framework.ContainmentType</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MonoGame_Extended_OrthographicCamera_Contains_" data-uid="MonoGame.Extended.OrthographicCamera.Contains*"></a>
+  <h4 id="MonoGame_Extended_OrthographicCamera_Contains_Microsoft_Xna_Framework_Rectangle_" data-uid="MonoGame.Extended.OrthographicCamera.Contains(Microsoft.Xna.Framework.Rectangle)">Contains(Rectangle)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override ContainmentType Contains(Rectangle rectangle)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Microsoft.Xna.Framework.Rectangle</span></td>
+        <td><span class="parametername">rectangle</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Microsoft.Xna.Framework.ContainmentType</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">MonoGame.Extended.Camera&lt;Microsoft.Xna.Framework.Vector2&gt;.Contains(Microsoft.Xna.Framework.Rectangle)</span></div>
+  
+  
+  <a id="MonoGame_Extended_OrthographicCamera_Contains_" data-uid="MonoGame.Extended.OrthographicCamera.Contains*"></a>
+  <h4 id="MonoGame_Extended_OrthographicCamera_Contains_Microsoft_Xna_Framework_Vector2_" data-uid="MonoGame.Extended.OrthographicCamera.Contains(Microsoft.Xna.Framework.Vector2)">Contains(Vector2)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override ContainmentType Contains(Vector2 vector2)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Microsoft.Xna.Framework.Vector2</span></td>
+        <td><span class="parametername">vector2</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Microsoft.Xna.Framework.ContainmentType</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">MonoGame.Extended.Camera&lt;Microsoft.Xna.Framework.Vector2&gt;.Contains(Microsoft.Xna.Framework.Vector2)</span></div>
+  
+  
+  <a id="MonoGame_Extended_OrthographicCamera_GetBoundingFrustum_" data-uid="MonoGame.Extended.OrthographicCamera.GetBoundingFrustum*"></a>
+  <h4 id="MonoGame_Extended_OrthographicCamera_GetBoundingFrustum" data-uid="MonoGame.Extended.OrthographicCamera.GetBoundingFrustum">GetBoundingFrustum()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override BoundingFrustum GetBoundingFrustum()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Microsoft.Xna.Framework.BoundingFrustum</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">MonoGame.Extended.Camera&lt;Microsoft.Xna.Framework.Vector2&gt;.GetBoundingFrustum()</span></div>
+  
+  
+  <a id="MonoGame_Extended_OrthographicCamera_GetInverseViewMatrix_" data-uid="MonoGame.Extended.OrthographicCamera.GetInverseViewMatrix*"></a>
+  <h4 id="MonoGame_Extended_OrthographicCamera_GetInverseViewMatrix" data-uid="MonoGame.Extended.OrthographicCamera.GetInverseViewMatrix">GetInverseViewMatrix()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override Matrix GetInverseViewMatrix()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Microsoft.Xna.Framework.Matrix</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">MonoGame.Extended.Camera&lt;Microsoft.Xna.Framework.Vector2&gt;.GetInverseViewMatrix()</span></div>
+  
+  
+  <a id="MonoGame_Extended_OrthographicCamera_GetViewMatrix_" data-uid="MonoGame.Extended.OrthographicCamera.GetViewMatrix*"></a>
+  <h4 id="MonoGame_Extended_OrthographicCamera_GetViewMatrix" data-uid="MonoGame.Extended.OrthographicCamera.GetViewMatrix">GetViewMatrix()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override Matrix GetViewMatrix()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Microsoft.Xna.Framework.Matrix</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">MonoGame.Extended.Camera&lt;Microsoft.Xna.Framework.Vector2&gt;.GetViewMatrix()</span></div>
+  
+  
+  <a id="MonoGame_Extended_OrthographicCamera_GetViewMatrix_" data-uid="MonoGame.Extended.OrthographicCamera.GetViewMatrix*"></a>
+  <h4 id="MonoGame_Extended_OrthographicCamera_GetViewMatrix_Microsoft_Xna_Framework_Vector2_" data-uid="MonoGame.Extended.OrthographicCamera.GetViewMatrix(Microsoft.Xna.Framework.Vector2)">GetViewMatrix(Vector2)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Matrix GetViewMatrix(Vector2 parallaxFactor)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Microsoft.Xna.Framework.Vector2</span></td>
+        <td><span class="parametername">parallaxFactor</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Microsoft.Xna.Framework.Matrix</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MonoGame_Extended_OrthographicCamera_LookAt_" data-uid="MonoGame.Extended.OrthographicCamera.LookAt*"></a>
+  <h4 id="MonoGame_Extended_OrthographicCamera_LookAt_Microsoft_Xna_Framework_Vector2_" data-uid="MonoGame.Extended.OrthographicCamera.LookAt(Microsoft.Xna.Framework.Vector2)">LookAt(Vector2)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void LookAt(Vector2 position)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Microsoft.Xna.Framework.Vector2</span></td>
+        <td><span class="parametername">position</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">MonoGame.Extended.Camera&lt;Microsoft.Xna.Framework.Vector2&gt;.LookAt(Microsoft.Xna.Framework.Vector2)</span></div>
+  
+  
+  <a id="MonoGame_Extended_OrthographicCamera_Move_" data-uid="MonoGame.Extended.OrthographicCamera.Move*"></a>
+  <h4 id="MonoGame_Extended_OrthographicCamera_Move_Microsoft_Xna_Framework_Vector2_" data-uid="MonoGame.Extended.OrthographicCamera.Move(Microsoft.Xna.Framework.Vector2)">Move(Vector2)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void Move(Vector2 direction)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Microsoft.Xna.Framework.Vector2</span></td>
+        <td><span class="parametername">direction</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">MonoGame.Extended.Camera&lt;Microsoft.Xna.Framework.Vector2&gt;.Move(Microsoft.Xna.Framework.Vector2)</span></div>
+  
+  
+  <a id="MonoGame_Extended_OrthographicCamera_Rotate_" data-uid="MonoGame.Extended.OrthographicCamera.Rotate*"></a>
+  <h4 id="MonoGame_Extended_OrthographicCamera_Rotate_System_Single_" data-uid="MonoGame.Extended.OrthographicCamera.Rotate(System.Single)">Rotate(Single)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void Rotate(float deltaRadians)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">deltaRadians</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">MonoGame.Extended.Camera&lt;Microsoft.Xna.Framework.Vector2&gt;.Rotate(System.Single)</span></div>
+  
+  
+  <a id="MonoGame_Extended_OrthographicCamera_ScreenToWorld_" data-uid="MonoGame.Extended.OrthographicCamera.ScreenToWorld*"></a>
+  <h4 id="MonoGame_Extended_OrthographicCamera_ScreenToWorld_Microsoft_Xna_Framework_Vector2_" data-uid="MonoGame.Extended.OrthographicCamera.ScreenToWorld(Microsoft.Xna.Framework.Vector2)">ScreenToWorld(Vector2)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override Vector2 ScreenToWorld(Vector2 screenPosition)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Microsoft.Xna.Framework.Vector2</span></td>
+        <td><span class="parametername">screenPosition</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Microsoft.Xna.Framework.Vector2</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">MonoGame.Extended.Camera&lt;Microsoft.Xna.Framework.Vector2&gt;.ScreenToWorld(Microsoft.Xna.Framework.Vector2)</span></div>
+  
+  
+  <a id="MonoGame_Extended_OrthographicCamera_ScreenToWorld_" data-uid="MonoGame.Extended.OrthographicCamera.ScreenToWorld*"></a>
+  <h4 id="MonoGame_Extended_OrthographicCamera_ScreenToWorld_System_Single_System_Single_" data-uid="MonoGame.Extended.OrthographicCamera.ScreenToWorld(System.Single,System.Single)">ScreenToWorld(Single, Single)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Vector2 ScreenToWorld(float x, float y)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">x</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">y</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Microsoft.Xna.Framework.Vector2</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MonoGame_Extended_OrthographicCamera_WorldToScreen_" data-uid="MonoGame.Extended.OrthographicCamera.WorldToScreen*"></a>
+  <h4 id="MonoGame_Extended_OrthographicCamera_WorldToScreen_Microsoft_Xna_Framework_Vector2_" data-uid="MonoGame.Extended.OrthographicCamera.WorldToScreen(Microsoft.Xna.Framework.Vector2)">WorldToScreen(Vector2)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override Vector2 WorldToScreen(Vector2 worldPosition)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Microsoft.Xna.Framework.Vector2</span></td>
+        <td><span class="parametername">worldPosition</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Microsoft.Xna.Framework.Vector2</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">MonoGame.Extended.Camera&lt;Microsoft.Xna.Framework.Vector2&gt;.WorldToScreen(Microsoft.Xna.Framework.Vector2)</span></div>
+  
+  
+  <a id="MonoGame_Extended_OrthographicCamera_WorldToScreen_" data-uid="MonoGame.Extended.OrthographicCamera.WorldToScreen*"></a>
+  <h4 id="MonoGame_Extended_OrthographicCamera_WorldToScreen_System_Single_System_Single_" data-uid="MonoGame.Extended.OrthographicCamera.WorldToScreen(System.Single,System.Single)">WorldToScreen(Single, Single)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Vector2 WorldToScreen(float x, float y)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">x</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">y</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Microsoft.Xna.Framework.Vector2</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MonoGame_Extended_OrthographicCamera_ZoomIn_" data-uid="MonoGame.Extended.OrthographicCamera.ZoomIn*"></a>
+  <h4 id="MonoGame_Extended_OrthographicCamera_ZoomIn_System_Single_" data-uid="MonoGame.Extended.OrthographicCamera.ZoomIn(System.Single)">ZoomIn(Single)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void ZoomIn(float deltaZoom)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">deltaZoom</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">MonoGame.Extended.Camera&lt;Microsoft.Xna.Framework.Vector2&gt;.ZoomIn(System.Single)</span></div>
+  
+  
+  <a id="MonoGame_Extended_OrthographicCamera_ZoomOut_" data-uid="MonoGame.Extended.OrthographicCamera.ZoomOut*"></a>
+  <h4 id="MonoGame_Extended_OrthographicCamera_ZoomOut_System_Single_" data-uid="MonoGame.Extended.OrthographicCamera.ZoomOut(System.Single)">ZoomOut(Single)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void ZoomOut(float deltaZoom)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">deltaZoom</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">MonoGame.Extended.Camera&lt;Microsoft.Xna.Framework.Vector2&gt;.ZoomOut(System.Single)</span></div>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="MonoGame.Extended.IMovable.html">IMovable</a>
+  </div>
+  <div>
+      <a class="xref" href="MonoGame.Extended.IRotatable.html">IRotatable</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

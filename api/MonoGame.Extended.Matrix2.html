@@ -1,0 +1,2735 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Struct Matrix2
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Struct Matrix2
+   ">
+    <meta name="generator" content="docfx 2.56.2.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="MonoGame.Extended.Matrix2">
+  
+  
+  <h1 id="MonoGame_Extended_Matrix2" data-uid="MonoGame.Extended.Matrix2" class="text-break">Struct Matrix2
+  </h1>
+  <div class="markdown level0 summary"><p>Defines a 3x3 matrix using floating point numbers which can store two dimensional translation, scale and rotation
+information in a right-handed coordinate system.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><span class="xref">System.IEquatable</span>&lt;<a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a>&gt;</div>
+    <div><a class="xref" href="MonoGame.Extended.IEquatableByRef-1.html">IEquatableByRef</a>&lt;<a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a>&gt;</div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="MonoGame.Extended.html">MonoGame.Extended</a></h6>
+  <h6><strong>Assembly</strong>: MonoGame.Extended.dll</h6>
+  <h5 id="MonoGame_Extended_Matrix2_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public struct Matrix2 : IEquatable&lt;Matrix2&gt;, IEquatableByRef&lt;Matrix2&gt;</code></pre>
+  </div>
+  <h5 id="MonoGame_Extended_Matrix2_remarks"><strong>Remarks</strong></h5>
+  <div class="markdown level0 remarks"><p>
+    Matrices use a row vector layout in the XNA / MonoGame Framework but, in general, matrices can be either have
+    a row vector or column vector layout. Row vector matrices view vectors as a row from left to right, while
+    column vector matrices view vectors as a column from top to bottom. For example, the <a class="xref" href="MonoGame.Extended.Matrix2.html#MonoGame_Extended_Matrix2_Translation">Translation</a>
+    corresponds to the fields <a class="xref" href="MonoGame.Extended.Matrix2.html#MonoGame_Extended_Matrix2_M31">M31</a> and <a class="xref" href="MonoGame.Extended.Matrix2.html#MonoGame_Extended_Matrix2_M32">M32</a>.
+</p>
+<p>
+    The fields M13 and M23 always have a value of <pre><code>0.0f</code></pre>, and thus are removed from the
+<a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a> to reduce its memory footprint. Same is true for the field M33, except it always has a
+value of <pre><code>1.0f</code></pre>.
+</p>
+</div>
+  <h3 id="constructors">Constructors
+  </h3>
+  
+  
+  <a id="MonoGame_Extended_Matrix2__ctor_" data-uid="MonoGame.Extended.Matrix2.#ctor*"></a>
+  <h4 id="MonoGame_Extended_Matrix2__ctor_System_Single_System_Single_System_Single_System_Single_System_Single_System_Single_" data-uid="MonoGame.Extended.Matrix2.#ctor(System.Single,System.Single,System.Single,System.Single,System.Single,System.Single)">Matrix2(Single, Single, Single, Single, Single, Single)</h4>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a> struct.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Matrix2(float m11, float m12, float m21, float m22, float m31, float m32)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">m11</span></td>
+        <td><p>The value to initialize <a class="xref" href="MonoGame.Extended.Matrix2.html#MonoGame_Extended_Matrix2_M11">M11</a> to.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">m12</span></td>
+        <td><p>The value to initialize <a class="xref" href="MonoGame.Extended.Matrix2.html#MonoGame_Extended_Matrix2_M12">M12</a> to.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">m21</span></td>
+        <td><p>The value to initialize <a class="xref" href="MonoGame.Extended.Matrix2.html#MonoGame_Extended_Matrix2_M21">M21</a> to.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">m22</span></td>
+        <td><p>The value to initialize <a class="xref" href="MonoGame.Extended.Matrix2.html#MonoGame_Extended_Matrix2_M22">M22</a> to.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">m31</span></td>
+        <td><p>The value to initialize <a class="xref" href="MonoGame.Extended.Matrix2.html#MonoGame_Extended_Matrix2_M31">M31</a> to.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">m32</span></td>
+        <td><p>The value to initialize <a class="xref" href="MonoGame.Extended.Matrix2.html#MonoGame_Extended_Matrix2_M32">M32</a> to.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="MonoGame_Extended_Matrix2__ctor_System_Single_System_Single_System_Single_System_Single_System_Single_System_Single__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>
+    The fields M13 and M23 always have a value of <pre><code>0.0f</code></pre>, and thus are removed from the
+<a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a> to reduce its memory footprint. Same is true for the field M33, except it always has a
+value of <pre><code>1.0f</code></pre>.
+</p>
+</div>
+  <h3 id="fields">Fields
+  </h3>
+  
+  
+  <h4 id="MonoGame_Extended_Matrix2_M11" data-uid="MonoGame.Extended.Matrix2.M11">M11</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float M11</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="MonoGame_Extended_Matrix2_M12" data-uid="MonoGame.Extended.Matrix2.M12">M12</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float M12</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="MonoGame_Extended_Matrix2_M21" data-uid="MonoGame.Extended.Matrix2.M21">M21</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float M21</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="MonoGame_Extended_Matrix2_M22" data-uid="MonoGame.Extended.Matrix2.M22">M22</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float M22</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="MonoGame_Extended_Matrix2_M31" data-uid="MonoGame.Extended.Matrix2.M31">M31</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float M31</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="MonoGame_Extended_Matrix2_M32" data-uid="MonoGame.Extended.Matrix2.M32">M32</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float M32</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="MonoGame_Extended_Matrix2_Identity_" data-uid="MonoGame.Extended.Matrix2.Identity*"></a>
+  <h4 id="MonoGame_Extended_Matrix2_Identity" data-uid="MonoGame.Extended.Matrix2.Identity">Identity</h4>
+  <div class="markdown level1 summary"><p>Gets the identity matrix.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Matrix2 Identity { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a></td>
+        <td><p>The identity matrix.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MonoGame_Extended_Matrix2_Rotation_" data-uid="MonoGame.Extended.Matrix2.Rotation*"></a>
+  <h4 id="MonoGame_Extended_Matrix2_Rotation" data-uid="MonoGame.Extended.Matrix2.Rotation">Rotation</h4>
+  <div class="markdown level1 summary"><p>Gets the rotation angle in radians.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float Rotation { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><p>The rotation angle in radians.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="MonoGame_Extended_Matrix2_Rotation_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>The <a class="xref" href="MonoGame.Extended.Matrix2.html#MonoGame_Extended_Matrix2_Rotation">Rotation</a> is equal to <pre><code>Atan2(M21, M11)</code></pre>.</p>
+</div>
+  
+  
+  <a id="MonoGame_Extended_Matrix2_Scale_" data-uid="MonoGame.Extended.Matrix2.Scale*"></a>
+  <h4 id="MonoGame_Extended_Matrix2_Scale" data-uid="MonoGame.Extended.Matrix2.Scale">Scale</h4>
+  <div class="markdown level1 summary"><p>Gets the scale.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Vector2 Scale { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Microsoft.Xna.Framework.Vector2</span></td>
+        <td><p>The scale.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="MonoGame_Extended_Matrix2_Scale_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>The <a class="xref" href="MonoGame.Extended.Matrix2.html#MonoGame_Extended_Matrix2_Scale">Scale</a> is equal to the vector</p>
+<pre><code>(Sqrt(M11 * M11 + M21 * M21), Sqrt(M12 * M12 + M22 * M22))</code></pre>.
+</div>
+  
+  
+  <a id="MonoGame_Extended_Matrix2_Translation_" data-uid="MonoGame.Extended.Matrix2.Translation*"></a>
+  <h4 id="MonoGame_Extended_Matrix2_Translation" data-uid="MonoGame.Extended.Matrix2.Translation">Translation</h4>
+  <div class="markdown level1 summary"><p>Gets the translation.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Vector2 Translation { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Microsoft.Xna.Framework.Vector2</span></td>
+        <td><p>The translation.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="MonoGame_Extended_Matrix2_Translation_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>The <a class="xref" href="MonoGame.Extended.Matrix2.html#MonoGame_Extended_Matrix2_Translation">Translation</a> is equal to the vector <pre><code>(M31, M32)</code></pre>.</p>
+</div>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="MonoGame_Extended_Matrix2_Add_" data-uid="MonoGame.Extended.Matrix2.Add*"></a>
+  <h4 id="MonoGame_Extended_Matrix2_Add_MonoGame_Extended_Matrix2_MonoGame_Extended_Matrix2_" data-uid="MonoGame.Extended.Matrix2.Add(MonoGame.Extended.Matrix2,MonoGame.Extended.Matrix2)">Add(Matrix2, Matrix2)</h4>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a> struct with the summation of two <a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a>
+s.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Matrix2 Add(Matrix2 matrix1, Matrix2 matrix2)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a></td>
+        <td><span class="parametername">matrix1</span></td>
+        <td><p>The first <a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a></td>
+        <td><span class="parametername">matrix2</span></td>
+        <td><p>The second <a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a></td>
+        <td><p>The resulting <a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MonoGame_Extended_Matrix2_Add_" data-uid="MonoGame.Extended.Matrix2.Add*"></a>
+  <h4 id="MonoGame_Extended_Matrix2_Add_MonoGame_Extended_Matrix2__MonoGame_Extended_Matrix2__MonoGame_Extended_Matrix2__" data-uid="MonoGame.Extended.Matrix2.Add(MonoGame.Extended.Matrix2@,MonoGame.Extended.Matrix2@,MonoGame.Extended.Matrix2@)">Add(ref Matrix2, ref Matrix2, out Matrix2)</h4>
+  <div class="markdown level1 summary"><p>Calculates the <a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a> summation of two <a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a>s.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void Add(ref Matrix2 matrix1, ref Matrix2 matrix2, out Matrix2 result)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a></td>
+        <td><span class="parametername">matrix1</span></td>
+        <td><p>The first <a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a></td>
+        <td><span class="parametername">matrix2</span></td>
+        <td><p>The second <a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a></td>
+        <td><span class="parametername">result</span></td>
+        <td><p>The resulting <a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MonoGame_Extended_Matrix2_CreateFrom_" data-uid="MonoGame.Extended.Matrix2.CreateFrom*"></a>
+  <h4 id="MonoGame_Extended_Matrix2_CreateFrom_Microsoft_Xna_Framework_Vector2_System_Single_System_Nullable_Microsoft_Xna_Framework_Vector2__System_Nullable_Microsoft_Xna_Framework_Vector2__" data-uid="MonoGame.Extended.Matrix2.CreateFrom(Microsoft.Xna.Framework.Vector2,System.Single,System.Nullable{Microsoft.Xna.Framework.Vector2},System.Nullable{Microsoft.Xna.Framework.Vector2})">CreateFrom(Vector2, Single, Nullable&lt;Vector2&gt;, Nullable&lt;Vector2&gt;)</h4>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a> struct that can be used to translate, rotate, and scale a set of vertices in two dimensions.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Matrix2 CreateFrom(Vector2 position, float rotation, Vector2? scale = default(Vector2? ), Vector2? origin = default(Vector2? ))</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Microsoft.Xna.Framework.Vector2</span></td>
+        <td><span class="parametername">position</span></td>
+        <td><p>The amounts to translate by on the x and y axes.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">rotation</span></td>
+        <td><p>The amount, in radians, in which to rotate around the z-axis.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Microsoft.Xna.Framework.Vector2</span>&gt;</td>
+        <td><span class="parametername">scale</span></td>
+        <td><p>The amount to scale by on the x and y axes.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Microsoft.Xna.Framework.Vector2</span>&gt;</td>
+        <td><span class="parametername">origin</span></td>
+        <td><p>The point which to rotate and scale around.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a></td>
+        <td><p>The resulting <a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MonoGame_Extended_Matrix2_CreateFrom_" data-uid="MonoGame.Extended.Matrix2.CreateFrom*"></a>
+  <h4 id="MonoGame_Extended_Matrix2_CreateFrom_Microsoft_Xna_Framework_Vector2_System_Single_System_Nullable_Microsoft_Xna_Framework_Vector2__System_Nullable_Microsoft_Xna_Framework_Vector2__MonoGame_Extended_Matrix2__" data-uid="MonoGame.Extended.Matrix2.CreateFrom(Microsoft.Xna.Framework.Vector2,System.Single,System.Nullable{Microsoft.Xna.Framework.Vector2},System.Nullable{Microsoft.Xna.Framework.Vector2},MonoGame.Extended.Matrix2@)">CreateFrom(Vector2, Single, Nullable&lt;Vector2&gt;, Nullable&lt;Vector2&gt;, out Matrix2)</h4>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a> struct that can be used to translate, rotate, and scale a set of vertices in two dimensions.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void CreateFrom(Vector2 position, float rotation, Vector2? scale, Vector2? origin, out Matrix2 transformMatrix)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Microsoft.Xna.Framework.Vector2</span></td>
+        <td><span class="parametername">position</span></td>
+        <td><p>The amounts to translate by on the x and y axes.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">rotation</span></td>
+        <td><p>The amount, in radians, in which to rotate around the z-axis.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Microsoft.Xna.Framework.Vector2</span>&gt;</td>
+        <td><span class="parametername">scale</span></td>
+        <td><p>The amount to scale by on the x and y axes.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Microsoft.Xna.Framework.Vector2</span>&gt;</td>
+        <td><span class="parametername">origin</span></td>
+        <td><p>The point which to rotate and scale around.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a></td>
+        <td><span class="parametername">transformMatrix</span></td>
+        <td><p>The resulting <a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MonoGame_Extended_Matrix2_CreateRotationZ_" data-uid="MonoGame.Extended.Matrix2.CreateRotationZ*"></a>
+  <h4 id="MonoGame_Extended_Matrix2_CreateRotationZ_System_Single_" data-uid="MonoGame.Extended.Matrix2.CreateRotationZ(System.Single)">CreateRotationZ(Single)</h4>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a> struct that can be used to rotate a set of vertices
+around the z-axis.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Matrix2 CreateRotationZ(float radians)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">radians</span></td>
+        <td><p>The amount, in radians, in which to rotate around the z-axis.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a></td>
+        <td><p>The resulting <a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MonoGame_Extended_Matrix2_CreateRotationZ_" data-uid="MonoGame.Extended.Matrix2.CreateRotationZ*"></a>
+  <h4 id="MonoGame_Extended_Matrix2_CreateRotationZ_System_Single_MonoGame_Extended_Matrix2__" data-uid="MonoGame.Extended.Matrix2.CreateRotationZ(System.Single,MonoGame.Extended.Matrix2@)">CreateRotationZ(Single, out Matrix2)</h4>
+  <div class="markdown level1 summary"><p>Calculates the <a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a> struct that can be used to rotate a set of vertices around the z-axis.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void CreateRotationZ(float radians, out Matrix2 result)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">radians</span></td>
+        <td><p>The amount, in radians, in which to rotate around the z-axis.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a></td>
+        <td><span class="parametername">result</span></td>
+        <td><p>The resulting <a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MonoGame_Extended_Matrix2_CreateScale_" data-uid="MonoGame.Extended.Matrix2.CreateScale*"></a>
+  <h4 id="MonoGame_Extended_Matrix2_CreateScale_Microsoft_Xna_Framework_Vector2_" data-uid="MonoGame.Extended.Matrix2.CreateScale(Microsoft.Xna.Framework.Vector2)">CreateScale(Vector2)</h4>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a> struct that can be used to scale a set vertices.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Matrix2 CreateScale(Vector2 scale)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Microsoft.Xna.Framework.Vector2</span></td>
+        <td><span class="parametername">scale</span></td>
+        <td><p>The amounts to scale by on the x and y axes.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a></td>
+        <td><p>The resulting <a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MonoGame_Extended_Matrix2_CreateScale_" data-uid="MonoGame.Extended.Matrix2.CreateScale*"></a>
+  <h4 id="MonoGame_Extended_Matrix2_CreateScale_Microsoft_Xna_Framework_Vector2__MonoGame_Extended_Matrix2__" data-uid="MonoGame.Extended.Matrix2.CreateScale(Microsoft.Xna.Framework.Vector2@,MonoGame.Extended.Matrix2@)">CreateScale(ref Vector2, out Matrix2)</h4>
+  <div class="markdown level1 summary"><p>Calculates the <a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a> struct that can be used to scale a set vertices.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void CreateScale(ref Vector2 scale, out Matrix2 result)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Microsoft.Xna.Framework.Vector2</span></td>
+        <td><span class="parametername">scale</span></td>
+        <td><p>The amounts to scale by on the x and y axes.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a></td>
+        <td><span class="parametername">result</span></td>
+        <td><p>The resulting <a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MonoGame_Extended_Matrix2_CreateScale_" data-uid="MonoGame.Extended.Matrix2.CreateScale*"></a>
+  <h4 id="MonoGame_Extended_Matrix2_CreateScale_System_Single_" data-uid="MonoGame.Extended.Matrix2.CreateScale(System.Single)">CreateScale(Single)</h4>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a> struct that can be used to scale a set vertices.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Matrix2 CreateScale(float scale)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">scale</span></td>
+        <td><p>The amount to scale by on the x and y axes.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a></td>
+        <td><p>The resulting <a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MonoGame_Extended_Matrix2_CreateScale_" data-uid="MonoGame.Extended.Matrix2.CreateScale*"></a>
+  <h4 id="MonoGame_Extended_Matrix2_CreateScale_System_Single_MonoGame_Extended_Matrix2__" data-uid="MonoGame.Extended.Matrix2.CreateScale(System.Single,MonoGame.Extended.Matrix2@)">CreateScale(Single, out Matrix2)</h4>
+  <div class="markdown level1 summary"><p>Calculates the <a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a> struct that can be used to scale a set vertices.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void CreateScale(float scale, out Matrix2 result)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">scale</span></td>
+        <td><p>The amount to scale by on the x and y axes.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a></td>
+        <td><span class="parametername">result</span></td>
+        <td><p>The resulting <a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MonoGame_Extended_Matrix2_CreateScale_" data-uid="MonoGame.Extended.Matrix2.CreateScale*"></a>
+  <h4 id="MonoGame_Extended_Matrix2_CreateScale_System_Single_System_Single_" data-uid="MonoGame.Extended.Matrix2.CreateScale(System.Single,System.Single)">CreateScale(Single, Single)</h4>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a> struct that can be used to scale a set vertices.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Matrix2 CreateScale(float xScale, float yScale)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">xScale</span></td>
+        <td><p>The amount to scale by on the x-axis.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">yScale</span></td>
+        <td><p>The amount to scale by on the y-axis.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a></td>
+        <td><p>The resulting <a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MonoGame_Extended_Matrix2_CreateScale_" data-uid="MonoGame.Extended.Matrix2.CreateScale*"></a>
+  <h4 id="MonoGame_Extended_Matrix2_CreateScale_System_Single_System_Single_MonoGame_Extended_Matrix2__" data-uid="MonoGame.Extended.Matrix2.CreateScale(System.Single,System.Single,MonoGame.Extended.Matrix2@)">CreateScale(Single, Single, out Matrix2)</h4>
+  <div class="markdown level1 summary"><p>Calculates the <a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a> struct that can be used to scale a set vertices.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void CreateScale(float xScale, float yScale, out Matrix2 result)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">xScale</span></td>
+        <td><p>The amount to scale by on the x-axis.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">yScale</span></td>
+        <td><p>The amount to scale by on the y-axis.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a></td>
+        <td><span class="parametername">result</span></td>
+        <td><p>The resulting <a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MonoGame_Extended_Matrix2_CreateTranslation_" data-uid="MonoGame.Extended.Matrix2.CreateTranslation*"></a>
+  <h4 id="MonoGame_Extended_Matrix2_CreateTranslation_Microsoft_Xna_Framework_Vector2_" data-uid="MonoGame.Extended.Matrix2.CreateTranslation(Microsoft.Xna.Framework.Vector2)">CreateTranslation(Vector2)</h4>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a> struct that can be used to translate a set vertices.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Matrix2 CreateTranslation(Vector2 position)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Microsoft.Xna.Framework.Vector2</span></td>
+        <td><span class="parametername">position</span></td>
+        <td><p>The amounts to translate by on the x and y axes.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a></td>
+        <td><p>The resulting <a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MonoGame_Extended_Matrix2_CreateTranslation_" data-uid="MonoGame.Extended.Matrix2.CreateTranslation*"></a>
+  <h4 id="MonoGame_Extended_Matrix2_CreateTranslation_Microsoft_Xna_Framework_Vector2__MonoGame_Extended_Matrix2__" data-uid="MonoGame.Extended.Matrix2.CreateTranslation(Microsoft.Xna.Framework.Vector2@,MonoGame.Extended.Matrix2@)">CreateTranslation(ref Vector2, out Matrix2)</h4>
+  <div class="markdown level1 summary"><p>Calculates the <a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a> struct that can be used to translate a set vertices.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void CreateTranslation(ref Vector2 position, out Matrix2 result)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Microsoft.Xna.Framework.Vector2</span></td>
+        <td><span class="parametername">position</span></td>
+        <td><p>The amounts to translate by on the x and y axes.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a></td>
+        <td><span class="parametername">result</span></td>
+        <td><p>The resulting <a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MonoGame_Extended_Matrix2_CreateTranslation_" data-uid="MonoGame.Extended.Matrix2.CreateTranslation*"></a>
+  <h4 id="MonoGame_Extended_Matrix2_CreateTranslation_System_Single_System_Single_" data-uid="MonoGame.Extended.Matrix2.CreateTranslation(System.Single,System.Single)">CreateTranslation(Single, Single)</h4>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a> struct that can be used to translate a set vertices.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Matrix2 CreateTranslation(float xPosition, float yPosition)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">xPosition</span></td>
+        <td><p>The amount to translate by on the x-axis.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">yPosition</span></td>
+        <td><p>The amount to translate by on the y-axis.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a></td>
+        <td><p>The resulting <a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MonoGame_Extended_Matrix2_CreateTranslation_" data-uid="MonoGame.Extended.Matrix2.CreateTranslation*"></a>
+  <h4 id="MonoGame_Extended_Matrix2_CreateTranslation_System_Single_System_Single_MonoGame_Extended_Matrix2__" data-uid="MonoGame.Extended.Matrix2.CreateTranslation(System.Single,System.Single,MonoGame.Extended.Matrix2@)">CreateTranslation(Single, Single, out Matrix2)</h4>
+  <div class="markdown level1 summary"><p>Calculates the <a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a> struct that can be used to translate a set vertices.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void CreateTranslation(float xPosition, float yPosition, out Matrix2 result)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">xPosition</span></td>
+        <td><p>The amount to translate by on the x-axis.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">yPosition</span></td>
+        <td><p>The amount to translate by on the y-axis.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a></td>
+        <td><span class="parametername">result</span></td>
+        <td><p>The resulting <a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MonoGame_Extended_Matrix2_Determinant_" data-uid="MonoGame.Extended.Matrix2.Determinant*"></a>
+  <h4 id="MonoGame_Extended_Matrix2_Determinant" data-uid="MonoGame.Extended.Matrix2.Determinant">Determinant()</h4>
+  <div class="markdown level1 summary"><p>Calculates the determinant of the <a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float Determinant()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><p>The determinant of the <a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MonoGame_Extended_Matrix2_Divide_" data-uid="MonoGame.Extended.Matrix2.Divide*"></a>
+  <h4 id="MonoGame_Extended_Matrix2_Divide_MonoGame_Extended_Matrix2_MonoGame_Extended_Matrix2_" data-uid="MonoGame.Extended.Matrix2.Divide(MonoGame.Extended.Matrix2,MonoGame.Extended.Matrix2)">Divide(Matrix2, Matrix2)</h4>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a> struct with the division of two <a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a>
+s.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Matrix2 Divide(Matrix2 matrix1, Matrix2 matrix2)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a></td>
+        <td><span class="parametername">matrix1</span></td>
+        <td><p>The first <a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a></td>
+        <td><span class="parametername">matrix2</span></td>
+        <td><p>The second <a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a></td>
+        <td><p>The resulting <a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MonoGame_Extended_Matrix2_Divide_" data-uid="MonoGame.Extended.Matrix2.Divide*"></a>
+  <h4 id="MonoGame_Extended_Matrix2_Divide_MonoGame_Extended_Matrix2_System_Single_" data-uid="MonoGame.Extended.Matrix2.Divide(MonoGame.Extended.Matrix2,System.Single)">Divide(Matrix2, Single)</h4>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a> struct with the division of a <a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a> by
+a scalar.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Matrix2 Divide(Matrix2 matrix, float scalar)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a></td>
+        <td><span class="parametername">matrix</span></td>
+        <td><p>The <a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">scalar</span></td>
+        <td><p>The amount to divide the <a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a> by.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a></td>
+        <td><p>The resulting <a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MonoGame_Extended_Matrix2_Divide_" data-uid="MonoGame.Extended.Matrix2.Divide*"></a>
+  <h4 id="MonoGame_Extended_Matrix2_Divide_MonoGame_Extended_Matrix2__MonoGame_Extended_Matrix2__MonoGame_Extended_Matrix2__" data-uid="MonoGame.Extended.Matrix2.Divide(MonoGame.Extended.Matrix2@,MonoGame.Extended.Matrix2@,MonoGame.Extended.Matrix2@)">Divide(ref Matrix2, ref Matrix2, out Matrix2)</h4>
+  <div class="markdown level1 summary"><p>Calculates the <a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a> division of two <a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a>s.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void Divide(ref Matrix2 matrix1, ref Matrix2 matrix2, out Matrix2 result)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a></td>
+        <td><span class="parametername">matrix1</span></td>
+        <td><p>The first <a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a></td>
+        <td><span class="parametername">matrix2</span></td>
+        <td><p>The second <a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a></td>
+        <td><span class="parametername">result</span></td>
+        <td><p>The resulting <a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MonoGame_Extended_Matrix2_Divide_" data-uid="MonoGame.Extended.Matrix2.Divide*"></a>
+  <h4 id="MonoGame_Extended_Matrix2_Divide_MonoGame_Extended_Matrix2__System_Single_MonoGame_Extended_Matrix2__" data-uid="MonoGame.Extended.Matrix2.Divide(MonoGame.Extended.Matrix2@,System.Single,MonoGame.Extended.Matrix2@)">Divide(ref Matrix2, Single, out Matrix2)</h4>
+  <div class="markdown level1 summary"><p>Calculates the division of a <a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a> by a scalar.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void Divide(ref Matrix2 matrix, float scalar, out Matrix2 result)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a></td>
+        <td><span class="parametername">matrix</span></td>
+        <td><p>The <a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">scalar</span></td>
+        <td><p>The amount to divide the <a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a> by.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a></td>
+        <td><span class="parametername">result</span></td>
+        <td><p>The resulting <a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MonoGame_Extended_Matrix2_Equals_" data-uid="MonoGame.Extended.Matrix2.Equals*"></a>
+  <h4 id="MonoGame_Extended_Matrix2_Equals_MonoGame_Extended_Matrix2_" data-uid="MonoGame.Extended.Matrix2.Equals(MonoGame.Extended.Matrix2)">Equals(Matrix2)</h4>
+  <div class="markdown level1 summary"><p>Returns a value that indicates whether the current <a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a> is equal to a specified
+<a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Equals(Matrix2 matrix)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a></td>
+        <td><span class="parametername">matrix</span></td>
+        <td><p>The <a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a> with which to make the comparison.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p><code>true</code> if the current <a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a> is equal to the specified <a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a>;
+<code>false</code> otherwise.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MonoGame_Extended_Matrix2_Equals_" data-uid="MonoGame.Extended.Matrix2.Equals*"></a>
+  <h4 id="MonoGame_Extended_Matrix2_Equals_MonoGame_Extended_Matrix2__" data-uid="MonoGame.Extended.Matrix2.Equals(MonoGame.Extended.Matrix2@)">Equals(ref Matrix2)</h4>
+  <div class="markdown level1 summary"><p>Returns a value that indicates whether the current <a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a> is equal to a specified
+<a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Equals(ref Matrix2 matrix)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a></td>
+        <td><span class="parametername">matrix</span></td>
+        <td><p>The <a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a> with which to make the comparison.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p><code>true</code> if the current <a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a> is equal to the specified <a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a>;
+<code>false</code> otherwise.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MonoGame_Extended_Matrix2_Equals_" data-uid="MonoGame.Extended.Matrix2.Equals*"></a>
+  <h4 id="MonoGame_Extended_Matrix2_Equals_System_Object_" data-uid="MonoGame.Extended.Matrix2.Equals(System.Object)">Equals(Object)</h4>
+  <div class="markdown level1 summary"><p>Returns a value that indicates whether the current <a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a> is equal to a specified object.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool Equals(object obj)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><span class="parametername">obj</span></td>
+        <td><p>The object with which to make the comparison.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p><code>true</code> if the current <a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a> is equal to the specified object;
+<code>false</code> otherwise.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.ValueType.Equals(System.Object)</span></div>
+  
+  
+  <a id="MonoGame_Extended_Matrix2_GetHashCode_" data-uid="MonoGame.Extended.Matrix2.GetHashCode*"></a>
+  <h4 id="MonoGame_Extended_Matrix2_GetHashCode" data-uid="MonoGame.Extended.Matrix2.GetHashCode">GetHashCode()</h4>
+  <div class="markdown level1 summary"><p>Returns a hash code for this <a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override int GetHashCode()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><p>A hash code for this <a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a>, suitable for use in hashing algorithms and data structures like a
+hash table.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.ValueType.GetHashCode()</span></div>
+  
+  
+  <a id="MonoGame_Extended_Matrix2_Invert_" data-uid="MonoGame.Extended.Matrix2.Invert*"></a>
+  <h4 id="MonoGame_Extended_Matrix2_Invert_MonoGame_Extended_Matrix2_" data-uid="MonoGame.Extended.Matrix2.Invert(MonoGame.Extended.Matrix2)">Invert(Matrix2)</h4>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a> struct with the inversion of a <a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Matrix2 Invert(Matrix2 matrix)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a></td>
+        <td><span class="parametername">matrix</span></td>
+        <td><p>The <a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a></td>
+        <td><p>The resulting <a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MonoGame_Extended_Matrix2_Invert_" data-uid="MonoGame.Extended.Matrix2.Invert*"></a>
+  <h4 id="MonoGame_Extended_Matrix2_Invert_MonoGame_Extended_Matrix2__MonoGame_Extended_Matrix2__" data-uid="MonoGame.Extended.Matrix2.Invert(MonoGame.Extended.Matrix2@,MonoGame.Extended.Matrix2@)">Invert(ref Matrix2, out Matrix2)</h4>
+  <div class="markdown level1 summary"><p>Calculates the inversion of a <a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void Invert(ref Matrix2 matrix, out Matrix2 result)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a></td>
+        <td><span class="parametername">matrix</span></td>
+        <td><p>The <a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a></td>
+        <td><span class="parametername">result</span></td>
+        <td><p>The resulting <a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MonoGame_Extended_Matrix2_Multiply_" data-uid="MonoGame.Extended.Matrix2.Multiply*"></a>
+  <h4 id="MonoGame_Extended_Matrix2_Multiply_MonoGame_Extended_Matrix2_MonoGame_Extended_Matrix2_" data-uid="MonoGame.Extended.Matrix2.Multiply(MonoGame.Extended.Matrix2,MonoGame.Extended.Matrix2)">Multiply(Matrix2, Matrix2)</h4>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a> struct with the multiplication of two
+<a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a>
+s.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Matrix2 Multiply(Matrix2 matrix1, Matrix2 matrix2)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a></td>
+        <td><span class="parametername">matrix1</span></td>
+        <td><p>The first <a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a></td>
+        <td><span class="parametername">matrix2</span></td>
+        <td><p>The second <a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a></td>
+        <td><p>The resulting <a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MonoGame_Extended_Matrix2_Multiply_" data-uid="MonoGame.Extended.Matrix2.Multiply*"></a>
+  <h4 id="MonoGame_Extended_Matrix2_Multiply_MonoGame_Extended_Matrix2_System_Single_" data-uid="MonoGame.Extended.Matrix2.Multiply(MonoGame.Extended.Matrix2,System.Single)">Multiply(Matrix2, Single)</h4>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a> struct with the division of a <a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a> by
+a scalar.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Matrix2 Multiply(Matrix2 matrix, float scalar)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a></td>
+        <td><span class="parametername">matrix</span></td>
+        <td><p>The <a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">scalar</span></td>
+        <td><p>The amount to divide the <a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a> by.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a></td>
+        <td><p>The resulting <a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MonoGame_Extended_Matrix2_Multiply_" data-uid="MonoGame.Extended.Matrix2.Multiply*"></a>
+  <h4 id="MonoGame_Extended_Matrix2_Multiply_MonoGame_Extended_Matrix2__MonoGame_Extended_Matrix2__MonoGame_Extended_Matrix2__" data-uid="MonoGame.Extended.Matrix2.Multiply(MonoGame.Extended.Matrix2@,MonoGame.Extended.Matrix2@,MonoGame.Extended.Matrix2@)">Multiply(ref Matrix2, ref Matrix2, out Matrix2)</h4>
+  <div class="markdown level1 summary"><p>Calculates the <a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a> multiplication of two <a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a>s.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void Multiply(ref Matrix2 matrix1, ref Matrix2 matrix2, out Matrix2 result)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a></td>
+        <td><span class="parametername">matrix1</span></td>
+        <td><p>The first <a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a></td>
+        <td><span class="parametername">matrix2</span></td>
+        <td><p>The second <a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a></td>
+        <td><span class="parametername">result</span></td>
+        <td><p>The resulting <a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MonoGame_Extended_Matrix2_Multiply_" data-uid="MonoGame.Extended.Matrix2.Multiply*"></a>
+  <h4 id="MonoGame_Extended_Matrix2_Multiply_MonoGame_Extended_Matrix2__System_Single_MonoGame_Extended_Matrix2__" data-uid="MonoGame.Extended.Matrix2.Multiply(MonoGame.Extended.Matrix2@,System.Single,MonoGame.Extended.Matrix2@)">Multiply(ref Matrix2, Single, out Matrix2)</h4>
+  <div class="markdown level1 summary"><p>Calculates the multiplication of a <a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a> by a scalar.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void Multiply(ref Matrix2 matrix, float scalar, out Matrix2 result)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a></td>
+        <td><span class="parametername">matrix</span></td>
+        <td><p>The <a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">scalar</span></td>
+        <td><p>The amount to multiple the <a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a> by.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a></td>
+        <td><span class="parametername">result</span></td>
+        <td><p>The resulting <a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MonoGame_Extended_Matrix2_Subtract_" data-uid="MonoGame.Extended.Matrix2.Subtract*"></a>
+  <h4 id="MonoGame_Extended_Matrix2_Subtract_MonoGame_Extended_Matrix2_MonoGame_Extended_Matrix2_" data-uid="MonoGame.Extended.Matrix2.Subtract(MonoGame.Extended.Matrix2,MonoGame.Extended.Matrix2)">Subtract(Matrix2, Matrix2)</h4>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a> struct with the substraction of two
+<a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a>
+s.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Matrix2 Subtract(Matrix2 matrix1, Matrix2 matrix2)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a></td>
+        <td><span class="parametername">matrix1</span></td>
+        <td><p>The first <a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a></td>
+        <td><span class="parametername">matrix2</span></td>
+        <td><p>The second <a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a></td>
+        <td><p>The resulting <a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MonoGame_Extended_Matrix2_Subtract_" data-uid="MonoGame.Extended.Matrix2.Subtract*"></a>
+  <h4 id="MonoGame_Extended_Matrix2_Subtract_MonoGame_Extended_Matrix2__MonoGame_Extended_Matrix2__MonoGame_Extended_Matrix2__" data-uid="MonoGame.Extended.Matrix2.Subtract(MonoGame.Extended.Matrix2@,MonoGame.Extended.Matrix2@,MonoGame.Extended.Matrix2@)">Subtract(ref Matrix2, ref Matrix2, out Matrix2)</h4>
+  <div class="markdown level1 summary"><p>Calculates the <a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a> substraction of two <a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a>s.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void Subtract(ref Matrix2 matrix1, ref Matrix2 matrix2, out Matrix2 result)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a></td>
+        <td><span class="parametername">matrix1</span></td>
+        <td><p>The first <a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a></td>
+        <td><span class="parametername">matrix2</span></td>
+        <td><p>The second <a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a></td>
+        <td><span class="parametername">result</span></td>
+        <td><p>The resulting <a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MonoGame_Extended_Matrix2_ToMatrix_" data-uid="MonoGame.Extended.Matrix2.ToMatrix*"></a>
+  <h4 id="MonoGame_Extended_Matrix2_ToMatrix_MonoGame_Extended_Matrix2__System_Single_Microsoft_Xna_Framework_Matrix__" data-uid="MonoGame.Extended.Matrix2.ToMatrix(MonoGame.Extended.Matrix2@,System.Single,Microsoft.Xna.Framework.Matrix@)">ToMatrix(ref Matrix2, Single, out Matrix)</h4>
+  <div class="markdown level1 summary"><p>Performs an explicit conversion from a specified <a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a> to a <span class="xref">Microsoft.Xna.Framework.Matrix</span>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void ToMatrix(ref Matrix2 matrix, float depth, out Matrix result)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a></td>
+        <td><span class="parametername">matrix</span></td>
+        <td><p>The <a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">depth</span></td>
+        <td><p>The depth value.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Microsoft.Xna.Framework.Matrix</span></td>
+        <td><span class="parametername">result</span></td>
+        <td><p>The resulting <span class="xref">Microsoft.Xna.Framework.Matrix</span>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MonoGame_Extended_Matrix2_ToMatrix_" data-uid="MonoGame.Extended.Matrix2.ToMatrix*"></a>
+  <h4 id="MonoGame_Extended_Matrix2_ToMatrix_System_Single_" data-uid="MonoGame.Extended.Matrix2.ToMatrix(System.Single)">ToMatrix(Single)</h4>
+  <div class="markdown level1 summary"><p>Performs an explicit conversion from a specified <a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a> to a <span class="xref">Microsoft.Xna.Framework.Matrix</span>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Matrix ToMatrix(float depth = 0F)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">depth</span></td>
+        <td><p>The depth value.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Microsoft.Xna.Framework.Matrix</span></td>
+        <td><p>The resulting <span class="xref">Microsoft.Xna.Framework.Matrix</span>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MonoGame_Extended_Matrix2_ToString_" data-uid="MonoGame.Extended.Matrix2.ToString*"></a>
+  <h4 id="MonoGame_Extended_Matrix2_ToString" data-uid="MonoGame.Extended.Matrix2.ToString">ToString()</h4>
+  <div class="markdown level1 summary"><p>Returns a <span class="xref">System.String</span> that represents this <a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override string ToString()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><p>A <span class="xref">System.String</span> that represents this <a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.ValueType.ToString()</span></div>
+  
+  
+  <a id="MonoGame_Extended_Matrix2_Transform_" data-uid="MonoGame.Extended.Matrix2.Transform*"></a>
+  <h4 id="MonoGame_Extended_Matrix2_Transform_Microsoft_Xna_Framework_Vector2_" data-uid="MonoGame.Extended.Matrix2.Transform(Microsoft.Xna.Framework.Vector2)">Transform(Vector2)</h4>
+  <div class="markdown level1 summary"><p>Transforms the specified <span class="xref">Microsoft.Xna.Framework.Vector2</span> by this <a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Vector2 Transform(Vector2 vector)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Microsoft.Xna.Framework.Vector2</span></td>
+        <td><span class="parametername">vector</span></td>
+        <td><p>The vector.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Microsoft.Xna.Framework.Vector2</span></td>
+        <td><p>The resulting <span class="xref">Microsoft.Xna.Framework.Vector2</span>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MonoGame_Extended_Matrix2_Transform_" data-uid="MonoGame.Extended.Matrix2.Transform*"></a>
+  <h4 id="MonoGame_Extended_Matrix2_Transform_Microsoft_Xna_Framework_Vector2_Microsoft_Xna_Framework_Vector2__" data-uid="MonoGame.Extended.Matrix2.Transform(Microsoft.Xna.Framework.Vector2,Microsoft.Xna.Framework.Vector2@)">Transform(Vector2, out Vector2)</h4>
+  <div class="markdown level1 summary"><p>Transforms the specified <span class="xref">Microsoft.Xna.Framework.Vector2</span> by this <a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Transform(Vector2 vector, out Vector2 result)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Microsoft.Xna.Framework.Vector2</span></td>
+        <td><span class="parametername">vector</span></td>
+        <td><p>The vector.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Microsoft.Xna.Framework.Vector2</span></td>
+        <td><span class="parametername">result</span></td>
+        <td><p>The resulting <span class="xref">Microsoft.Xna.Framework.Vector2</span>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MonoGame_Extended_Matrix2_Transform_" data-uid="MonoGame.Extended.Matrix2.Transform*"></a>
+  <h4 id="MonoGame_Extended_Matrix2_Transform_System_Single_System_Single_Microsoft_Xna_Framework_Vector2__" data-uid="MonoGame.Extended.Matrix2.Transform(System.Single,System.Single,Microsoft.Xna.Framework.Vector2@)">Transform(Single, Single, out Vector2)</h4>
+  <div class="markdown level1 summary"><p>Transforms the specified <span class="xref">Microsoft.Xna.Framework.Vector2</span> by this <a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Transform(float x, float y, out Vector2 result)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">x</span></td>
+        <td><p>The x value of the vector.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">y</span></td>
+        <td><p>The y value of the vector.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Microsoft.Xna.Framework.Vector2</span></td>
+        <td><span class="parametername">result</span></td>
+        <td><p>The resulting <span class="xref">Microsoft.Xna.Framework.Vector2</span>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MonoGame_Extended_Matrix2_Transform_" data-uid="MonoGame.Extended.Matrix2.Transform*"></a>
+  <h4 id="MonoGame_Extended_Matrix2_Transform_System_Single_System_Single_Microsoft_Xna_Framework_Vector3__" data-uid="MonoGame.Extended.Matrix2.Transform(System.Single,System.Single,Microsoft.Xna.Framework.Vector3@)">Transform(Single, Single, ref Vector3)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Transform(float x, float y, ref Vector3 result)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">x</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">y</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Microsoft.Xna.Framework.Vector3</span></td>
+        <td><span class="parametername">result</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="operators">Operators
+  </h3>
+  
+  
+  <a id="MonoGame_Extended_Matrix2_op_Addition_" data-uid="MonoGame.Extended.Matrix2.op_Addition*"></a>
+  <h4 id="MonoGame_Extended_Matrix2_op_Addition_MonoGame_Extended_Matrix2_MonoGame_Extended_Matrix2_" data-uid="MonoGame.Extended.Matrix2.op_Addition(MonoGame.Extended.Matrix2,MonoGame.Extended.Matrix2)">Addition(Matrix2, Matrix2)</h4>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a> struct with the summation of two <a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a>
+s.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Matrix2 operator +(Matrix2 matrix1, Matrix2 matrix2)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a></td>
+        <td><span class="parametername">matrix1</span></td>
+        <td><p>The first <a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a></td>
+        <td><span class="parametername">matrix2</span></td>
+        <td><p>The second <a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a></td>
+        <td><p>The resulting <a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MonoGame_Extended_Matrix2_op_Division_" data-uid="MonoGame.Extended.Matrix2.op_Division*"></a>
+  <h4 id="MonoGame_Extended_Matrix2_op_Division_MonoGame_Extended_Matrix2_MonoGame_Extended_Matrix2_" data-uid="MonoGame.Extended.Matrix2.op_Division(MonoGame.Extended.Matrix2,MonoGame.Extended.Matrix2)">Division(Matrix2, Matrix2)</h4>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a> struct with the division of two <a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a>
+s.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Matrix2 operator /(Matrix2 matrix1, Matrix2 matrix2)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a></td>
+        <td><span class="parametername">matrix1</span></td>
+        <td><p>The first <a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a></td>
+        <td><span class="parametername">matrix2</span></td>
+        <td><p>The second <a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a></td>
+        <td><p>The resulting <a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MonoGame_Extended_Matrix2_op_Division_" data-uid="MonoGame.Extended.Matrix2.op_Division*"></a>
+  <h4 id="MonoGame_Extended_Matrix2_op_Division_MonoGame_Extended_Matrix2_System_Single_" data-uid="MonoGame.Extended.Matrix2.op_Division(MonoGame.Extended.Matrix2,System.Single)">Division(Matrix2, Single)</h4>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a> struct with the division of a <a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a> by
+a scalar.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Matrix2 operator /(Matrix2 matrix, float scalar)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a></td>
+        <td><span class="parametername">matrix</span></td>
+        <td><p>The <a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">scalar</span></td>
+        <td><p>The amount to divide the <a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a> by.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a></td>
+        <td><p>The resulting <a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MonoGame_Extended_Matrix2_op_Equality_" data-uid="MonoGame.Extended.Matrix2.op_Equality*"></a>
+  <h4 id="MonoGame_Extended_Matrix2_op_Equality_MonoGame_Extended_Matrix2_MonoGame_Extended_Matrix2_" data-uid="MonoGame.Extended.Matrix2.op_Equality(MonoGame.Extended.Matrix2,MonoGame.Extended.Matrix2)">Equality(Matrix2, Matrix2)</h4>
+  <div class="markdown level1 summary"><p>Compares a <a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a> for equality with another <a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a> without any tolerance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool operator ==(Matrix2 matrix1, Matrix2 matrix2)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a></td>
+        <td><span class="parametername">matrix1</span></td>
+        <td><p>The first <a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a></td>
+        <td><span class="parametername">matrix2</span></td>
+        <td><p>The second <a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p><code>true</code> if the <a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a>s are equal; <code>false</code> otherwise.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MonoGame_Extended_Matrix2_op_Implicit_" data-uid="MonoGame.Extended.Matrix2.op_Implicit*"></a>
+  <h4 id="MonoGame_Extended_Matrix2_op_Implicit_MonoGame_Extended_Matrix2__Microsoft_Xna_Framework_Matrix" data-uid="MonoGame.Extended.Matrix2.op_Implicit(MonoGame.Extended.Matrix2)~Microsoft.Xna.Framework.Matrix">Implicit(Matrix2 to Matrix)</h4>
+  <div class="markdown level1 summary"><p>Performs an implicit conversion from <a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a> to <span class="xref">Microsoft.Xna.Framework.Matrix</span>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static implicit operator Matrix(Matrix2 matrix)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a></td>
+        <td><span class="parametername">matrix</span></td>
+        <td><p>The <a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Microsoft.Xna.Framework.Matrix</span></td>
+        <td><p>The resulting <span class="xref">Microsoft.Xna.Framework.Matrix</span>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MonoGame_Extended_Matrix2_op_Inequality_" data-uid="MonoGame.Extended.Matrix2.op_Inequality*"></a>
+  <h4 id="MonoGame_Extended_Matrix2_op_Inequality_MonoGame_Extended_Matrix2_MonoGame_Extended_Matrix2_" data-uid="MonoGame.Extended.Matrix2.op_Inequality(MonoGame.Extended.Matrix2,MonoGame.Extended.Matrix2)">Inequality(Matrix2, Matrix2)</h4>
+  <div class="markdown level1 summary"><p>Compares a <a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a> for inequality with another <a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a> without any tolerance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool operator !=(Matrix2 matrix1, Matrix2 matrix2)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a></td>
+        <td><span class="parametername">matrix1</span></td>
+        <td><p>The first <a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a></td>
+        <td><span class="parametername">matrix2</span></td>
+        <td><p>The second <a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p><code>true</code> if the <a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a>s are not equal; <code>false</code> otherwise.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MonoGame_Extended_Matrix2_op_Multiply_" data-uid="MonoGame.Extended.Matrix2.op_Multiply*"></a>
+  <h4 id="MonoGame_Extended_Matrix2_op_Multiply_MonoGame_Extended_Matrix2_MonoGame_Extended_Matrix2_" data-uid="MonoGame.Extended.Matrix2.op_Multiply(MonoGame.Extended.Matrix2,MonoGame.Extended.Matrix2)">Multiply(Matrix2, Matrix2)</h4>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a> struct with the multiplication of two
+<a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a>
+s.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Matrix2 operator *(Matrix2 matrix1, Matrix2 matrix2)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a></td>
+        <td><span class="parametername">matrix1</span></td>
+        <td><p>The first <a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a></td>
+        <td><span class="parametername">matrix2</span></td>
+        <td><p>The second <a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a></td>
+        <td><p>The resulting <a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MonoGame_Extended_Matrix2_op_Multiply_" data-uid="MonoGame.Extended.Matrix2.op_Multiply*"></a>
+  <h4 id="MonoGame_Extended_Matrix2_op_Multiply_MonoGame_Extended_Matrix2_System_Single_" data-uid="MonoGame.Extended.Matrix2.op_Multiply(MonoGame.Extended.Matrix2,System.Single)">Multiply(Matrix2, Single)</h4>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a> struct with the division of a <a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a> by
+a scalar.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Matrix2 operator *(Matrix2 matrix, float scalar)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a></td>
+        <td><span class="parametername">matrix</span></td>
+        <td><p>The <a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">scalar</span></td>
+        <td><p>The amount to divide the <a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a> by.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a></td>
+        <td><p>The resulting <a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MonoGame_Extended_Matrix2_op_Subtraction_" data-uid="MonoGame.Extended.Matrix2.op_Subtraction*"></a>
+  <h4 id="MonoGame_Extended_Matrix2_op_Subtraction_MonoGame_Extended_Matrix2_MonoGame_Extended_Matrix2_" data-uid="MonoGame.Extended.Matrix2.op_Subtraction(MonoGame.Extended.Matrix2,MonoGame.Extended.Matrix2)">Subtraction(Matrix2, Matrix2)</h4>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a> struct with the substraction of two
+<a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a>
+s.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Matrix2 operator -(Matrix2 matrix1, Matrix2 matrix2)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a></td>
+        <td><span class="parametername">matrix1</span></td>
+        <td><p>The first <a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a></td>
+        <td><span class="parametername">matrix2</span></td>
+        <td><p>The second <a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a></td>
+        <td><p>The resulting <a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MonoGame_Extended_Matrix2_op_UnaryNegation_" data-uid="MonoGame.Extended.Matrix2.op_UnaryNegation*"></a>
+  <h4 id="MonoGame_Extended_Matrix2_op_UnaryNegation_MonoGame_Extended_Matrix2_" data-uid="MonoGame.Extended.Matrix2.op_UnaryNegation(MonoGame.Extended.Matrix2)">UnaryNegation(Matrix2)</h4>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a> struct with the inversion of a <a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Matrix2 operator -(Matrix2 matrix)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a></td>
+        <td><span class="parametername">matrix</span></td>
+        <td><p>The <a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a></td>
+        <td><p>The resulting <a class="xref" href="MonoGame.Extended.Matrix2.html">Matrix2</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <span class="xref">System.IEquatable&lt;T&gt;</span>
+  </div>
+  <div>
+      <a class="xref" href="MonoGame.Extended.IEquatableByRef-1.html">IEquatableByRef&lt;T&gt;</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

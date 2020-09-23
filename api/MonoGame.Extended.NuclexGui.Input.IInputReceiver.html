@@ -1,0 +1,450 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Interface IInputReceiver
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Interface IInputReceiver
+   ">
+    <meta name="generator" content="docfx 2.56.2.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="MonoGame.Extended.NuclexGui.Input.IInputReceiver">
+  
+  
+  <h1 id="MonoGame_Extended_NuclexGui_Input_IInputReceiver" data-uid="MonoGame.Extended.NuclexGui.Input.IInputReceiver" class="text-break">Interface IInputReceiver
+  </h1>
+  <div class="markdown level0 summary"><p>Interface for classes that can process user input</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="MonoGame.Extended.NuclexGui.Input.html">MonoGame.Extended.NuclexGui.Input</a></h6>
+  <h6><strong>Assembly</strong>: MonoGame.Extended.NuclexGui.dll</h6>
+  <h5 id="MonoGame_Extended_NuclexGui_Input_IInputReceiver_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public interface IInputReceiver</code></pre>
+  </div>
+  <h5 id="MonoGame_Extended_NuclexGui_Input_IInputReceiver_remarks"><strong>Remarks</strong></h5>
+  <div class="markdown level0 remarks"><p>This interface is implemented by any class that can process user input.
+Normally, user input is directly fed into the <a class="xref" href="MonoGame.Extended.NuclexGui.GuiScreen.html">GuiScreen</a> class
+which manages the global state of an isolated GUI system. It is also possible,
+though not recommended, to use this interface for sending input directly
+to a control, for example, to simulate text input for an input box.</p>
+</div>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="MonoGame_Extended_NuclexGui_Input_IInputReceiver_InjectButtonPress_" data-uid="MonoGame.Extended.NuclexGui.Input.IInputReceiver.InjectButtonPress*"></a>
+  <h4 id="MonoGame_Extended_NuclexGui_Input_IInputReceiver_InjectButtonPress_Microsoft_Xna_Framework_Input_Buttons_" data-uid="MonoGame.Extended.NuclexGui.Input.IInputReceiver.InjectButtonPress(Microsoft.Xna.Framework.Input.Buttons)">InjectButtonPress(Buttons)</h4>
+  <div class="markdown level1 summary"><p>Called when a button on the gamepad has been pressed</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void InjectButtonPress(Buttons button)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Microsoft.Xna.Framework.Input.Buttons</span></td>
+        <td><span class="parametername">button</span></td>
+        <td><p>Button that has been pressed</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MonoGame_Extended_NuclexGui_Input_IInputReceiver_InjectButtonRelease_" data-uid="MonoGame.Extended.NuclexGui.Input.IInputReceiver.InjectButtonRelease*"></a>
+  <h4 id="MonoGame_Extended_NuclexGui_Input_IInputReceiver_InjectButtonRelease_Microsoft_Xna_Framework_Input_Buttons_" data-uid="MonoGame.Extended.NuclexGui.Input.IInputReceiver.InjectButtonRelease(Microsoft.Xna.Framework.Input.Buttons)">InjectButtonRelease(Buttons)</h4>
+  <div class="markdown level1 summary"><p>Called when a button on the gamepad has been released</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void InjectButtonRelease(Buttons button)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Microsoft.Xna.Framework.Input.Buttons</span></td>
+        <td><span class="parametername">button</span></td>
+        <td><p>Button that has been released</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MonoGame_Extended_NuclexGui_Input_IInputReceiver_InjectCharacter_" data-uid="MonoGame.Extended.NuclexGui.Input.IInputReceiver.InjectCharacter*"></a>
+  <h4 id="MonoGame_Extended_NuclexGui_Input_IInputReceiver_InjectCharacter_System_Char_" data-uid="MonoGame.Extended.NuclexGui.Input.IInputReceiver.InjectCharacter(System.Char)">InjectCharacter(Char)</h4>
+  <div class="markdown level1 summary"><p>Handle user text input by a physical or virtual keyboard</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void InjectCharacter(char character)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Char</span></td>
+        <td><span class="parametername">character</span></td>
+        <td><p>Character that has been entered</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MonoGame_Extended_NuclexGui_Input_IInputReceiver_InjectCommand_" data-uid="MonoGame.Extended.NuclexGui.Input.IInputReceiver.InjectCommand*"></a>
+  <h4 id="MonoGame_Extended_NuclexGui_Input_IInputReceiver_InjectCommand_MonoGame_Extended_NuclexGui_Input_Command_" data-uid="MonoGame.Extended.NuclexGui.Input.IInputReceiver.InjectCommand(MonoGame.Extended.NuclexGui.Input.Command)">InjectCommand(Command)</h4>
+  <div class="markdown level1 summary"><p>Injects an input command into the input receiver</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void InjectCommand(Command command)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MonoGame.Extended.NuclexGui.Input.Command.html">Command</a></td>
+        <td><span class="parametername">command</span></td>
+        <td><p>Input command to be injected</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="MonoGame_Extended_NuclexGui_Input_IInputReceiver_InjectCommand_MonoGame_Extended_NuclexGui_Input_Command__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>
+    If the GUI is run without the usual GUI input methods (eg. when a GUI is
+    displayed on a gaming console), this is the sole way to feed input to
+    the controls.
+</p>
+<p>
+    By default, normal key presses will generate a command in addition to the
+    KeyPress itself, so unless a control does something very special, it
+    should respond to this method only and leave the KeyPress method alone ;)
+</p>
+</div>
+  
+  
+  <a id="MonoGame_Extended_NuclexGui_Input_IInputReceiver_InjectKeyPress_" data-uid="MonoGame.Extended.NuclexGui.Input.IInputReceiver.InjectKeyPress*"></a>
+  <h4 id="MonoGame_Extended_NuclexGui_Input_IInputReceiver_InjectKeyPress_Microsoft_Xna_Framework_Input_Keys_" data-uid="MonoGame.Extended.NuclexGui.Input.IInputReceiver.InjectKeyPress(Microsoft.Xna.Framework.Input.Keys)">InjectKeyPress(Keys)</h4>
+  <div class="markdown level1 summary"><p>Called when a key on the keyboard has been pressed down</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void InjectKeyPress(Keys keyCode)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Microsoft.Xna.Framework.Input.Keys</span></td>
+        <td><span class="parametername">keyCode</span></td>
+        <td><p>Code of the key that was pressed</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="MonoGame_Extended_NuclexGui_Input_IInputReceiver_InjectKeyPress_Microsoft_Xna_Framework_Input_Keys__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Only handle this if you need it for some special purpose. For standard commands
+like confirmation and cancellation, simply respond to InjectCommand()</p>
+</div>
+  
+  
+  <a id="MonoGame_Extended_NuclexGui_Input_IInputReceiver_InjectKeyRelease_" data-uid="MonoGame.Extended.NuclexGui.Input.IInputReceiver.InjectKeyRelease*"></a>
+  <h4 id="MonoGame_Extended_NuclexGui_Input_IInputReceiver_InjectKeyRelease_Microsoft_Xna_Framework_Input_Keys_" data-uid="MonoGame.Extended.NuclexGui.Input.IInputReceiver.InjectKeyRelease(Microsoft.Xna.Framework.Input.Keys)">InjectKeyRelease(Keys)</h4>
+  <div class="markdown level1 summary"><p>Called when a key on the keyboard has been released again</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void InjectKeyRelease(Keys keyCode)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Microsoft.Xna.Framework.Input.Keys</span></td>
+        <td><span class="parametername">keyCode</span></td>
+        <td><p>Code of the key that was released</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="MonoGame_Extended_NuclexGui_Input_IInputReceiver_InjectKeyRelease_Microsoft_Xna_Framework_Input_Keys__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Only handle this if you need it for some special purpose. For standard commands
+like confirmation and cancellation, simply respond to InjectCommand()</p>
+</div>
+  
+  
+  <a id="MonoGame_Extended_NuclexGui_Input_IInputReceiver_InjectMouseMove_" data-uid="MonoGame.Extended.NuclexGui.Input.IInputReceiver.InjectMouseMove*"></a>
+  <h4 id="MonoGame_Extended_NuclexGui_Input_IInputReceiver_InjectMouseMove_System_Single_System_Single_" data-uid="MonoGame.Extended.NuclexGui.Input.IInputReceiver.InjectMouseMove(System.Single,System.Single)">InjectMouseMove(Single, Single)</h4>
+  <div class="markdown level1 summary"><p>Injects a mouse position update into the receiver</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void InjectMouseMove(float x, float y)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">x</span></td>
+        <td><p>New X coordinate of the mouse cursor on the screen</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">y</span></td>
+        <td><p>New Y coordinate of the mouse cursor on the screen</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="MonoGame_Extended_NuclexGui_Input_IInputReceiver_InjectMouseMove_System_Single_System_Single__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>When the mouse leaves the valid region (eg. if the game runs in windowed mode
+and the mouse cursor is moved outside of the window), a final mouse move
+notification is generated with the coordinates -1, -1</p>
+</div>
+  
+  
+  <a id="MonoGame_Extended_NuclexGui_Input_IInputReceiver_InjectMousePress_" data-uid="MonoGame.Extended.NuclexGui.Input.IInputReceiver.InjectMousePress*"></a>
+  <h4 id="MonoGame_Extended_NuclexGui_Input_IInputReceiver_InjectMousePress_MonoGame_Extended_Input_MouseButton_" data-uid="MonoGame.Extended.NuclexGui.Input.IInputReceiver.InjectMousePress(MonoGame.Extended.Input.MouseButton)">InjectMousePress(MouseButton)</h4>
+  <div class="markdown level1 summary"><p>Called when a mouse button has been pressed down</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void InjectMousePress(MouseButton button)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MonoGame.Extended.Input.MouseButton.html">MouseButton</a></td>
+        <td><span class="parametername">button</span></td>
+        <td><p>Index of the button that has been pressed</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MonoGame_Extended_NuclexGui_Input_IInputReceiver_InjectMouseRelease_" data-uid="MonoGame.Extended.NuclexGui.Input.IInputReceiver.InjectMouseRelease*"></a>
+  <h4 id="MonoGame_Extended_NuclexGui_Input_IInputReceiver_InjectMouseRelease_MonoGame_Extended_Input_MouseButton_" data-uid="MonoGame.Extended.NuclexGui.Input.IInputReceiver.InjectMouseRelease(MonoGame.Extended.Input.MouseButton)">InjectMouseRelease(MouseButton)</h4>
+  <div class="markdown level1 summary"><p>Called when a mouse button has been released again</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void InjectMouseRelease(MouseButton button)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MonoGame.Extended.Input.MouseButton.html">MouseButton</a></td>
+        <td><span class="parametername">button</span></td>
+        <td><p>Index of the button that has been released</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MonoGame_Extended_NuclexGui_Input_IInputReceiver_InjectMouseWheel_" data-uid="MonoGame.Extended.NuclexGui.Input.IInputReceiver.InjectMouseWheel*"></a>
+  <h4 id="MonoGame_Extended_NuclexGui_Input_IInputReceiver_InjectMouseWheel_System_Single_" data-uid="MonoGame.Extended.NuclexGui.Input.IInputReceiver.InjectMouseWheel(System.Single)">InjectMouseWheel(Single)</h4>
+  <div class="markdown level1 summary"><p>Called when the mouse wheel has been rotated</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void InjectMouseWheel(float ticks)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">ticks</span></td>
+        <td><p>Number of ticks that the mouse wheel has been rotated</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>
